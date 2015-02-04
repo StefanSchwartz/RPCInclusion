@@ -1,0 +1,102 @@
+#include "../include/EffiEvent.h"
+
+
+EffiEvent::EffiEvent():
+  SizeTrk(0), rpc_NumLctsTrk(0), muonSize(0)
+{
+}
+
+
+void EffiEvent::CloseFile(TFile *file) { file -> Close(); }
+
+void EffiEvent::AttachToFile(TFile *file){
+
+  if (!file) return;
+
+  // get the Nutple  
+
+  CSCtree = (TTree*) file -> Get("CSCtree");
+  
+  CSCtree -> SetBranchAddress("Event" ,  &Event);
+  CSCtree -> SetBranchAddress("Run"   ,  &Run  );
+  CSCtree -> SetBranchAddress("Lumi"  ,  &Lumi );
+
+
+  //Generated Muon Variables
+  CSCtree -> SetBranchAddress("gen_pt"     ,  &gen_pt  );
+  CSCtree -> SetBranchAddress("gen_eta"    ,  &gen_eta );
+  CSCtree -> SetBranchAddress("gen_phi"    ,  &gen_phi );
+
+  // RECO objects
+  CSCtree -> SetBranchAddress("muonSize"    ,  &muonSize  );
+  CSCtree -> SetBranchAddress("muon_pt"     ,  muon_pt  );
+  CSCtree -> SetBranchAddress("muon_eta"    ,  muon_eta );
+  CSCtree -> SetBranchAddress("muon_phi"    ,  muon_phi );
+  CSCtree -> SetBranchAddress("muon_chg"    ,  muon_chg );
+  CSCtree -> SetBranchAddress("muon_match"  ,  muon_match );
+ 
+  // CSCTF track variables
+  CSCtree -> SetBranchAddress("SizeTrk"   ,  &SizeTrk  );
+  CSCtree -> SetBranchAddress("EtaTrk"    ,  EtaTrk    );
+  CSCtree -> SetBranchAddress("PhiTrk"    ,  PhiTrk    );
+  CSCtree -> SetBranchAddress("PtTrk"     ,  PtTrk     );
+  CSCtree -> SetBranchAddress("PtBitTrk"  ,  PtBitTrk  );
+  CSCtree -> SetBranchAddress("EtaBitTrk" ,  EtaBitTrk );
+  CSCtree -> SetBranchAddress("PhiBitTrk" ,  PhiBitTrk );
+  CSCtree -> SetBranchAddress("ModeTrk"   ,  ModeTrk   );
+  CSCtree -> SetBranchAddress("NumLctsTrk",  NumLctsTrk);
+
+  CSCtree -> SetBranchAddress("PtTrk_reco_front"     , PtTrk_reco_front     );
+  CSCtree -> SetBranchAddress("PtTrk_reco_rear"      , PtTrk_reco_rear      );
+  CSCtree -> SetBranchAddress("PtTrk_reco_best"      , PtTrk_reco_best 	    );
+  CSCtree -> SetBranchAddress("PtTrk_reco_best_two"  , PtTrk_reco_best_two  );
+  CSCtree -> SetBranchAddress("rpcIsmatched"         , rpcIsmatched  );
+  CSCtree -> SetBranchAddress("trkIsMatched"         , trkIsMatched         );
+  CSCtree -> SetBranchAddress("RpcMatchedID"         , RpcMatchedID         );
+
+  //Added by Scott
+  CSCtree -> SetBranchAddress("PtTrk_reco_front_three" , PtTrk_reco_front_three );
+  CSCtree -> SetBranchAddress("PtTrk_reco_rear_three"  , PtTrk_reco_rear_three  );
+  CSCtree -> SetBranchAddress("isGoodTrk"              , isGoodTrk              );
+
+  // These are the variables LCTs that belong to the CSCTF track
+  CSCtree -> SetBranchAddress("trLctglobalPhi" , trLctglobalPhi );
+  CSCtree -> SetBranchAddress("trLctglobalEta" , trLctglobalEta );
+  CSCtree -> SetBranchAddress("trLctPhiBit"    , trLctPhiBit    );
+  CSCtree -> SetBranchAddress("trLctEtaBit"    , trLctEtaBit    );
+  //CSCtree -> SetBranchAddress("trLctEtaBitMatt", trLctEtaBitMatt);  
+  CSCtree -> SetBranchAddress("trLctSector"    , trLctSector    );
+  CSCtree -> SetBranchAddress("trLctSubSector" , trLctSubSector );
+  CSCtree -> SetBranchAddress("trLctStation"   , trLctStation   );
+  CSCtree -> SetBranchAddress("trLctChamber"   , trLctChamber   );
+  CSCtree -> SetBranchAddress("trLctEndcap"    , trLctEndcap    );
+  CSCtree -> SetBranchAddress("trLctBx"        , trLctBx        );
+  CSCtree -> SetBranchAddress("trLctCSCId"     , trLctCSCId      );
+  CSCtree -> SetBranchAddress("trLctRing"      , trLctRing      );
+
+  CSCtree -> SetBranchAddress("csc_rpc_match"       , csc_rpc_match);
+  CSCtree -> SetBranchAddress("PtTrk_reco_rpc_csc"  , PtTrk_reco_rpc_csc);
+
+
+
+  // --------- RPCTF Branches ------------------------------------------------------
+ 
+  // RPC Trigger Primitive Branches(all hits in event record)
+  CSCtree -> SetBranchAddress("rpc_NumLctsTrk" ,  &rpc_NumLctsTrk );
+  CSCtree -> SetBranchAddress("rpc_gblEta"    ,  rpc_gblEta    );
+  CSCtree -> SetBranchAddress("rpc_gblPhi"    ,  rpc_gblPhi    );
+  //  CSCtree -> SetBranchAddress("rpc_Layer"     ,  rpc_Layer     );
+  //  CSCtree -> SetBranchAddress("rpc_strip"     ,  rpc_strip     );
+  CSCtree -> SetBranchAddress("rpc_bx"        ,  rpc_bx        );
+  CSCtree -> SetBranchAddress("rpc_Station"    ,  rpc_Station  );
+  CSCtree -> SetBranchAddress("rpc_Sector"    ,  rpc_Sector   );
+  CSCtree -> SetBranchAddress("rpc_Phibit"    ,  rpc_Phibit   );  
+  //CSCtree -> SetBranchAddress("rpc_Etabit"    ,  rpc_Etabit   );
+
+}
+
+void EffiEvent::GetEntry( long int iEvt ){
+
+  CSCtree -> GetEntry(iEvt);
+
+}

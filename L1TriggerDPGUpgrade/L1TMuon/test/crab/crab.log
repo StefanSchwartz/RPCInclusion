@@ -1,0 +1,211 @@
+DEBUG 2015-01-12 14:31:14,712: 	 Executing command: 'submit'
+DEBUG 2015-01-12 14:31:14,713: 	 Could not find /afs/cern.ch/user/d/dcurry/.crab3 file; creating a new one
+DEBUG 2015-01-12 14:31:14,731: 	 Checking credentials
+DEBUG 2015-01-12 14:31:14,732: 	 Proxy file /tmp/x509up_u37753 not found
+DEBUG 2015-01-12 14:31:14,732: 	 Creating proxy for 24:00 hours with VO role 'NULL' and VO group ''
+DEBUG 2015-01-12 14:31:31,105: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 0
+DEBUG 2015-01-12 14:31:31,613: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 86398
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-12 14:31:32,121: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 86397
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-12 14:31:32,626: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-12 14:31:32,626: 	 Proxy created
+ERROR 2015-01-12 14:31:32,627: 	 Configuration file 'crabConfig.py' not found
+ERROR 2015-01-12 14:31:32,627: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 218, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 42, in loadConfig
+    raise ConfigurationException("Configuration file '%s' not found" % configname)
+ConfigurationException: Configuration file 'crabConfig.py' not found
+DEBUG 2015-01-12 14:32:27,948: 	 Executing command: 'submit'
+DEBUG 2015-01-12 14:32:27,948: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-12 14:32:27,955: 	 Checking credentials
+DEBUG 2015-01-12 14:32:27,956: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-12 14:32:27,956: 	 Getting proxy life time left
+DEBUG 2015-01-12 14:32:28,460: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 86341
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-12 14:32:28,966: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 86341
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-12 14:32:28,966: 	 Proxy valid for 23:59:01 hours
+INFO 2015-01-12 14:32:28,966: 	 Will use configuration file crabConfig.py
+DEBUG 2015-01-12 14:32:28,966: 	 Loading configuration
+ERROR 2015-01-12 14:32:28,968: 	 Configuration syntax error:
+invalid syntax (crabConfig.py, line 7)
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Configuration_syntax_error
+See the ./crab.log file for more details
+ERROR 2015-01-12 14:32:28,968: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 218, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 78, in loadConfig
+    raise ConfigurationException("Configuration syntax error:\n%s\nPlease refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Configuration_syntax_error\nSee the ./crab.log file for more details" % msg)
+ConfigurationException: Configuration syntax error:
+invalid syntax (crabConfig.py, line 7)
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Configuration_syntax_error
+See the ./crab.log file for more details
+DEBUG 2015-01-12 14:40:33,260: 	 Executing command: 'submit'
+DEBUG 2015-01-12 14:40:33,260: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-12 14:40:33,269: 	 Checking credentials
+DEBUG 2015-01-12 14:40:33,269: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-12 14:40:33,269: 	 Getting proxy life time left
+DEBUG 2015-01-12 14:40:33,778: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 85856
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-12 14:40:34,185: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 85855
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-12 14:40:34,185: 	 Proxy valid for 23:50:56 hours
+INFO 2015-01-12 14:40:34,185: 	 Will use configuration file crabConfig.py
+DEBUG 2015-01-12 14:40:34,185: 	 Loading configuration
+ERROR 2015-01-12 14:40:34,188: 	 CRAB configuration problem: Parameter Data.inputDBS has an invalid value 'http://cmsdbsprod.cern.ch/cms_dbs_prod_global/servlet/DBSServlet'
+Allowed values are: 'global' ('https://cmsweb.cern.ch/dbs/prod/global/DBSReader')
+                    'phys02' ('https://cmsweb.cern.ch/dbs/prod/phys02/DBSReader')
+                    'phys03' ('https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader')
+                    'phys01' ('https://cmsweb.cern.ch/dbs/prod/phys01/DBSReader')
+If Data.inputDBS would not be specified, the default 'global' ('https://cmsweb.cern.ch/dbs/prod/global/DBSReader') would be used
+ERROR 2015-01-12 14:40:34,188: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 218, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 82, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: CRAB configuration problem: Parameter Data.inputDBS has an invalid value 'http://cmsdbsprod.cern.ch/cms_dbs_prod_global/servlet/DBSServlet'
+Allowed values are: 'global' ('https://cmsweb.cern.ch/dbs/prod/global/DBSReader')
+                    'phys02' ('https://cmsweb.cern.ch/dbs/prod/phys02/DBSReader')
+                    'phys03' ('https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader')
+                    'phys01' ('https://cmsweb.cern.ch/dbs/prod/phys01/DBSReader')
+If Data.inputDBS would not be specified, the default 'global' ('https://cmsweb.cern.ch/dbs/prod/global/DBSReader') would be used
+DEBUG 2015-01-12 16:31:31,454: 	 Executing command: 'kill'
+DEBUG 2015-01-12 16:31:31,454: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+ERROR 2015-01-12 16:31:31,455: 	 ERROR: Task option is required.
+ERROR 2015-01-12 16:31:31,455: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 193, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/CRABClient/Commands/kill.py", line 51, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 469, in validateOptions
+    raise MissingOptionException('ERROR: Task option is required.')
+MissingOptionException: ERROR: Task option is required.
+DEBUG 2015-01-12 16:32:36,182: 	 Executing command: 'kill'
+DEBUG 2015-01-12 16:32:36,183: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-12 16:32:36,281: 	 Checking credentials
+DEBUG 2015-01-12 16:32:36,282: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-12 16:32:36,282: 	 Getting proxy life time left
+DEBUG 2015-01-12 16:32:37,490: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 79132
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-12 16:32:38,599: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 79131
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-12 16:32:38,599: 	 Proxy valid for 21:58:52 hours
+ERROR 2015-01-12 16:32:38,600: 	 Working directory for task 150112_134130_crab3test-4:dcurry_crab_20150112_144103 not found 
+ERROR 2015-01-12 16:32:38,600: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 242, in __init__
+    self.loadLocalCache()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 346, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/CRABClient/client_utilities.py", line 383, in loadCache
+    raise TaskNotFoundException(msg)
+TaskNotFoundException: Working directory for task 150112_134130_crab3test-4:dcurry_crab_20150112_144103 not found 
+DEBUG 2015-01-14 17:03:59,441: 	 Executing command: 'status'
+DEBUG 2015-01-14 17:03:59,447: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-14 17:03:59,513: 	 Checking credentials
+DEBUG 2015-01-14 17:03:59,513: 	 Proxy file /tmp/x509up_u37753 not found
+DEBUG 2015-01-14 17:03:59,513: 	 Creating proxy for 24:00 hours with VO role 'NULL' and VO group ''
+DEBUG 2015-01-14 17:04:16,756: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 1
+DEBUG 2015-01-14 17:04:17,063: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 
+ error: Proxy not found: /tmp/x509up_u37753 (No such file or directory)
+
+ retcode : 1
+ERROR 2015-01-14 17:04:17,063: 	 Error while checking proxy timeleft for /tmp/x509up_u37753
+DEBUG 2015-01-14 17:04:17,366: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : 
+ error: Proxy not found: /tmp/x509up_u37753 (No such file or directory)
+
+ retcode : 1
+ERROR 2015-01-14 17:04:17,366: 	 Problems creating proxy
+ERROR 2015-01-14 17:04:17,367: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 213, in __init__
+    self.proxy_created = self.proxy.createNewVomsProxySimple(time_left_threshold = 720)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/CRABClient/CredentialInteractions.py", line 147, in createNewVomsProxySimple
+    raise ProxyCreationException("Problems creating proxy")
+ProxyCreationException: Problems creating proxy

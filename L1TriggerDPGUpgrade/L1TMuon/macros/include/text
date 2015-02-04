@@ -1,0 +1,2 @@
+chain.AddFile("root://eoscms//eos/cms//store/user/dcurry/rpc/2012D_reco_5_26/rpc_tuple_2012D_100_1_3ei.root")
+chain.AddFile("root://eoscms//eos/cms//store/user/dcurry/rpc/2012D_reco_5_26/rpc_tuple_2012D_101_1_Yj9.root")

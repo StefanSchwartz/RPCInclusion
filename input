@@ -1,0 +1,6 @@
+cmsLs /store/user/dcurry/rpc/2012C_reco/ | grep root | awk '{print ""$5""}' >> test
+
+
+
+hadd -f root://eoscms//eos/cms/store/user/dcurry/rpc/2012D_reco/minbias_2012D_merged_test.root root://eoscms//eos/cms/store/user/dcurry/rpc/2012C_reco/rpc_tuple_2012C_296_1_KqW.root root://eoscms//eos/cms/store/user/dcurry/rpc/2012C_reco/rpc_tuple_2012C_296_1_YQW.root root://eoscms//eos/cms/store/user/dcurry/rpc/2012C_reco/rpc_tuple_2012C_297_1_k64.root root://eoscms//eos/cms/store/user/dcurry/rpc/2012C_reco/rpc_tuple_2012C_298_1_obI.root root://eoscms//eos/cms/store/user/dcurry/rpc/2012C_reco/rpc_tuple_2012C_299_1_CuJ.root root://eoscms//eos/cms/store/user/dcurry/rpc/2012C_reco/rpc_tuple_2012C_299_1_Pa1.root root://eoscms//eos/cms/store/user/dcurry/rpc/2012C_reco/rpc_tuple_2012C_300_1_OLn.root root://eoscms//eos/cms/store/user/dcurry/rpc/2012C_reco/rpc_tuple_2012C_300_1_zar.root
+

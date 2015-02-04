@@ -1,0 +1,67 @@
+# Python script to merge root files together
+
+import sys
+import os
+from ROOT import *
+
+
+# This is fine for files with one tree 
+#=======================================================================================
+# the name of the chain has to be the same as the one in the tree.
+#
+# Use this for shortcut in writing out the chain lines
+#cmsLs /store/user/dcurry/rpc/2012D_reco_5_26/ | grep root | awk '{print "chain.AddFile(\"root://eoscms//eos/cms/"$5"\")"}' >> text
+#
+#cmsLs /store/user/dcurry/rpc/2012D_reco_5_26/ | grep root | awk '{print ""$5""}' >> text
+
+
+'''
+chain = TChain("CSCtree")
+
+with open("text") as file:
+    
+    for i, line in enumerate(file):
+        if i is 2: break
+        print 'executing', line
+        exec(line)
+
+        
+print '----> Merging Files.  This may take a while....'
+
+chain.Merge("root://eoscms//eos/cms/store/user/dcurry/rpc/test_merge2.root")
+'''
+# =======================================================================================
+
+
+
+# What if I have multiple trees in a file?  Use hadd
+# input files come from creating a single line of file names, seperated by a space.
+# using awk we put file names in hadd.  Only user input is path of directory after cmsLs and target file
+
+target_file = '/exports/uftrig01a/dcurry/data/rpc/2012D_minBias_clustering_1_18_2015.root'
+
+os.system('rm hadd')
+
+print '----> Printing file names/paths to hadd...'
+os.system("cmsLs /store/user/dcurry/rpc/2012D_MinBias_Raw_Reco_1_5_15/MinimumBias/crab_20150115_152609/150115_142623/0000/rpc_tuple_2012D_99.root | grep root | awk '{print ""$5""}' >> hadd")
+
+input_file = ''
+with open('hadd') as file:
+    
+    for i, line in enumerate(file):
+        
+        if i is 5: break
+
+        line = 'root://eoscms//eos/cms' + line 
+        
+        x = line.replace('\n', ' ')
+        
+        input_file += x
+
+
+
+merge = "hadd -f %s %s" % (target_file, input_file) 
+
+print '----> Merging Files into', target_file,'.  This may take a while....'
+
+os.system(merge)

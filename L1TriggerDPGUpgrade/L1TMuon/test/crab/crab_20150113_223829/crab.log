@@ -1,0 +1,136 @@
+DEBUG 2015-01-13 22:37:34,897: 	 Executing command: 'submit'
+DEBUG 2015-01-13 22:37:34,899: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 22:37:34,948: 	 Checking credentials
+DEBUG 2015-01-13 22:37:34,949: 	 Proxy file /tmp/x509up_u37753 not found
+DEBUG 2015-01-13 22:37:34,949: 	 Creating proxy for 24:00 hours with VO role 'NULL' and VO group ''
+DEBUG 2015-01-13 22:38:27,966: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 0
+DEBUG 2015-01-13 22:38:28,470: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 86398
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 22:38:28,976: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 86398
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 22:38:29,489: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 22:38:29,489: 	 Proxy created
+INFO 2015-01-13 22:38:29,490: 	 Will use configuration file crabConfig.py
+DEBUG 2015-01-13 22:38:29,491: 	 Loading configuration
+DEBUG 2015-01-13 22:38:29,645: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 22:38:29,645: 	 Checking credentials
+DEBUG 2015-01-13 22:38:29,646: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 22:38:29,646: 	 Getting proxy life time left
+DEBUG 2015-01-13 22:38:30,151: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 86396
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 22:38:30,655: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 86396
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 22:38:30,656: 	 Proxy valid for 23:59:56 hours
+DEBUG 2015-01-13 22:38:30,805: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 22:38:30,915: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 22:38:30,915: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 22:38:30,915: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 22:38:31,620: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 688:02:38  (28.7 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 22:38:31,621: 	 Myproxy is valid: 2476958
+DEBUG 2015-01-13 22:38:31,621: 	 Command use: submit
+DEBUG 2015-01-13 22:38:31,621: 	 Options use: []
+DEBUG 2015-01-13 22:38:31,766: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 22:38:31,766: 	 Instance is prod
+DEBUG 2015-01-13 22:38:31,766: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 22:38:31,766: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 22:38:31,766: 	 Started submission
+DEBUG 2015-01-13 22:38:31,767: 	 Working on ./crab_20150113_223829
+DEBUG 2015-01-13 22:38:32,511: 	 Found CMSSW_6_2_3 for slc5_amd64_gcc472 with base /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3
+DEBUG 2015-01-13 22:38:32,571: 	 UNIQUE NAME: tarUUID c038b26b-6093-4d75-bf7a-9e49300aac29 
+DEBUG 2015-01-13 22:38:32,572: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferOutputs = True
+config.General.serverUrl = 'cmsweb.cern.ch'
+config.section_('JobType')
+config.JobType.outputFiles = ['rpc_tuple_2012D.root']
+config.JobType.filecacheurl = 'https://cmsweb.cern.ch/crabcache'
+config.JobType.pluginName = 'Analysis'
+config.JobType.capath = '/etc/grid-security/certificates/'
+config.JobType.psetName = 'L1TMuon_ntuple_data.py'
+config.JobType.proxyfilename = '/tmp/x509up_u37753'
+config.section_('Data')
+config.Data.inputDataset = '/MinimumBias/Run2012D-HLTPhysics-Tier1PromptSkim-v1/RAW-RECO'
+config.Data.unitsPerJob = 1000
+config.Data.outLFN = '/store/user/dcurry/rpc/2012D_MinBias_Raw_Reco_1_11_15'
+config.Data.splitting = 'LumiBased'
+config.section_('User')
+config.section_('Site')
+config.Site.storageSite = 'T2_CH_CERN'
+
+DEBUG 2015-01-13 22:38:32,572: 	 self.config.JobType.psetName: L1TMuon_ntuple_data.py
+DEBUG 2015-01-13 22:38:32,573: 	 Importing CMSSW config L1TMuon_ntuple_data.py
+DEBUG 2015-01-13 22:38:51,441: 	 The following EDM output files will be collected: []
+DEBUG 2015-01-13 22:38:51,441: 	 The following TFile output files will be collected: []
+DEBUG 2015-01-13 22:38:51,441: 	 The following user output files will be collected: ['rpc_tuple_2012D.root']
+DEBUG 2015-01-13 22:38:51,441: 	 Writing CMSSW config to ./crab_20150113_223829/inputs/CMSSW_cfg.py
+DEBUG 2015-01-13 22:38:51,829: 	 Found CMSSW_6_2_3 for slc5_amd64_gcc472 with base /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3
+DEBUG 2015-01-13 22:38:51,829: 	 Making tarball in ./crab_20150113_223829/inputs/c038b26b-6093-4d75-bf7a-9e49300aac29default.tgz
+DEBUG 2015-01-13 22:38:51,830: 	  checking directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/lib
+DEBUG 2015-01-13 22:38:51,830: 	  adding directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/lib to tarball
+DEBUG 2015-01-13 22:38:56,622: 	  checking directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/module
+DEBUG 2015-01-13 22:38:56,678: 	  adding data directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/src/L1Trigger/CSCTrackFinder/data to tarball
+DEBUG 2015-01-13 22:38:57,888: 	  adding data directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/src/L1TriggerDPGUpgrade/L1TMuon/macros/data to tarball
+DEBUG 2015-01-13 22:38:58,080: 	  adding data directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data to tarball
+DEBUG 2015-01-13 22:38:58,361: 	  adding data directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data to tarball
+DEBUG 2015-01-13 22:38:58,411: 	  adding data directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/tests/data to tarball
+DEBUG 2015-01-13 22:38:59,151: 	 tgz contents: [('lib', 0, 1399999195, 'dcurry'), ('lib/slc5_amd64_gcc472', 0, 1421068078, 'dcurry'), ('lib/slc5_amd64_gcc472/libL1TriggerDPGUpgradeDataFormats.so', 1419992, 1400000347, 'dcurry'), ('lib/slc5_amd64_gcc472/pluginL1TriggerDPGUpgradeDataFormatsCapabilities.so', 14152, 1400000354, 'dcurry'), ('lib/slc5_amd64_gcc472/L1TriggerDPGUpgradeDataFormatsCapabilities.edmplugin', 59, 1400000354, 'dcurry'), ('lib/slc5_amd64_gcc472/libL1TriggerCSCTrackFinder.so', 12372320, 1400001559, 'dcurry'), ('lib/slc5_amd64_gcc472/libL1TriggerDPGUpgradeL1TMuon.so', 775752, 1400001567, 'dcurry'), ('lib/slc5_amd64_gcc472/pluginL1TriggerDPGUpgradeL1TMuonPlugins.so', 894864, 1421068075, 'dcurry'), ('lib/slc5_amd64_gcc472/L1TriggerDPGUpgradeL1TMuonPlugins.edmplugin', 50, 1421068075, 'dcurry'), ('lib/slc5_amd64_gcc472/pluginL1TriggerCSCTrackFinderPlugins.so', 317232, 1400001686, 'dcurry'), ('lib/slc5_amd64_gcc472/L1TriggerCSCTrackFinderPlugins.edmplugin', 47, 1400001686, 'dcurry'), ('lib/slc5_amd64_gcc472/.edmplugincache', 9883, 1421068078, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data', 0, 1399999290, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30', 0, 1399999289, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30/comp_dphi_8.dat', 3055, 1399999288, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30/mode2-mode5.dat', 3744, 1399999288, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30/comp_dphi_7.dat', 3053, 1399999289, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30/comp_dphi_4b.dat', 3050, 1399999289, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30/comp_dphi_8a.dat', 3050, 1399999289, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30/comp_dphi_5.dat', 3031, 1399999290, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_03_13', 0, 1399999291, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_03_13/comp_dphi_8.dat', 3055, 1399999290, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_03_13/comp_dphi_7.dat', 3053, 1399999291, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_03_13/comp_dphi_5.dat', 3031, 1399999291, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/data', 0, 1402485331, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/data/merge.txt', 731, 1401013309, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data', 0, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data/languages', 0, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data/languages/fetch_data.py', 3881, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data/movie_reviews', 0, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data/movie_reviews/fetch_data.py', 695, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data/twenty_newsgroups', 0, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data/twenty_newsgroups/fetch_data.py', 784, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data', 0, 1405363500, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/boston_house_prices.csv', 34741, 1405363499, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/diabetes_data.csv.gz', 23803, 1405363499, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/diabetes_target.csv.gz', 1050, 1405363500, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/digits.csv.gz', 57523, 1405363500, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/iris.csv', 2734, 1405363500, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/linnerud_exercise.csv', 212, 1405363500, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/linnerud_physiological.csv', 219, 1405363500, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/tests/data', 0, 1405363503, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/tests/data/svmlight_classification.txt', 254, 1405363502, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/tests/data/svmlight_invalid.txt', 54, 1405363502, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/tests/data/svmlight_invalid_order.txt', 23, 1405363502, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/tests/data/svmlight_multilabel.txt', 92, 1405363503, 'dcurry'), ('PSet.py', 101, 1421185131, 'dcurry'), ('PSet.pkl', 645955, 1421185131, 'dcurry'), ('debug/originalPSet.py', 5477, 1421157245, 'dcurry'), ('debug/crabConfig.py', 873, 1421185139, 'dcurry')]
+DEBUG 2015-01-13 22:38:59,152: 	 MD5 checksum: 6a653f3a0d87acc47576a13252bd41b8
+DEBUG 2015-01-13 22:38:59,224: 	  uploading archive to cache /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/src/L1TriggerDPGUpgrade/L1TMuon/test/crab/crab_20150113_223829/inputs/c038b26b-6093-4d75-bf7a-9e49300aac29default.tgz 
+DEBUG 2015-01-13 22:38:59,871: 	 Result uploading input files: ('https://cmsweb.cern.ch/crabcache', '7c2db9a6655b22702fbebcab2dd7abee2ab1fb3541d65edd06dc7b63dd6c92be.tar.gz', '6a653f3a0d87acc47576a13252bd41b8') 
+WARNING 2015-01-13 22:38:59,871: 	 WARNING: The following output files will not be published, as they are not EDM files: ['rpc_tuple_2012D.root']
+INFO 2015-01-13 22:38:59,871: 	 Sending the request to the server
+DEBUG 2015-01-13 22:38:59,872: 	 Submitting {'lfn': '/store/user/dcurry/rpc/2012D_MinBias_Raw_Reco_1_11_15', 'workflow': 'crab_20150113_223829', 'adduserfiles': [], 'savelogsflag': 0, 'publishname': '6a653f3a0d87acc47576a13252bd41b8', 'ignorelocality': 0, 'useparent': 0, 'nonprodsw': 0, 'tfileoutfiles': [], 'asyncdest': 'T2_CH_CERN', 'oneEventMode': 0, 'algoargs': 1000, 'saveoutput': 1, 'totalunits': 0, 'cachefilename': '7c2db9a6655b22702fbebcab2dd7abee2ab1fb3541d65edd06dc7b63dd6c92be.tar.gz', 'jobarch': 'slc5_amd64_gcc472', 'addoutputfiles': ['rpc_tuple_2012D.root'], 'splitalgo': 'LumiBased', 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'jobsw': 'CMSSW_6_2_3', 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publication': 1, 'edmoutfiles': [], 'cacheurl': 'https://cmsweb.cern.ch/crabcache', 'inputdata': '/MinimumBias/Run2012D-HLTPhysics-Tier1PromptSkim-v1/RAW-RECO', 'jobtype': 'Analysis'} 
+DEBUG 2015-01-13 22:38:59,872: 	 Encoded submit request: lfn=%2Fstore%2Fuser%2Fdcurry%2Frpc%2F2012D_MinBias_Raw_Reco_1_11_15&workflow=crab_20150113_223829&savelogsflag=0&publishname=6a653f3a0d87acc47576a13252bd41b8&ignorelocality=0&useparent=0&nonprodsw=0&asyncdest=T2_CH_CERN&oneEventMode=0&algoargs=1000&saveoutput=1&totalunits=0&cachefilename=7c2db9a6655b22702fbebcab2dd7abee2ab1fb3541d65edd06dc7b63dd6c92be.tar.gz&jobarch=slc5_amd64_gcc472&splitalgo=LumiBased&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&jobsw=CMSSW_6_2_3&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publication=1&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&inputdata=%2FMinimumBias%2FRun2012D-HLTPhysics-Tier1PromptSkim-v1%2FRAW-RECO&jobtype=Analysis&addoutputfiles=rpc_tuple_2012D.root
+DEBUG 2015-01-13 22:39:00,789: 	 Result: {'result': [{'RequestName': '150113_213900_crab3test-1:dcurry_crab_20150113_223829'}]}
+INFO 2015-01-13 22:39:00,792: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2015-01-13 22:39:00,792: 	 Task name: 150113_213900_crab3test-1:dcurry_crab_20150113_223829
+INFO 2015-01-13 22:39:00,792: 	 Please use 'crab status' to check how the submission process proceed
+DEBUG 2015-01-13 22:39:00,792: 	 About to return

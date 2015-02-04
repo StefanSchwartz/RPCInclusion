@@ -1,0 +1,1682 @@
+DEBUG 2015-01-13 13:51:32,963: 	 Executing command: 'submit'
+DEBUG 2015-01-13 13:51:32,964: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 13:51:32,972: 	 Checking credentials
+DEBUG 2015-01-13 13:51:32,972: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 13:51:32,972: 	 Getting proxy life time left
+DEBUG 2015-01-13 13:51:33,580: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 80687
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:51:33,988: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 80687
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:51:33,988: 	 Proxy valid for 22:24:47 hours
+INFO 2015-01-13 13:51:33,988: 	 Will use configuration file crabConfig.py
+DEBUG 2015-01-13 13:51:33,988: 	 Loading configuration
+DEBUG 2015-01-13 13:51:34,106: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 13:51:34,107: 	 Checking credentials
+DEBUG 2015-01-13 13:51:34,107: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 13:51:34,107: 	 Getting proxy life time left
+DEBUG 2015-01-13 13:51:34,612: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 80686
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:51:35,015: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 80686
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:51:35,016: 	 Proxy valid for 22:24:46 hours
+DEBUG 2015-01-13 13:51:35,422: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:51:35,564: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 13:51:35,673: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 13:51:35,674: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 13:51:35,674: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 13:51:35,880: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 696:49:34  (29.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:51:35,881: 	 Myproxy is valid: 2508574
+DEBUG 2015-01-13 13:51:35,881: 	 Command use: submit
+DEBUG 2015-01-13 13:51:35,881: 	 Options use: []
+DEBUG 2015-01-13 13:51:36,024: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 13:51:36,024: 	 Instance is prod
+DEBUG 2015-01-13 13:51:36,024: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 13:51:36,025: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 13:51:36,025: 	 Started submission
+DEBUG 2015-01-13 13:51:36,025: 	 Working on ./crab_20150113_135133
+DEBUG 2015-01-13 13:51:36,217: 	 Found CMSSW_6_2_3 for slc5_amd64_gcc472 with base /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3
+DEBUG 2015-01-13 13:51:36,236: 	 UNIQUE NAME: tarUUID b108fcc4-b208-4ab0-b3cf-17abaccc9038 
+DEBUG 2015-01-13 13:51:36,236: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferOutputs = True
+config.General.serverUrl = 'cmsweb.cern.ch'
+config.section_('JobType')
+config.JobType.outputFiles = ['rpc_tuple_2012D.root']
+config.JobType.filecacheurl = 'https://cmsweb.cern.ch/crabcache'
+config.JobType.pluginName = 'Analysis'
+config.JobType.capath = '/etc/grid-security/certificates/'
+config.JobType.psetName = 'L1TMuon_ntuple_data.py'
+config.JobType.proxyfilename = '/tmp/x509up_u37753'
+config.section_('Data')
+config.Data.inputDataset = '/MinimumBias/Run2012D-HLTPhysics-Tier1PromptSkim-v1/RAW-RECO'
+config.Data.unitsPerJob = 1000
+config.Data.outLFN = '/store/user/dcurry/rpc/2012D_MinBias_Raw_Reco_1_10_15'
+config.Data.splitting = 'LumiBased'
+config.section_('User')
+config.section_('Site')
+config.Site.storageSite = 'T2_CH_CERN'
+
+DEBUG 2015-01-13 13:51:36,236: 	 self.config.JobType.psetName: L1TMuon_ntuple_data.py
+DEBUG 2015-01-13 13:51:36,236: 	 Importing CMSSW config L1TMuon_ntuple_data.py
+DEBUG 2015-01-13 13:51:37,112: 	 The following EDM output files will be collected: []
+DEBUG 2015-01-13 13:51:37,112: 	 The following TFile output files will be collected: []
+DEBUG 2015-01-13 13:51:37,112: 	 The following user output files will be collected: ['rpc_tuple_2012D.root']
+DEBUG 2015-01-13 13:51:37,112: 	 Writing CMSSW config to ./crab_20150113_135133/inputs/CMSSW_cfg.py
+DEBUG 2015-01-13 13:51:37,479: 	 Found CMSSW_6_2_3 for slc5_amd64_gcc472 with base /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3
+DEBUG 2015-01-13 13:51:37,479: 	 Making tarball in ./crab_20150113_135133/inputs/b108fcc4-b208-4ab0-b3cf-17abaccc9038default.tgz
+DEBUG 2015-01-13 13:51:37,480: 	  checking directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/lib
+DEBUG 2015-01-13 13:51:37,480: 	  adding directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/lib to tarball
+DEBUG 2015-01-13 13:51:42,071: 	  checking directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/module
+DEBUG 2015-01-13 13:51:42,074: 	  adding data directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/src/L1Trigger/CSCTrackFinder/data to tarball
+DEBUG 2015-01-13 13:51:42,130: 	  adding data directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/src/L1TriggerDPGUpgrade/L1TMuon/macros/data to tarball
+DEBUG 2015-01-13 13:51:42,157: 	  adding data directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data to tarball
+DEBUG 2015-01-13 13:51:42,191: 	  adding data directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data to tarball
+DEBUG 2015-01-13 13:51:42,209: 	  adding data directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/tests/data to tarball
+DEBUG 2015-01-13 13:51:42,349: 	 tgz contents: [('lib', 0, 1399999195, 'dcurry'), ('lib/slc5_amd64_gcc472', 0, 1421068078, 'dcurry'), ('lib/slc5_amd64_gcc472/libL1TriggerDPGUpgradeDataFormats.so', 1419992, 1400000347, 'dcurry'), ('lib/slc5_amd64_gcc472/pluginL1TriggerDPGUpgradeDataFormatsCapabilities.so', 14152, 1400000354, 'dcurry'), ('lib/slc5_amd64_gcc472/L1TriggerDPGUpgradeDataFormatsCapabilities.edmplugin', 59, 1400000354, 'dcurry'), ('lib/slc5_amd64_gcc472/libL1TriggerCSCTrackFinder.so', 12372320, 1400001559, 'dcurry'), ('lib/slc5_amd64_gcc472/libL1TriggerDPGUpgradeL1TMuon.so', 775752, 1400001567, 'dcurry'), ('lib/slc5_amd64_gcc472/pluginL1TriggerDPGUpgradeL1TMuonPlugins.so', 894864, 1421068075, 'dcurry'), ('lib/slc5_amd64_gcc472/L1TriggerDPGUpgradeL1TMuonPlugins.edmplugin', 50, 1421068075, 'dcurry'), ('lib/slc5_amd64_gcc472/pluginL1TriggerCSCTrackFinderPlugins.so', 317232, 1400001686, 'dcurry'), ('lib/slc5_amd64_gcc472/L1TriggerCSCTrackFinderPlugins.edmplugin', 47, 1400001686, 'dcurry'), ('lib/slc5_amd64_gcc472/.edmplugincache', 9883, 1421068078, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data', 0, 1399999290, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30', 0, 1399999289, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30/comp_dphi_8.dat', 3055, 1399999288, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30/mode2-mode5.dat', 3744, 1399999288, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30/comp_dphi_7.dat', 3053, 1399999289, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30/comp_dphi_4b.dat', 3050, 1399999289, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30/comp_dphi_8a.dat', 3050, 1399999289, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30/comp_dphi_5.dat', 3031, 1399999290, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_03_13', 0, 1399999291, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_03_13/comp_dphi_8.dat', 3055, 1399999290, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_03_13/comp_dphi_7.dat', 3053, 1399999291, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_03_13/comp_dphi_5.dat', 3031, 1399999291, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/data', 0, 1402485331, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/data/merge.txt', 731, 1401013309, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data', 0, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data/languages', 0, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data/languages/fetch_data.py', 3881, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data/movie_reviews', 0, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data/movie_reviews/fetch_data.py', 695, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data/twenty_newsgroups', 0, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data/twenty_newsgroups/fetch_data.py', 784, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data', 0, 1405363500, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/boston_house_prices.csv', 34741, 1405363499, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/diabetes_data.csv.gz', 23803, 1405363499, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/diabetes_target.csv.gz', 1050, 1405363500, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/digits.csv.gz', 57523, 1405363500, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/iris.csv', 2734, 1405363500, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/linnerud_exercise.csv', 212, 1405363500, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/linnerud_physiological.csv', 219, 1405363500, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/tests/data', 0, 1405363503, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/tests/data/svmlight_classification.txt', 254, 1405363502, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/tests/data/svmlight_invalid.txt', 54, 1405363502, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/tests/data/svmlight_invalid_order.txt', 23, 1405363502, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/tests/data/svmlight_multilabel.txt', 92, 1405363503, 'dcurry'), ('PSet.py', 101, 1421153497, 'dcurry'), ('PSet.pkl', 655933, 1421153497, 'dcurry'), ('debug/originalPSet.py', 5479, 1421153427, 'dcurry'), ('debug/crabConfig.py', 873, 1421153502, 'dcurry')]
+DEBUG 2015-01-13 13:51:42,350: 	 MD5 checksum: b095462ed693dbb9d86d9f6a84bef595
+DEBUG 2015-01-13 13:51:42,402: 	  uploading archive to cache /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/src/L1TriggerDPGUpgrade/L1TMuon/test/crab/crab_20150113_135133/inputs/b108fcc4-b208-4ab0-b3cf-17abaccc9038default.tgz 
+DEBUG 2015-01-13 13:51:43,055: 	 Result uploading input files: ('https://cmsweb.cern.ch/crabcache', 'c11347c7851356371e77bd87ea77f11d972f1872986959bc3704dda1021d6682.tar.gz', 'b095462ed693dbb9d86d9f6a84bef595') 
+WARNING 2015-01-13 13:51:43,056: 	 WARNING: The following output files will not be published, as they are not EDM files: ['rpc_tuple_2012D.root']
+INFO 2015-01-13 13:51:43,056: 	 Sending the request to the server
+DEBUG 2015-01-13 13:51:43,056: 	 Submitting {'lfn': '/store/user/dcurry/rpc/2012D_MinBias_Raw_Reco_1_10_15', 'workflow': 'crab_20150113_135133', 'adduserfiles': [], 'savelogsflag': 0, 'publishname': 'b095462ed693dbb9d86d9f6a84bef595', 'ignorelocality': 0, 'useparent': 0, 'nonprodsw': 0, 'tfileoutfiles': [], 'asyncdest': 'T2_CH_CERN', 'oneEventMode': 0, 'algoargs': 1000, 'saveoutput': 1, 'totalunits': 0, 'cachefilename': 'c11347c7851356371e77bd87ea77f11d972f1872986959bc3704dda1021d6682.tar.gz', 'jobarch': 'slc5_amd64_gcc472', 'addoutputfiles': ['rpc_tuple_2012D.root'], 'splitalgo': 'LumiBased', 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'jobsw': 'CMSSW_6_2_3', 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publication': 1, 'edmoutfiles': [], 'cacheurl': 'https://cmsweb.cern.ch/crabcache', 'inputdata': '/MinimumBias/Run2012D-HLTPhysics-Tier1PromptSkim-v1/RAW-RECO', 'jobtype': 'Analysis'} 
+DEBUG 2015-01-13 13:51:43,056: 	 Encoded submit request: lfn=%2Fstore%2Fuser%2Fdcurry%2Frpc%2F2012D_MinBias_Raw_Reco_1_10_15&workflow=crab_20150113_135133&savelogsflag=0&publishname=b095462ed693dbb9d86d9f6a84bef595&ignorelocality=0&useparent=0&nonprodsw=0&asyncdest=T2_CH_CERN&oneEventMode=0&algoargs=1000&saveoutput=1&totalunits=0&cachefilename=c11347c7851356371e77bd87ea77f11d972f1872986959bc3704dda1021d6682.tar.gz&jobarch=slc5_amd64_gcc472&splitalgo=LumiBased&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&jobsw=CMSSW_6_2_3&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publication=1&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&inputdata=%2FMinimumBias%2FRun2012D-HLTPhysics-Tier1PromptSkim-v1%2FRAW-RECO&jobtype=Analysis&addoutputfiles=rpc_tuple_2012D.root
+DEBUG 2015-01-13 13:51:43,770: 	 Result: {'result': [{'RequestName': '150113_125143_crab3test-4:dcurry_crab_20150113_135133'}]}
+INFO 2015-01-13 13:51:43,772: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2015-01-13 13:51:43,772: 	 Task name: 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 13:51:43,773: 	 Please use 'crab status' to check how the submission process proceed
+DEBUG 2015-01-13 13:51:43,773: 	 About to return
+DEBUG 2015-01-13 13:51:49,434: 	 Executing command: 'status'
+DEBUG 2015-01-13 13:51:49,435: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 13:51:49,443: 	 Checking credentials
+DEBUG 2015-01-13 13:51:49,444: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 13:51:49,444: 	 Getting proxy life time left
+DEBUG 2015-01-13 13:51:49,950: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 80671
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:51:50,354: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 80670
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:51:50,355: 	 Proxy valid for 22:24:31 hours
+DEBUG 2015-01-13 13:51:50,473: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 13:51:50,473: 	 Checking credentials
+DEBUG 2015-01-13 13:51:50,473: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 13:51:50,473: 	 Getting proxy life time left
+DEBUG 2015-01-13 13:51:50,877: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 80670
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:51:51,382: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 80669
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:51:51,382: 	 Proxy valid for 22:24:30 hours
+DEBUG 2015-01-13 13:51:51,786: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:51:51,970: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 13:51:52,111: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 13:51:52,112: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 13:51:52,112: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 13:51:52,318: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 696:49:17  (29.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:51:52,319: 	 Myproxy is valid: 2508557
+DEBUG 2015-01-13 13:51:52,319: 	 Command use: status
+DEBUG 2015-01-13 13:51:52,319: 	 Options use: []
+DEBUG 2015-01-13 13:51:52,454: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 13:51:52,454: 	 Instance is prod
+DEBUG 2015-01-13 13:51:52,454: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 13:51:52,454: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 13:51:52,455: 	 Looking up detailed status of task 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+DEBUG 2015-01-13 13:51:52,573: 	 {'status': 'NEW', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 13:51:52,573: 	 Task name:			150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 13:51:52,573: 	 Task status:			NEW
+INFO 2015-01-13 13:51:52,573: 	 
+INFO 2015-01-13 13:51:52,573: 	 No publication information available yet
+INFO 2015-01-13 13:51:52,573: 	 
+No jobs created yet!
+DEBUG 2015-01-13 14:09:35,196: 	 Executing command: 'status'
+DEBUG 2015-01-13 14:09:35,197: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 14:09:35,243: 	 Checking credentials
+DEBUG 2015-01-13 14:09:35,244: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 14:09:35,244: 	 Getting proxy life time left
+DEBUG 2015-01-13 14:09:36,950: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 79604
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:09:37,455: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 79603
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:09:37,455: 	 Proxy valid for 22:06:44 hours
+DEBUG 2015-01-13 14:09:37,568: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 14:09:37,568: 	 Checking credentials
+DEBUG 2015-01-13 14:09:37,568: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 14:09:37,569: 	 Getting proxy life time left
+DEBUG 2015-01-13 14:09:38,075: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 79602
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:09:38,581: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 79602
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:09:38,582: 	 Proxy valid for 22:06:42 hours
+DEBUG 2015-01-13 14:09:39,192: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:09:39,421: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 14:09:39,565: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 14:09:39,565: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 14:09:39,565: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 14:09:40,170: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 696:31:29  (29.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:09:40,171: 	 Myproxy is valid: 2507489
+DEBUG 2015-01-13 14:09:40,171: 	 Command use: status
+DEBUG 2015-01-13 14:09:40,171: 	 Options use: []
+DEBUG 2015-01-13 14:09:40,260: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 14:09:40,260: 	 Instance is prod
+DEBUG 2015-01-13 14:09:40,260: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 14:09:40,260: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 14:09:40,260: 	 Looking up detailed status of task 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+DEBUG 2015-01-13 14:10:04,550: 	 {'status': 'UNKNOWN', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 14:10:04,550: 	 Task name:			150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 14:10:04,551: 	 Task status:			UNKNOWN
+ERROR 2015-01-13 14:10:04,551: 	 Error during task information retrieval:	150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host.
+INFO 2015-01-13 14:10:04,551: 	 
+INFO 2015-01-13 14:10:04,551: 	 No publication information available yet
+INFO 2015-01-13 14:10:04,551: 	 
+No jobs created yet!
+DEBUG 2015-01-13 14:10:39,346: 	 Executing command: 'status'
+DEBUG 2015-01-13 14:10:39,346: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 14:10:39,368: 	 Checking credentials
+DEBUG 2015-01-13 14:10:39,369: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 14:10:39,369: 	 Getting proxy life time left
+DEBUG 2015-01-13 14:10:39,873: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 79541
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:10:40,379: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 79540
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:10:40,380: 	 Proxy valid for 22:05:41 hours
+DEBUG 2015-01-13 14:10:40,489: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 14:10:40,489: 	 Checking credentials
+DEBUG 2015-01-13 14:10:40,490: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 14:10:40,490: 	 Getting proxy life time left
+DEBUG 2015-01-13 14:10:40,893: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 79540
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:10:41,297: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 79539
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:10:41,298: 	 Proxy valid for 22:05:40 hours
+DEBUG 2015-01-13 14:10:41,702: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:10:41,807: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 14:10:41,918: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 14:10:41,918: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 14:10:41,918: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 14:10:42,324: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 696:30:27  (29.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:10:42,325: 	 Myproxy is valid: 2507427
+DEBUG 2015-01-13 14:10:42,325: 	 Command use: status
+DEBUG 2015-01-13 14:10:42,325: 	 Options use: []
+DEBUG 2015-01-13 14:10:42,521: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 14:10:42,522: 	 Instance is prod
+DEBUG 2015-01-13 14:10:42,522: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 14:10:42,522: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 14:10:42,522: 	 Looking up detailed status of task 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+DEBUG 2015-01-13 14:11:13,730: 	 {'status': 'UNKNOWN', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 14:11:13,730: 	 Task name:			150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 14:11:13,730: 	 Task status:			UNKNOWN
+ERROR 2015-01-13 14:11:13,730: 	 Error during task information retrieval:	150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host.
+INFO 2015-01-13 14:11:13,730: 	 
+INFO 2015-01-13 14:11:13,731: 	 No publication information available yet
+INFO 2015-01-13 14:11:13,731: 	 
+No jobs created yet!
+DEBUG 2015-01-13 14:15:03,936: 	 Executing command: 'status'
+DEBUG 2015-01-13 14:15:03,937: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 14:15:03,954: 	 Checking credentials
+DEBUG 2015-01-13 14:15:03,954: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 14:15:03,954: 	 Getting proxy life time left
+DEBUG 2015-01-13 14:15:04,560: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 79276
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:15:05,065: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 79275
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:15:05,065: 	 Proxy valid for 22:01:16 hours
+DEBUG 2015-01-13 14:15:05,177: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 14:15:05,177: 	 Checking credentials
+DEBUG 2015-01-13 14:15:05,177: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 14:15:05,177: 	 Getting proxy life time left
+DEBUG 2015-01-13 14:15:05,582: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 79275
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:15:05,986: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 79275
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:15:05,986: 	 Proxy valid for 22:01:15 hours
+DEBUG 2015-01-13 14:15:06,390: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:15:06,533: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 14:15:06,642: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 14:15:06,642: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 14:15:06,642: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 14:15:07,146: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 696:26:02  (29.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:15:07,148: 	 Myproxy is valid: 2507162
+DEBUG 2015-01-13 14:15:07,148: 	 Command use: status
+DEBUG 2015-01-13 14:15:07,148: 	 Options use: []
+DEBUG 2015-01-13 14:15:08,079: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 14:15:08,079: 	 Instance is prod
+DEBUG 2015-01-13 14:15:08,079: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 14:15:08,079: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 14:15:08,079: 	 Looking up detailed status of task 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+DEBUG 2015-01-13 14:15:36,999: 	 {'status': 'UNKNOWN', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 14:15:36,999: 	 Task name:			150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 14:15:37,000: 	 Task status:			UNKNOWN
+ERROR 2015-01-13 14:15:37,000: 	 Error during task information retrieval:	150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host.
+INFO 2015-01-13 14:15:37,000: 	 
+INFO 2015-01-13 14:15:37,000: 	 No publication information available yet
+INFO 2015-01-13 14:15:37,000: 	 
+No jobs created yet!
+DEBUG 2015-01-13 14:26:19,769: 	 Executing command: 'status'
+DEBUG 2015-01-13 14:26:19,770: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 14:26:19,803: 	 Checking credentials
+DEBUG 2015-01-13 14:26:19,804: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 14:26:19,804: 	 Getting proxy life time left
+DEBUG 2015-01-13 14:26:20,713: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 78600
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:26:21,218: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 78599
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:26:21,219: 	 Proxy valid for 21:50:00 hours
+DEBUG 2015-01-13 14:26:21,337: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 14:26:21,337: 	 Checking credentials
+DEBUG 2015-01-13 14:26:21,337: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 14:26:21,337: 	 Getting proxy life time left
+DEBUG 2015-01-13 14:26:21,843: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 78599
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:26:22,348: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 78598
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:26:22,349: 	 Proxy valid for 21:49:59 hours
+DEBUG 2015-01-13 14:26:22,752: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:26:22,962: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 14:26:23,073: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 14:26:23,073: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 14:26:23,073: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 14:26:23,577: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 696:14:46  (29.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:26:23,579: 	 Myproxy is valid: 2506486
+DEBUG 2015-01-13 14:26:23,579: 	 Command use: status
+DEBUG 2015-01-13 14:26:23,579: 	 Options use: []
+DEBUG 2015-01-13 14:26:23,722: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 14:26:23,722: 	 Instance is prod
+DEBUG 2015-01-13 14:26:23,722: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 14:26:23,722: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 14:26:23,722: 	 Looking up detailed status of task 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+DEBUG 2015-01-13 14:26:45,317: 	 {'status': 'SUBMITTED', 'totalJobdefs': 0, 'jobSetID': '150113_125143_crab3test-4:dcurry_crab_20150113_135133', 'jobsPerStatus': {'running': 147, 'transferring': 3, 'finished': 22, 'transferred': 7}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'jobList': [['transferred', 165], ['running', 133], ['running', 132], ['finished', 131], ['finished', 130], ['running', 137], ['running', 136], ['running', 135], ['running', 134], ['transferred', 139], ['running', 138], ['transferred', 166], ['finished', 24], ['running', 25], ['running', 26], ['finished', 27], ['running', 20], ['running', 21], ['running', 22], ['running', 23], ['finished', 160], ['finished', 28], ['finished', 29], ['running', 161], ['transferred', 4], ['finished', 8], ['running', 163], ['running', 119], ['running', 120], ['running', 121], ['running', 122], ['running', 123], ['running', 124], ['running', 125], ['running', 126], ['running', 127], ['running', 128], ['running', 129], ['running', 167], ['running', 118], ['running', 59], ['running', 58], ['running', 55], ['running', 54], ['running', 57], ['running', 56], ['running', 51], ['transferring', 50], ['running', 53], ['running', 52], ['running', 164], ['running', 179], ['running', 178], ['running', 115], ['running', 114], ['running', 88], ['running', 89], ['running', 111], ['running', 110], ['running', 113], ['running', 112], ['running', 82], ['running', 83], ['running', 80], ['running', 81], ['running', 86], ['running', 87], ['running', 84], ['running', 85], ['transferred', 3], ['running', 177], ['running', 7], ['running', 108], ['running', 109], ['running', 102], ['transferring', 103], ['running', 100], ['running', 101], ['running', 106], ['running', 107], ['running', 104], ['running', 105], ['running', 39], ['finished', 38], ['finished', 33], ['finished', 32], ['finished', 31], ['finished', 30], ['finished', 37], ['finished', 36], ['finished', 35], ['finished', 34], ['running', 176], ['running', 60], ['running', 61], ['running', 62], ['running', 63], ['running', 64], ['running', 65], ['running', 66], ['running', 67], ['running', 68], ['running', 69], ['running', 175], ['running', 174], ['running', 173], ['running', 172], ['running', 171], ['running', 170], ['running', 2], ['transferred', 162], ['running', 6], ['running', 99], ['running', 98], ['running', 168], ['running', 169], ['running', 91], ['running', 90], ['running', 93], ['running', 92], ['running', 95], ['running', 94], ['running', 97], ['running', 96], ['running', 11], ['finished', 10], ['running', 13], ['running', 12], ['running', 15], ['transferred', 14], ['running', 17], ['finished', 16], ['running', 19], ['running', 18], ['running', 117], ['running', 116], ['running', 151], ['running', 150], ['running', 153], ['running', 152], ['running', 155], ['running', 154], ['running', 157], ['running', 156], ['running', 159], ['running', 158], ['running', 48], ['running', 49], ['running', 46], ['running', 47], ['transferring', 44], ['running', 45], ['running', 42], ['running', 43], ['running', 40], ['running', 41], ['finished', 1], ['running', 5], ['finished', 9], ['running', 146], ['running', 147], ['running', 144], ['running', 145], ['finished', 142], ['running', 143], ['running', 140], ['running', 141], ['running', 148], ['running', 149], ['running', 77], ['running', 76], ['running', 75], ['running', 74], ['running', 73], ['running', 72], ['running', 71], ['running', 70], ['running', 79], ['running', 78]], 'jobs': {'133': {'State': 'running'}, '132': {'State': 'running'}, '131': {'State': 'finished'}, '130': {'State': 'finished'}, '137': {'State': 'running'}, '136': {'State': 'running'}, '135': {'State': 'running'}, '134': {'State': 'running'}, '139': {'State': 'transferred'}, '138': {'State': 'running'}, '93': {'State': 'running'}, '24': {'State': 'finished'}, '25': {'State': 'running'}, '26': {'State': 'running'}, '27': {'State': 'finished'}, '20': {'State': 'running'}, '21': {'State': 'running'}, '22': {'State': 'running'}, '23': {'State': 'running'}, '95': {'State': 'running'}, '28': {'State': 'finished'}, '29': {'State': 'finished'}, '94': {'State': 'running'}, '4': {'State': 'transferred'}, '8': {'State': 'finished'}, '96': {'State': 'running'}, '68': {'State': 'running'}, '120': {'State': 'running'}, '121': {'State': 'running'}, '122': {'State': 'running'}, '123': {'State': 'running'}, '124': {'State': 'running'}, '125': {'State': 'running'}, '126': {'State': 'running'}, '127': {'State': 'running'}, '128': {'State': 'running'}, '129': {'State': 'running'}, '69': {'State': 'running'}, '91': {'State': 'running'}, '59': {'State': 'running'}, '58': {'State': 'running'}, '55': {'State': 'running'}, '54': {'State': 'running'}, '57': {'State': 'running'}, '56': {'State': 'running'}, '51': {'State': 'running'}, '50': {'State': 'transferring'}, '53': {'State': 'running'}, '52': {'State': 'running'}, '90': {'State': 'running'}, '66': {'State': 'running'}, '67': {'State': 'running'}, '115': {'State': 'running'}, '114': {'State': 'running'}, '88': {'State': 'running'}, '89': {'State': 'running'}, '111': {'State': 'running'}, '110': {'State': 'running'}, '113': {'State': 'running'}, '112': {'State': 'running'}, '82': {'State': 'running'}, '83': {'State': 'running'}, '80': {'State': 'running'}, '81': {'State': 'running'}, '119': {'State': 'running'}, '118': {'State': 'running'}, '84': {'State': 'running'}, '85': {'State': 'running'}, '3': {'State': 'transferred'}, '7': {'State': 'running'}, '92': {'State': 'running'}, '108': {'State': 'running'}, '109': {'State': 'running'}, '102': {'State': 'running'}, '103': {'State': 'transferring'}, '100': {'State': 'running'}, '101': {'State': 'running'}, '106': {'State': 'running'}, '107': {'State': 'running'}, '104': {'State': 'running'}, '105': {'State': 'running'}, '39': {'State': 'running'}, '38': {'State': 'finished'}, '33': {'State': 'finished'}, '32': {'State': 'finished'}, '31': {'State': 'finished'}, '30': {'State': 'finished'}, '37': {'State': 'finished'}, '36': {'State': 'finished'}, '35': {'State': 'finished'}, '34': {'State': 'finished'}, '60': {'State': 'running'}, '61': {'State': 'running'}, '62': {'State': 'running'}, '63': {'State': 'running'}, '64': {'State': 'running'}, '65': {'State': 'running'}, '179': {'State': 'running'}, '178': {'State': 'running'}, '177': {'State': 'running'}, '176': {'State': 'running'}, '175': {'State': 'running'}, '174': {'State': 'running'}, '173': {'State': 'running'}, '172': {'State': 'running'}, '171': {'State': 'running'}, '170': {'State': 'running'}, '2': {'State': 'running'}, '6': {'State': 'running'}, '97': {'State': 'running'}, '99': {'State': 'running'}, '98': {'State': 'running'}, '168': {'State': 'running'}, '169': {'State': 'running'}, '164': {'State': 'running'}, '165': {'State': 'transferred'}, '166': {'State': 'transferred'}, '167': {'State': 'running'}, '160': {'State': 'finished'}, '161': {'State': 'running'}, '162': {'State': 'transferred'}, '163': {'State': 'running'}, '11': {'State': 'running'}, '10': {'State': 'finished'}, '13': {'State': 'running'}, '12': {'State': 'running'}, '15': {'State': 'running'}, '14': {'State': 'transferred'}, '17': {'State': 'running'}, '16': {'State': 'finished'}, '19': {'State': 'running'}, '18': {'State': 'running'}, '117': {'State': 'running'}, '116': {'State': 'running'}, '151': {'State': 'running'}, '150': {'State': 'running'}, '153': {'State': 'running'}, '152': {'State': 'running'}, '155': {'State': 'running'}, '154': {'State': 'running'}, '157': {'State': 'running'}, '156': {'State': 'running'}, '159': {'State': 'running'}, '158': {'State': 'running'}, '48': {'State': 'running'}, '49': {'State': 'running'}, '46': {'State': 'running'}, '86': {'State': 'running'}, '44': {'State': 'transferring'}, '45': {'State': 'running'}, '42': {'State': 'running'}, '43': {'State': 'running'}, '40': {'State': 'running'}, '87': {'State': 'running'}, '1': {'State': 'finished'}, '5': {'State': 'running'}, '9': {'State': 'finished'}, '146': {'State': 'running'}, '147': {'State': 'running'}, '144': {'State': 'running'}, '145': {'State': 'running'}, '142': {'State': 'finished'}, '143': {'State': 'running'}, '140': {'State': 'running'}, '141': {'State': 'running'}, '148': {'State': 'running'}, '149': {'State': 'running'}, '77': {'State': 'running'}, '76': {'State': 'running'}, '75': {'State': 'running'}, '74': {'State': 'running'}, '73': {'State': 'running'}, '72': {'State': 'running'}, '71': {'State': 'running'}, '70': {'State': 'running'}, '79': {'State': 'running'}, '78': {'State': 'running'}, '41': {'State': 'running'}, '47': {'State': 'running'}}, 'jobdefErrors': [], 'outdatasets': None, 'pool': {}, 'publication': {}}
+INFO 2015-01-13 14:26:45,317: 	 Task name:			150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 14:26:45,317: 	 Task status:			SUBMITTED
+INFO 2015-01-13 14:26:45,317: 	 Glidemon monitoring URL:	http://glidemon.web.cern.ch/glidemon/jobs.php?taskname=150113_125143_crab3test-4%3Adcurry_crab_20150113_135133
+INFO 2015-01-13 14:26:45,317: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=dcurry&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=150113_125143_crab3test-4%3Adcurry_crab_20150113_135133
+INFO 2015-01-13 14:26:45,321: 	 Details:			finished       12.3% ( 22/179)
+INFO 2015-01-13 14:26:45,321: 	 				running        82.1% (147/179)
+INFO 2015-01-13 14:26:45,321: 	 				transferred     3.9% (  7/179)
+INFO 2015-01-13 14:26:45,321: 	 				transferring    1.7% (  3/179)
+INFO 2015-01-13 14:26:45,322: 	 
+INFO 2015-01-13 14:26:45,322: 	 No publication information available yet
+DEBUG 2015-01-13 14:33:28,023: 	 Executing command: 'status'
+DEBUG 2015-01-13 14:33:28,024: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 14:33:28,041: 	 Checking credentials
+DEBUG 2015-01-13 14:33:28,042: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 14:33:28,042: 	 Getting proxy life time left
+DEBUG 2015-01-13 14:33:28,946: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 78172
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:33:29,451: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 78171
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:33:29,452: 	 Proxy valid for 21:42:52 hours
+DEBUG 2015-01-13 14:33:29,572: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 14:33:29,572: 	 Checking credentials
+DEBUG 2015-01-13 14:33:29,573: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 14:33:29,573: 	 Getting proxy life time left
+DEBUG 2015-01-13 14:33:30,078: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 78170
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:33:30,584: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 78170
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:33:30,585: 	 Proxy valid for 21:42:50 hours
+DEBUG 2015-01-13 14:33:31,092: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:33:31,303: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 14:33:31,421: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 14:33:31,422: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 14:33:31,422: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 14:33:31,827: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 696:07:38  (29.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:33:31,828: 	 Myproxy is valid: 2506058
+DEBUG 2015-01-13 14:33:31,828: 	 Command use: status
+DEBUG 2015-01-13 14:33:31,828: 	 Options use: []
+DEBUG 2015-01-13 14:33:31,970: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 14:33:31,970: 	 Instance is prod
+DEBUG 2015-01-13 14:33:31,970: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 14:33:31,970: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 14:33:31,970: 	 Looking up detailed status of task 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+DEBUG 2015-01-13 14:34:01,081: 	 {'status': 'UNKNOWN', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 14:34:01,081: 	 Task name:			150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 14:34:01,081: 	 Task status:			UNKNOWN
+ERROR 2015-01-13 14:34:01,081: 	 Error during task information retrieval:	150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host.
+INFO 2015-01-13 14:34:01,081: 	 
+INFO 2015-01-13 14:34:01,081: 	 No publication information available yet
+INFO 2015-01-13 14:34:01,081: 	 
+No jobs created yet!
+DEBUG 2015-01-13 14:41:45,099: 	 Executing command: 'status'
+DEBUG 2015-01-13 14:41:45,100: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 14:41:45,151: 	 Checking credentials
+DEBUG 2015-01-13 14:41:45,160: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 14:41:45,160: 	 Getting proxy life time left
+DEBUG 2015-01-13 14:41:46,168: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 77674
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:41:46,574: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 77674
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:41:46,574: 	 Proxy valid for 21:34:34 hours
+DEBUG 2015-01-13 14:41:46,690: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 14:41:46,691: 	 Checking credentials
+DEBUG 2015-01-13 14:41:46,691: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 14:41:46,691: 	 Getting proxy life time left
+DEBUG 2015-01-13 14:41:47,206: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 77673
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:41:47,717: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 77673
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:41:47,717: 	 Proxy valid for 21:34:33 hours
+DEBUG 2015-01-13 14:41:48,221: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:41:48,435: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 14:41:48,549: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 14:41:48,550: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 14:41:48,550: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 14:41:49,257: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 695:59:20  (29.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:41:49,258: 	 Myproxy is valid: 2505560
+DEBUG 2015-01-13 14:41:49,258: 	 Command use: status
+DEBUG 2015-01-13 14:41:49,258: 	 Options use: []
+DEBUG 2015-01-13 14:41:49,431: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 14:41:49,431: 	 Instance is prod
+DEBUG 2015-01-13 14:41:49,431: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 14:41:49,431: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 14:41:49,431: 	 Looking up detailed status of task 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+DEBUG 2015-01-13 14:42:04,941: 	 {'status': 'SUBMITTED', 'totalJobdefs': 0, 'jobSetID': '150113_125143_crab3test-4:dcurry_crab_20150113_135133', 'jobsPerStatus': {'running': 109, 'finished': 61, 'transferring': 1, 'cooloff': 1, 'transferred': 7}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'jobList': [['finished', 165], ['running', 133], ['running', 132], ['finished', 131], ['finished', 130], ['running', 137], ['running', 136], ['running', 135], ['running', 134], ['finished', 139], ['running', 138], ['finished', 166], ['finished', 24], ['running', 25], ['finished', 26], ['finished', 27], ['running', 20], ['running', 21], ['running', 22], ['transferred', 23], ['finished', 160], ['finished', 28], ['finished', 29], ['running', 161], ['finished', 4], ['finished', 8], ['running', 163], ['running', 119], ['running', 120], ['running', 121], ['running', 122], ['finished', 123], ['finished', 124], ['transferred', 125], ['running', 126], ['running', 127], ['transferred', 128], ['running', 129], ['finished', 167], ['running', 118], ['running', 59], ['running', 58], ['running', 55], ['running', 54], ['running', 57], ['finished', 56], ['running', 51], ['finished', 50], ['finished', 53], ['running', 52], ['finished', 164], ['finished', 179], ['running', 178], ['running', 115], ['running', 114], ['running', 88], ['finished', 89], ['transferred', 111], ['running', 110], ['transferred', 113], ['running', 112], ['running', 82], ['cooloff', 83], ['running', 80], ['running', 81], ['running', 86], ['finished', 87], ['running', 84], ['running', 85], ['finished', 3], ['running', 177], ['running', 7], ['running', 108], ['running', 109], ['running', 102], ['finished', 103], ['finished', 100], ['running', 101], ['running', 106], ['running', 107], ['running', 104], ['running', 105], ['running', 39], ['finished', 38], ['finished', 33], ['finished', 32], ['finished', 31], ['finished', 30], ['finished', 37], ['finished', 36], ['finished', 35], ['finished', 34], ['running', 176], ['running', 60], ['running', 61], ['running', 62], ['running', 63], ['running', 64], ['running', 65], ['running', 66], ['running', 67], ['running', 68], ['running', 69], ['finished', 175], ['finished', 174], ['finished', 173], ['finished', 172], ['finished', 171], ['running', 170], ['finished', 2], ['finished', 162], ['transferred', 6], ['finished', 99], ['finished', 98], ['finished', 168], ['transferring', 169], ['running', 91], ['finished', 90], ['running', 93], ['running', 92], ['running', 95], ['running', 94], ['finished', 97], ['finished', 96], ['running', 11], ['finished', 10], ['running', 13], ['finished', 12], ['running', 15], ['finished', 14], ['running', 17], ['finished', 16], ['finished', 19], ['running', 18], ['running', 117], ['running', 116], ['running', 151], ['running', 150], ['running', 153], ['running', 152], ['running', 155], ['running', 154], ['running', 157], ['running', 156], ['running', 159], ['running', 158], ['running', 48], ['finished', 49], ['running', 46], ['running', 47], ['finished', 44], ['running', 45], ['running', 42], ['running', 43], ['running', 40], ['running', 41], ['finished', 1], ['running', 5], ['finished', 9], ['running', 146], ['running', 147], ['running', 144], ['running', 145], ['finished', 142], ['running', 143], ['finished', 140], ['finished', 141], ['running', 148], ['running', 149], ['running', 77], ['running', 76], ['running', 75], ['running', 74], ['running', 73], ['running', 72], ['finished', 71], ['transferred', 70], ['running', 79], ['running', 78]], 'jobs': {'133': {'State': 'running'}, '132': {'State': 'running'}, '131': {'State': 'finished'}, '130': {'State': 'finished'}, '137': {'State': 'running'}, '136': {'State': 'running'}, '135': {'State': 'running'}, '134': {'State': 'running'}, '139': {'State': 'finished'}, '138': {'State': 'running'}, '93': {'State': 'running'}, '24': {'State': 'finished'}, '25': {'State': 'running'}, '26': {'State': 'finished'}, '27': {'State': 'finished'}, '20': {'State': 'running'}, '21': {'State': 'running'}, '22': {'State': 'running'}, '23': {'State': 'transferred'}, '95': {'State': 'running'}, '28': {'State': 'finished'}, '29': {'State': 'finished'}, '94': {'State': 'running'}, '4': {'State': 'finished'}, '8': {'State': 'finished'}, '96': {'State': 'finished'}, '68': {'State': 'running'}, '120': {'State': 'running'}, '121': {'State': 'running'}, '122': {'State': 'running'}, '123': {'State': 'finished'}, '124': {'State': 'finished'}, '125': {'State': 'transferred'}, '126': {'State': 'running'}, '127': {'State': 'running'}, '128': {'State': 'transferred'}, '129': {'State': 'running'}, '69': {'State': 'running'}, '91': {'State': 'running'}, '59': {'State': 'running'}, '58': {'State': 'running'}, '55': {'State': 'running'}, '54': {'State': 'running'}, '57': {'State': 'running'}, '56': {'State': 'finished'}, '51': {'State': 'running'}, '50': {'State': 'finished'}, '53': {'State': 'finished'}, '52': {'State': 'running'}, '90': {'State': 'finished'}, '66': {'State': 'running'}, '67': {'State': 'running'}, '115': {'State': 'running'}, '114': {'State': 'running'}, '88': {'State': 'running'}, '89': {'State': 'finished'}, '111': {'State': 'transferred'}, '110': {'State': 'running'}, '113': {'State': 'transferred'}, '112': {'State': 'running'}, '82': {'State': 'running'}, '83': {'State': 'cooloff'}, '80': {'State': 'running'}, '81': {'State': 'running'}, '119': {'State': 'running'}, '118': {'State': 'running'}, '84': {'State': 'running'}, '85': {'State': 'running'}, '3': {'State': 'finished'}, '7': {'State': 'running'}, '92': {'State': 'running'}, '108': {'State': 'running'}, '109': {'State': 'running'}, '102': {'State': 'running'}, '103': {'State': 'finished'}, '100': {'State': 'finished'}, '101': {'State': 'running'}, '106': {'State': 'running'}, '107': {'State': 'running'}, '104': {'State': 'running'}, '105': {'State': 'running'}, '39': {'State': 'running'}, '38': {'State': 'finished'}, '33': {'State': 'finished'}, '32': {'State': 'finished'}, '31': {'State': 'finished'}, '30': {'State': 'finished'}, '37': {'State': 'finished'}, '36': {'State': 'finished'}, '35': {'State': 'finished'}, '34': {'State': 'finished'}, '60': {'State': 'running'}, '61': {'State': 'running'}, '62': {'State': 'running'}, '63': {'State': 'running'}, '64': {'State': 'running'}, '65': {'State': 'running'}, '179': {'State': 'finished'}, '178': {'State': 'running'}, '177': {'State': 'running'}, '176': {'State': 'running'}, '175': {'State': 'finished'}, '174': {'State': 'finished'}, '173': {'State': 'finished'}, '172': {'State': 'finished'}, '171': {'State': 'finished'}, '170': {'State': 'running'}, '2': {'State': 'finished'}, '6': {'State': 'transferred'}, '97': {'State': 'finished'}, '99': {'State': 'finished'}, '98': {'State': 'finished'}, '168': {'State': 'finished'}, '169': {'State': 'transferring'}, '164': {'State': 'finished'}, '165': {'State': 'finished'}, '166': {'State': 'finished'}, '167': {'State': 'finished'}, '160': {'State': 'finished'}, '161': {'State': 'running'}, '162': {'State': 'finished'}, '163': {'State': 'running'}, '11': {'State': 'running'}, '10': {'State': 'finished'}, '13': {'State': 'running'}, '12': {'State': 'finished'}, '15': {'State': 'running'}, '14': {'State': 'finished'}, '17': {'State': 'running'}, '16': {'State': 'finished'}, '19': {'State': 'finished'}, '18': {'State': 'running'}, '117': {'State': 'running'}, '116': {'State': 'running'}, '151': {'State': 'running'}, '150': {'State': 'running'}, '153': {'State': 'running'}, '152': {'State': 'running'}, '155': {'State': 'running'}, '154': {'State': 'running'}, '157': {'State': 'running'}, '156': {'State': 'running'}, '159': {'State': 'running'}, '158': {'State': 'running'}, '48': {'State': 'running'}, '49': {'State': 'finished'}, '46': {'State': 'running'}, '86': {'State': 'running'}, '44': {'State': 'finished'}, '45': {'State': 'running'}, '42': {'State': 'running'}, '43': {'State': 'running'}, '40': {'State': 'running'}, '87': {'State': 'finished'}, '1': {'State': 'finished'}, '5': {'State': 'running'}, '9': {'State': 'finished'}, '146': {'State': 'running'}, '147': {'State': 'running'}, '144': {'State': 'running'}, '145': {'State': 'running'}, '142': {'State': 'finished'}, '143': {'State': 'running'}, '140': {'State': 'finished'}, '141': {'State': 'finished'}, '148': {'State': 'running'}, '149': {'State': 'running'}, '77': {'State': 'running'}, '76': {'State': 'running'}, '75': {'State': 'running'}, '74': {'State': 'running'}, '73': {'State': 'running'}, '72': {'State': 'running'}, '71': {'State': 'finished'}, '70': {'State': 'transferred'}, '79': {'State': 'running'}, '78': {'State': 'running'}, '41': {'State': 'running'}, '47': {'State': 'running'}}, 'jobdefErrors': [], 'outdatasets': None, 'pool': {}, 'publication': {}}
+INFO 2015-01-13 14:42:04,941: 	 Task name:			150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 14:42:04,942: 	 Task status:			SUBMITTED
+INFO 2015-01-13 14:42:04,942: 	 Glidemon monitoring URL:	http://glidemon.web.cern.ch/glidemon/jobs.php?taskname=150113_125143_crab3test-4%3Adcurry_crab_20150113_135133
+INFO 2015-01-13 14:42:04,942: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=dcurry&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=150113_125143_crab3test-4%3Adcurry_crab_20150113_135133
+INFO 2015-01-13 14:42:04,942: 	 Details:			cooloff         0.6% (  1/179)
+INFO 2015-01-13 14:42:04,942: 	 				finished       34.1% ( 61/179)
+INFO 2015-01-13 14:42:04,942: 	 				running        60.9% (109/179)
+INFO 2015-01-13 14:42:04,943: 	 				transferred     3.9% (  7/179)
+INFO 2015-01-13 14:42:04,943: 	 				transferring    0.6% (  1/179)
+INFO 2015-01-13 14:42:04,943: 	 
+INFO 2015-01-13 14:42:04,943: 	 No publication information available yet
+DEBUG 2015-01-13 14:53:16,541: 	 Executing command: 'status'
+DEBUG 2015-01-13 14:53:16,546: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 14:53:16,670: 	 Checking credentials
+DEBUG 2015-01-13 14:53:16,682: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 14:53:16,682: 	 Getting proxy life time left
+DEBUG 2015-01-13 14:53:18,191: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 76982
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:53:19,913: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 76981
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:53:19,913: 	 Proxy valid for 21:23:02 hours
+DEBUG 2015-01-13 14:53:20,155: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 14:53:20,155: 	 Checking credentials
+DEBUG 2015-01-13 14:53:20,155: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 14:53:20,155: 	 Getting proxy life time left
+DEBUG 2015-01-13 14:53:20,760: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 76980
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:53:21,368: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 76979
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:53:21,368: 	 Proxy valid for 21:23:00 hours
+DEBUG 2015-01-13 14:53:21,984: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:53:22,213: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 14:53:22,326: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 14:53:22,326: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 14:53:22,327: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 14:53:23,135: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 695:47:46  (29.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 14:53:23,137: 	 Myproxy is valid: 2504866
+DEBUG 2015-01-13 14:53:23,137: 	 Command use: status
+DEBUG 2015-01-13 14:53:23,137: 	 Options use: []
+DEBUG 2015-01-13 14:53:23,233: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 14:53:23,233: 	 Instance is prod
+DEBUG 2015-01-13 14:53:23,233: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 14:53:23,233: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 14:53:23,233: 	 Looking up detailed status of task 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+DEBUG 2015-01-13 14:53:23,818: 	 {'status': 'SUBMITTED', 'totalJobdefs': 0, 'jobSetID': '150113_125143_crab3test-4:dcurry_crab_20150113_135133', 'jobsPerStatus': {'cooloff': 1, 'finished': 92, 'transferring': 5, 'running': 77, 'transferred': 4}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'jobList': [['finished', 165], ['running', 133], ['finished', 132], ['finished', 131], ['finished', 130], ['running', 137], ['running', 136], ['running', 135], ['running', 134], ['finished', 139], ['finished', 138], ['finished', 166], ['finished', 24], ['running', 25], ['finished', 26], ['finished', 27], ['running', 20], ['finished', 21], ['running', 22], ['finished', 23], ['finished', 160], ['finished', 28], ['finished', 29], ['running', 161], ['finished', 4], ['finished', 8], ['cooloff', 163], ['transferred', 119], ['running', 120], ['running', 121], ['running', 122], ['finished', 123], ['finished', 124], ['finished', 125], ['finished', 126], ['finished', 127], ['finished', 128], ['running', 129], ['finished', 167], ['running', 118], ['running', 59], ['running', 58], ['running', 55], ['finished', 54], ['running', 57], ['finished', 56], ['running', 51], ['finished', 50], ['finished', 53], ['finished', 52], ['finished', 164], ['finished', 179], ['transferring', 178], ['running', 115], ['running', 114], ['running', 88], ['finished', 89], ['finished', 111], ['running', 110], ['finished', 113], ['running', 112], ['running', 82], ['running', 83], ['running', 80], ['running', 81], ['transferring', 86], ['finished', 87], ['running', 84], ['running', 85], ['finished', 3], ['transferring', 177], ['running', 7], ['transferred', 108], ['running', 109], ['running', 102], ['finished', 103], ['finished', 100], ['running', 101], ['running', 106], ['running', 107], ['running', 104], ['running', 105], ['finished', 39], ['finished', 38], ['finished', 33], ['finished', 32], ['finished', 31], ['finished', 30], ['finished', 37], ['finished', 36], ['finished', 35], ['finished', 34], ['finished', 176], ['running', 60], ['running', 61], ['running', 62], ['finished', 63], ['running', 64], ['finished', 65], ['finished', 66], ['running', 67], ['finished', 68], ['running', 69], ['finished', 175], ['finished', 174], ['finished', 173], ['finished', 172], ['finished', 171], ['running', 170], ['finished', 2], ['finished', 162], ['finished', 6], ['finished', 99], ['finished', 98], ['finished', 168], ['transferring', 169], ['running', 91], ['finished', 90], ['running', 93], ['running', 92], ['running', 95], ['running', 94], ['finished', 97], ['finished', 96], ['transferred', 11], ['finished', 10], ['running', 13], ['finished', 12], ['running', 15], ['finished', 14], ['finished', 17], ['finished', 16], ['finished', 19], ['running', 18], ['running', 117], ['running', 116], ['running', 151], ['finished', 150], ['running', 153], ['running', 152], ['running', 155], ['running', 154], ['running', 157], ['running', 156], ['finished', 159], ['running', 158], ['finished', 48], ['finished', 49], ['running', 46], ['finished', 47], ['finished', 44], ['finished', 45], ['finished', 42], ['finished', 43], ['finished', 40], ['transferring', 41], ['finished', 1], ['finished', 5], ['finished', 9], ['running', 146], ['running', 147], ['running', 144], ['running', 145], ['finished', 142], ['running', 143], ['finished', 140], ['finished', 141], ['running', 148], ['running', 149], ['transferred', 77], ['running', 76], ['running', 75], ['running', 74], ['running', 73], ['finished', 72], ['finished', 71], ['finished', 70], ['running', 79], ['running', 78]], 'jobs': {'133': {'State': 'running'}, '132': {'State': 'finished'}, '131': {'State': 'finished'}, '130': {'State': 'finished'}, '137': {'State': 'running'}, '136': {'State': 'running'}, '135': {'State': 'running'}, '134': {'State': 'running'}, '139': {'State': 'finished'}, '138': {'State': 'finished'}, '93': {'State': 'running'}, '24': {'State': 'finished'}, '25': {'State': 'running'}, '26': {'State': 'finished'}, '27': {'State': 'finished'}, '20': {'State': 'running'}, '21': {'State': 'finished'}, '22': {'State': 'running'}, '23': {'State': 'finished'}, '95': {'State': 'running'}, '28': {'State': 'finished'}, '29': {'State': 'finished'}, '94': {'State': 'running'}, '4': {'State': 'finished'}, '8': {'State': 'finished'}, '96': {'State': 'finished'}, '68': {'State': 'finished'}, '120': {'State': 'running'}, '121': {'State': 'running'}, '122': {'State': 'running'}, '123': {'State': 'finished'}, '124': {'State': 'finished'}, '125': {'State': 'finished'}, '126': {'State': 'finished'}, '127': {'State': 'finished'}, '128': {'State': 'finished'}, '129': {'State': 'running'}, '69': {'State': 'running'}, '91': {'State': 'running'}, '59': {'State': 'running'}, '58': {'State': 'running'}, '55': {'State': 'running'}, '54': {'State': 'finished'}, '57': {'State': 'running'}, '56': {'State': 'finished'}, '51': {'State': 'running'}, '50': {'State': 'finished'}, '53': {'State': 'finished'}, '52': {'State': 'finished'}, '90': {'State': 'finished'}, '66': {'State': 'finished'}, '67': {'State': 'running'}, '115': {'State': 'running'}, '114': {'State': 'running'}, '88': {'State': 'running'}, '89': {'State': 'finished'}, '111': {'State': 'finished'}, '110': {'State': 'running'}, '113': {'State': 'finished'}, '112': {'State': 'running'}, '82': {'State': 'running'}, '83': {'State': 'running'}, '80': {'State': 'running'}, '81': {'State': 'running'}, '119': {'State': 'transferred'}, '118': {'State': 'running'}, '84': {'State': 'running'}, '85': {'State': 'running'}, '3': {'State': 'finished'}, '7': {'State': 'running'}, '92': {'State': 'running'}, '108': {'State': 'transferred'}, '109': {'State': 'running'}, '102': {'State': 'running'}, '103': {'State': 'finished'}, '100': {'State': 'finished'}, '101': {'State': 'running'}, '106': {'State': 'running'}, '107': {'State': 'running'}, '104': {'State': 'running'}, '105': {'State': 'running'}, '39': {'State': 'finished'}, '38': {'State': 'finished'}, '33': {'State': 'finished'}, '32': {'State': 'finished'}, '31': {'State': 'finished'}, '30': {'State': 'finished'}, '37': {'State': 'finished'}, '36': {'State': 'finished'}, '35': {'State': 'finished'}, '34': {'State': 'finished'}, '60': {'State': 'running'}, '61': {'State': 'running'}, '62': {'State': 'running'}, '63': {'State': 'finished'}, '64': {'State': 'running'}, '65': {'State': 'finished'}, '179': {'State': 'finished'}, '178': {'State': 'transferring'}, '177': {'State': 'transferring'}, '176': {'State': 'finished'}, '175': {'State': 'finished'}, '174': {'State': 'finished'}, '173': {'State': 'finished'}, '172': {'State': 'finished'}, '171': {'State': 'finished'}, '170': {'State': 'running'}, '2': {'State': 'finished'}, '6': {'State': 'finished'}, '97': {'State': 'finished'}, '99': {'State': 'finished'}, '98': {'State': 'finished'}, '168': {'State': 'finished'}, '169': {'State': 'transferring'}, '164': {'State': 'finished'}, '165': {'State': 'finished'}, '166': {'State': 'finished'}, '167': {'State': 'finished'}, '160': {'State': 'finished'}, '161': {'State': 'running'}, '162': {'State': 'finished'}, '163': {'State': 'cooloff'}, '11': {'State': 'transferred'}, '10': {'State': 'finished'}, '13': {'State': 'running'}, '12': {'State': 'finished'}, '15': {'State': 'running'}, '14': {'State': 'finished'}, '17': {'State': 'finished'}, '16': {'State': 'finished'}, '19': {'State': 'finished'}, '18': {'State': 'running'}, '117': {'State': 'running'}, '116': {'State': 'running'}, '151': {'State': 'running'}, '150': {'State': 'finished'}, '153': {'State': 'running'}, '152': {'State': 'running'}, '155': {'State': 'running'}, '154': {'State': 'running'}, '157': {'State': 'running'}, '156': {'State': 'running'}, '159': {'State': 'finished'}, '158': {'State': 'running'}, '48': {'State': 'finished'}, '49': {'State': 'finished'}, '46': {'State': 'running'}, '86': {'State': 'transferring'}, '44': {'State': 'finished'}, '45': {'State': 'finished'}, '42': {'State': 'finished'}, '43': {'State': 'finished'}, '40': {'State': 'finished'}, '87': {'State': 'finished'}, '1': {'State': 'finished'}, '5': {'State': 'finished'}, '9': {'State': 'finished'}, '146': {'State': 'running'}, '147': {'State': 'running'}, '144': {'State': 'running'}, '145': {'State': 'running'}, '142': {'State': 'finished'}, '143': {'State': 'running'}, '140': {'State': 'finished'}, '141': {'State': 'finished'}, '148': {'State': 'running'}, '149': {'State': 'running'}, '77': {'State': 'transferred'}, '76': {'State': 'running'}, '75': {'State': 'running'}, '74': {'State': 'running'}, '73': {'State': 'running'}, '72': {'State': 'finished'}, '71': {'State': 'finished'}, '70': {'State': 'finished'}, '79': {'State': 'running'}, '78': {'State': 'running'}, '41': {'State': 'transferring'}, '47': {'State': 'finished'}}, 'jobdefErrors': [], 'outdatasets': None, 'pool': {}, 'publication': {}}
+INFO 2015-01-13 14:53:23,819: 	 Task name:			150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 14:53:23,819: 	 Task status:			SUBMITTED
+INFO 2015-01-13 14:53:23,819: 	 Glidemon monitoring URL:	http://glidemon.web.cern.ch/glidemon/jobs.php?taskname=150113_125143_crab3test-4%3Adcurry_crab_20150113_135133
+INFO 2015-01-13 14:53:23,819: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=dcurry&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=150113_125143_crab3test-4%3Adcurry_crab_20150113_135133
+INFO 2015-01-13 14:53:23,819: 	 Details:			cooloff         0.6% (  1/179)
+INFO 2015-01-13 14:53:23,819: 	 				finished       51.4% ( 92/179)
+INFO 2015-01-13 14:53:23,820: 	 				running        43.0% ( 77/179)
+INFO 2015-01-13 14:53:23,820: 	 				transferred     2.2% (  4/179)
+INFO 2015-01-13 14:53:23,820: 	 				transferring    2.8% (  5/179)
+INFO 2015-01-13 14:53:23,820: 	 
+INFO 2015-01-13 14:53:23,820: 	 No publication information available yet
+DEBUG 2015-01-13 15:08:19,909: 	 Executing command: 'status'
+DEBUG 2015-01-13 15:08:19,913: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 15:08:19,971: 	 Checking credentials
+DEBUG 2015-01-13 15:08:19,974: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 15:08:19,974: 	 Getting proxy life time left
+DEBUG 2015-01-13 15:08:22,183: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 76078
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:08:22,900: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 76078
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:08:22,900: 	 Proxy valid for 21:07:58 hours
+DEBUG 2015-01-13 15:08:23,033: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 15:08:23,034: 	 Checking credentials
+DEBUG 2015-01-13 15:08:23,034: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 15:08:23,034: 	 Getting proxy life time left
+DEBUG 2015-01-13 15:08:23,944: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 76077
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:08:24,651: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 76076
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:08:24,652: 	 Proxy valid for 21:07:57 hours
+DEBUG 2015-01-13 15:08:25,261: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:08:25,823: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 15:08:25,973: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 15:08:25,974: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 15:08:25,974: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 15:08:26,681: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 695:32:43  (29.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:08:26,682: 	 Myproxy is valid: 2503963
+DEBUG 2015-01-13 15:08:26,683: 	 Command use: status
+DEBUG 2015-01-13 15:08:26,683: 	 Options use: []
+DEBUG 2015-01-13 15:08:26,878: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 15:08:26,878: 	 Instance is prod
+DEBUG 2015-01-13 15:08:26,878: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 15:08:26,878: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 15:08:26,878: 	 Looking up detailed status of task 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+DEBUG 2015-01-13 15:08:49,250: 	 {'status': 'UNKNOWN', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 15:08:49,251: 	 Task name:			150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 15:08:49,251: 	 Task status:			UNKNOWN
+ERROR 2015-01-13 15:08:49,251: 	 Error during task information retrieval:	150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host.
+INFO 2015-01-13 15:08:49,251: 	 
+INFO 2015-01-13 15:08:49,251: 	 No publication information available yet
+INFO 2015-01-13 15:08:49,251: 	 
+No jobs created yet!
+DEBUG 2015-01-13 15:27:05,279: 	 Executing command: 'status'
+DEBUG 2015-01-13 15:27:05,280: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 15:27:05,352: 	 Checking credentials
+DEBUG 2015-01-13 15:27:05,353: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 15:27:05,353: 	 Getting proxy life time left
+DEBUG 2015-01-13 15:27:06,364: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 74954
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:27:06,872: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 74954
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:27:06,872: 	 Proxy valid for 20:49:14 hours
+DEBUG 2015-01-13 15:27:06,990: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 15:27:06,990: 	 Checking credentials
+DEBUG 2015-01-13 15:27:06,990: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 15:27:06,990: 	 Getting proxy life time left
+DEBUG 2015-01-13 15:27:07,495: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 74953
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:27:08,006: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 74953
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:27:08,007: 	 Proxy valid for 20:49:13 hours
+DEBUG 2015-01-13 15:27:08,513: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:27:08,664: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 15:27:08,777: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 15:27:08,777: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 15:27:08,777: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 15:27:09,283: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 695:14:00  (29.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:27:09,285: 	 Myproxy is valid: 2502840
+DEBUG 2015-01-13 15:27:09,285: 	 Command use: status
+DEBUG 2015-01-13 15:27:09,285: 	 Options use: []
+DEBUG 2015-01-13 15:27:09,372: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 15:27:09,372: 	 Instance is prod
+DEBUG 2015-01-13 15:27:09,372: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 15:27:09,373: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 15:27:09,373: 	 Looking up detailed status of task 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+DEBUG 2015-01-13 15:27:10,597: 	 {'status': 'SUBMITTED', 'totalJobdefs': 0, 'jobSetID': '150113_125143_crab3test-4:dcurry_crab_20150113_135133', 'jobsPerStatus': {'transferring': 5, 'finished': 144, 'transferred': 3, 'running': 24, 'cooloff': 2, 'idle': 1}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'jobList': [['finished', 165], ['finished', 133], ['finished', 132], ['finished', 131], ['finished', 130], ['running', 137], ['finished', 136], ['running', 135], ['transferring', 134], ['finished', 139], ['finished', 138], ['finished', 166], ['finished', 24], ['finished', 25], ['finished', 26], ['finished', 27], ['finished', 20], ['finished', 21], ['transferred', 22], ['finished', 23], ['finished', 160], ['finished', 28], ['finished', 29], ['running', 161], ['finished', 4], ['finished', 8], ['running', 163], ['finished', 119], ['finished', 120], ['running', 121], ['running', 122], ['finished', 123], ['finished', 124], ['finished', 125], ['finished', 126], ['finished', 127], ['finished', 128], ['finished', 129], ['finished', 167], ['transferring', 118], ['running', 59], ['finished', 58], ['running', 55], ['finished', 54], ['finished', 57], ['finished', 56], ['finished', 51], ['finished', 50], ['finished', 53], ['finished', 52], ['finished', 164], ['finished', 179], ['finished', 178], ['transferred', 115], ['running', 114], ['finished', 88], ['finished', 89], ['finished', 111], ['cooloff', 110], ['finished', 113], ['transferred', 112], ['finished', 82], ['running', 83], ['cooloff', 80], ['running', 81], ['finished', 86], ['finished', 87], ['running', 84], ['finished', 85], ['finished', 3], ['finished', 177], ['finished', 7], ['finished', 108], ['finished', 109], ['running', 102], ['finished', 103], ['finished', 100], ['finished', 101], ['finished', 106], ['running', 107], ['running', 104], ['finished', 105], ['finished', 39], ['finished', 38], ['finished', 33], ['finished', 32], ['finished', 31], ['finished', 30], ['finished', 37], ['finished', 36], ['finished', 35], ['finished', 34], ['finished', 176], ['finished', 60], ['finished', 61], ['finished', 62], ['finished', 63], ['running', 64], ['finished', 65], ['finished', 66], ['finished', 67], ['finished', 68], ['idle', 69], ['finished', 175], ['finished', 174], ['finished', 173], ['finished', 172], ['finished', 171], ['finished', 170], ['finished', 2], ['finished', 162], ['finished', 6], ['finished', 99], ['finished', 98], ['finished', 168], ['transferring', 169], ['finished', 91], ['finished', 90], ['finished', 93], ['finished', 92], ['finished', 95], ['running', 94], ['finished', 97], ['finished', 96], ['finished', 11], ['finished', 10], ['running', 13], ['finished', 12], ['finished', 15], ['finished', 14], ['finished', 17], ['finished', 16], ['finished', 19], ['finished', 18], ['transferring', 117], ['finished', 116], ['running', 151], ['finished', 150], ['finished', 153], ['finished', 152], ['running', 155], ['running', 154], ['finished', 157], ['running', 156], ['finished', 159], ['finished', 158], ['finished', 48], ['finished', 49], ['running', 46], ['finished', 47], ['finished', 44], ['finished', 45], ['finished', 42], ['finished', 43], ['finished', 40], ['finished', 41], ['finished', 1], ['finished', 5], ['finished', 9], ['finished', 146], ['finished', 147], ['finished', 144], ['finished', 145], ['finished', 142], ['finished', 143], ['finished', 140], ['finished', 141], ['finished', 148], ['transferring', 149], ['finished', 77], ['finished', 76], ['running', 75], ['finished', 74], ['finished', 73], ['finished', 72], ['finished', 71], ['finished', 70], ['finished', 79], ['finished', 78]], 'jobs': {'133': {'State': 'finished'}, '132': {'State': 'finished'}, '131': {'State': 'finished'}, '130': {'State': 'finished'}, '137': {'State': 'running'}, '136': {'State': 'finished'}, '135': {'State': 'running'}, '134': {'State': 'transferring'}, '139': {'State': 'finished'}, '138': {'State': 'finished'}, '93': {'State': 'finished'}, '24': {'State': 'finished'}, '25': {'State': 'finished'}, '26': {'State': 'finished'}, '27': {'State': 'finished'}, '20': {'State': 'finished'}, '21': {'State': 'finished'}, '22': {'State': 'transferred'}, '23': {'State': 'finished'}, '95': {'State': 'finished'}, '28': {'State': 'finished'}, '29': {'State': 'finished'}, '94': {'State': 'running'}, '4': {'State': 'finished'}, '8': {'State': 'finished'}, '96': {'State': 'finished'}, '68': {'State': 'finished'}, '120': {'State': 'finished'}, '121': {'State': 'running'}, '122': {'State': 'running'}, '123': {'State': 'finished'}, '124': {'State': 'finished'}, '125': {'State': 'finished'}, '126': {'State': 'finished'}, '127': {'State': 'finished'}, '128': {'State': 'finished'}, '129': {'State': 'finished'}, '69': {'State': 'idle'}, '91': {'State': 'finished'}, '59': {'State': 'running'}, '58': {'State': 'finished'}, '55': {'State': 'running'}, '54': {'State': 'finished'}, '57': {'State': 'finished'}, '56': {'State': 'finished'}, '51': {'State': 'finished'}, '50': {'State': 'finished'}, '53': {'State': 'finished'}, '52': {'State': 'finished'}, '90': {'State': 'finished'}, '66': {'State': 'finished'}, '67': {'State': 'finished'}, '115': {'State': 'transferred'}, '114': {'State': 'running'}, '88': {'State': 'finished'}, '89': {'State': 'finished'}, '111': {'State': 'finished'}, '110': {'State': 'cooloff'}, '113': {'State': 'finished'}, '112': {'State': 'transferred'}, '82': {'State': 'finished'}, '83': {'State': 'running'}, '80': {'State': 'cooloff'}, '81': {'State': 'running'}, '119': {'State': 'finished'}, '118': {'State': 'transferring'}, '84': {'State': 'running'}, '85': {'State': 'finished'}, '3': {'State': 'finished'}, '7': {'State': 'finished'}, '92': {'State': 'finished'}, '108': {'State': 'finished'}, '109': {'State': 'finished'}, '102': {'State': 'running'}, '103': {'State': 'finished'}, '100': {'State': 'finished'}, '101': {'State': 'finished'}, '106': {'State': 'finished'}, '107': {'State': 'running'}, '104': {'State': 'running'}, '105': {'State': 'finished'}, '39': {'State': 'finished'}, '38': {'State': 'finished'}, '33': {'State': 'finished'}, '32': {'State': 'finished'}, '31': {'State': 'finished'}, '30': {'State': 'finished'}, '37': {'State': 'finished'}, '36': {'State': 'finished'}, '35': {'State': 'finished'}, '34': {'State': 'finished'}, '60': {'State': 'finished'}, '61': {'State': 'finished'}, '62': {'State': 'finished'}, '63': {'State': 'finished'}, '64': {'State': 'running'}, '65': {'State': 'finished'}, '179': {'State': 'finished'}, '178': {'State': 'finished'}, '177': {'State': 'finished'}, '176': {'State': 'finished'}, '175': {'State': 'finished'}, '174': {'State': 'finished'}, '173': {'State': 'finished'}, '172': {'State': 'finished'}, '171': {'State': 'finished'}, '170': {'State': 'finished'}, '2': {'State': 'finished'}, '6': {'State': 'finished'}, '97': {'State': 'finished'}, '99': {'State': 'finished'}, '98': {'State': 'finished'}, '168': {'State': 'finished'}, '169': {'State': 'transferring'}, '164': {'State': 'finished'}, '165': {'State': 'finished'}, '166': {'State': 'finished'}, '167': {'State': 'finished'}, '160': {'State': 'finished'}, '161': {'State': 'running'}, '162': {'State': 'finished'}, '163': {'State': 'running'}, '11': {'State': 'finished'}, '10': {'State': 'finished'}, '13': {'State': 'running'}, '12': {'State': 'finished'}, '15': {'State': 'finished'}, '14': {'State': 'finished'}, '17': {'State': 'finished'}, '16': {'State': 'finished'}, '19': {'State': 'finished'}, '18': {'State': 'finished'}, '117': {'State': 'transferring'}, '116': {'State': 'finished'}, '151': {'State': 'running'}, '150': {'State': 'finished'}, '153': {'State': 'finished'}, '152': {'State': 'finished'}, '155': {'State': 'running'}, '154': {'State': 'running'}, '157': {'State': 'finished'}, '156': {'State': 'running'}, '159': {'State': 'finished'}, '158': {'State': 'finished'}, '48': {'State': 'finished'}, '49': {'State': 'finished'}, '46': {'State': 'running'}, '86': {'State': 'finished'}, '44': {'State': 'finished'}, '45': {'State': 'finished'}, '42': {'State': 'finished'}, '43': {'State': 'finished'}, '40': {'State': 'finished'}, '87': {'State': 'finished'}, '1': {'State': 'finished'}, '5': {'State': 'finished'}, '9': {'State': 'finished'}, '146': {'State': 'finished'}, '147': {'State': 'finished'}, '144': {'State': 'finished'}, '145': {'State': 'finished'}, '142': {'State': 'finished'}, '143': {'State': 'finished'}, '140': {'State': 'finished'}, '141': {'State': 'finished'}, '148': {'State': 'finished'}, '149': {'State': 'transferring'}, '77': {'State': 'finished'}, '76': {'State': 'finished'}, '75': {'State': 'running'}, '74': {'State': 'finished'}, '73': {'State': 'finished'}, '72': {'State': 'finished'}, '71': {'State': 'finished'}, '70': {'State': 'finished'}, '79': {'State': 'finished'}, '78': {'State': 'finished'}, '41': {'State': 'finished'}, '47': {'State': 'finished'}}, 'jobdefErrors': [], 'outdatasets': None, 'pool': {}, 'publication': {}}
+INFO 2015-01-13 15:27:10,597: 	 Task name:			150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 15:27:10,597: 	 Task status:			SUBMITTED
+INFO 2015-01-13 15:27:10,598: 	 Glidemon monitoring URL:	http://glidemon.web.cern.ch/glidemon/jobs.php?taskname=150113_125143_crab3test-4%3Adcurry_crab_20150113_135133
+INFO 2015-01-13 15:27:10,598: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=dcurry&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=150113_125143_crab3test-4%3Adcurry_crab_20150113_135133
+INFO 2015-01-13 15:27:10,598: 	 Details:			cooloff         1.1% (  2/179)
+INFO 2015-01-13 15:27:10,598: 	 				finished       80.4% (144/179)
+INFO 2015-01-13 15:27:10,598: 	 				idle            0.6% (  1/179)
+INFO 2015-01-13 15:27:10,598: 	 				running        13.4% ( 24/179)
+INFO 2015-01-13 15:27:10,598: 	 				transferred     1.7% (  3/179)
+INFO 2015-01-13 15:27:10,599: 	 				transferring    2.8% (  5/179)
+INFO 2015-01-13 15:27:10,599: 	 
+INFO 2015-01-13 15:27:10,599: 	 No publication information available yet
+DEBUG 2015-01-13 15:44:14,867: 	 Executing command: 'status'
+DEBUG 2015-01-13 15:44:14,867: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 15:44:14,875: 	 Checking credentials
+DEBUG 2015-01-13 15:44:14,876: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 15:44:14,876: 	 Getting proxy life time left
+DEBUG 2015-01-13 15:44:15,583: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 73925
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:44:16,094: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 73924
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:44:16,094: 	 Proxy valid for 20:32:05 hours
+DEBUG 2015-01-13 15:44:16,207: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 15:44:16,208: 	 Checking credentials
+DEBUG 2015-01-13 15:44:16,208: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 15:44:16,208: 	 Getting proxy life time left
+DEBUG 2015-01-13 15:44:16,815: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 73924
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:44:17,321: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 73923
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:44:17,321: 	 Proxy valid for 20:32:04 hours
+DEBUG 2015-01-13 15:44:18,027: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:44:18,183: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 15:44:18,296: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 15:44:18,296: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 15:44:18,296: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 15:44:18,709: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 694:56:51  (29.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:44:18,710: 	 Myproxy is valid: 2501811
+DEBUG 2015-01-13 15:44:18,710: 	 Command use: status
+DEBUG 2015-01-13 15:44:18,710: 	 Options use: ['crab_20150113_135133']
+DEBUG 2015-01-13 15:44:18,806: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 15:44:18,806: 	 Instance is prod
+DEBUG 2015-01-13 15:44:18,807: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 15:44:18,807: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 15:44:18,807: 	 Looking up detailed status of task 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+DEBUG 2015-01-13 15:44:53,585: 	 {'status': 'UNKNOWN', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 15:44:53,585: 	 Task name:			150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 15:44:53,586: 	 Task status:			UNKNOWN
+ERROR 2015-01-13 15:44:53,586: 	 Error during task information retrieval:	150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host.
+INFO 2015-01-13 15:44:53,586: 	 
+INFO 2015-01-13 15:44:53,586: 	 No publication information available yet
+INFO 2015-01-13 15:44:53,586: 	 
+No jobs created yet!
+DEBUG 2015-01-13 15:50:20,502: 	 Executing command: 'status'
+DEBUG 2015-01-13 15:50:20,502: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 15:50:20,620: 	 Checking credentials
+DEBUG 2015-01-13 15:50:20,621: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 15:50:20,621: 	 Getting proxy life time left
+DEBUG 2015-01-13 15:50:21,225: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 73559
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:50:21,733: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 73559
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:50:21,733: 	 Proxy valid for 20:25:59 hours
+DEBUG 2015-01-13 15:50:21,844: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 15:50:21,845: 	 Checking credentials
+DEBUG 2015-01-13 15:50:21,845: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 15:50:21,845: 	 Getting proxy life time left
+DEBUG 2015-01-13 15:50:22,349: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 73558
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:50:22,854: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 73558
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:50:22,854: 	 Proxy valid for 20:25:58 hours
+DEBUG 2015-01-13 15:50:23,364: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:50:23,546: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 15:50:23,657: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 15:50:23,657: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 15:50:23,657: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 15:50:24,061: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 694:50:45  (29.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:50:24,063: 	 Myproxy is valid: 2501445
+DEBUG 2015-01-13 15:50:24,063: 	 Command use: status
+DEBUG 2015-01-13 15:50:24,063: 	 Options use: ['crab_20150113_135133']
+DEBUG 2015-01-13 15:50:24,173: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 15:50:24,174: 	 Instance is prod
+DEBUG 2015-01-13 15:50:24,174: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 15:50:24,174: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 15:50:24,174: 	 Looking up detailed status of task 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+DEBUG 2015-01-13 15:50:45,663: 	 {'status': 'UNKNOWN', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 15:50:45,663: 	 Task name:			150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 15:50:45,663: 	 Task status:			UNKNOWN
+ERROR 2015-01-13 15:50:45,663: 	 Error during task information retrieval:	150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host.
+INFO 2015-01-13 15:50:45,664: 	 
+INFO 2015-01-13 15:50:45,664: 	 No publication information available yet
+INFO 2015-01-13 15:50:45,664: 	 
+No jobs created yet!
+DEBUG 2015-01-13 15:59:17,620: 	 Executing command: 'status'
+DEBUG 2015-01-13 15:59:17,621: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 15:59:17,713: 	 Checking credentials
+DEBUG 2015-01-13 15:59:17,714: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 15:59:17,714: 	 Getting proxy life time left
+DEBUG 2015-01-13 15:59:18,519: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 73022
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:59:19,125: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 73021
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:59:19,125: 	 Proxy valid for 20:17:02 hours
+DEBUG 2015-01-13 15:59:20,383: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 15:59:20,383: 	 Checking credentials
+DEBUG 2015-01-13 15:59:20,383: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 15:59:20,383: 	 Getting proxy life time left
+DEBUG 2015-01-13 15:59:21,088: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 73019
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:59:21,596: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 73019
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:59:21,596: 	 Proxy valid for 20:16:59 hours
+DEBUG 2015-01-13 15:59:22,105: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:59:22,224: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 15:59:22,342: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 15:59:22,343: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 15:59:22,343: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 15:59:22,847: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 694:41:47  (28.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 15:59:22,848: 	 Myproxy is valid: 2500907
+DEBUG 2015-01-13 15:59:22,849: 	 Command use: status
+DEBUG 2015-01-13 15:59:22,849: 	 Options use: ['crab_20150113_135133']
+DEBUG 2015-01-13 15:59:22,959: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 15:59:22,959: 	 Instance is prod
+DEBUG 2015-01-13 15:59:22,959: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 15:59:22,959: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 15:59:22,959: 	 Looking up detailed status of task 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+DEBUG 2015-01-13 15:59:55,979: 	 {'status': 'UNKNOWN', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 15:59:55,980: 	 Task name:			150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 15:59:55,980: 	 Task status:			UNKNOWN
+ERROR 2015-01-13 15:59:55,980: 	 Error during task information retrieval:	150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host.
+INFO 2015-01-13 15:59:55,980: 	 
+INFO 2015-01-13 15:59:55,980: 	 No publication information available yet
+INFO 2015-01-13 15:59:55,980: 	 
+No jobs created yet!
+DEBUG 2015-01-13 16:47:53,654: 	 Executing command: 'status'
+DEBUG 2015-01-13 16:47:53,657: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 16:47:53,728: 	 Checking credentials
+DEBUG 2015-01-13 16:47:53,729: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 16:47:53,729: 	 Getting proxy life time left
+DEBUG 2015-01-13 16:47:55,759: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 41064
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 16:47:56,580: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 41062
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 16:47:56,580: 	 Proxy valid for 11:24:24 hours
+DEBUG 2015-01-13 16:47:56,825: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 16:47:56,825: 	 Checking credentials
+DEBUG 2015-01-13 16:47:56,825: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 16:47:56,825: 	 Getting proxy life time left
+DEBUG 2015-01-13 16:47:57,635: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 41062
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 16:47:58,764: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 41060
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 16:47:58,764: 	 Proxy valid for 11:24:22 hours
+DEBUG 2015-01-13 16:47:59,588: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 16:47:59,795: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 16:47:59,949: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 16:47:59,949: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 16:47:59,949: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 16:48:00,884: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 693:53:09  (28.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 16:48:00,886: 	 Myproxy is valid: 2497989
+DEBUG 2015-01-13 16:48:00,886: 	 Command use: status
+DEBUG 2015-01-13 16:48:00,886: 	 Options use: []
+DEBUG 2015-01-13 16:48:01,002: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 16:48:01,002: 	 Instance is prod
+DEBUG 2015-01-13 16:48:01,002: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 16:48:01,002: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 16:48:01,002: 	 Looking up detailed status of task 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+DEBUG 2015-01-13 16:48:51,145: 	 {'status': 'UNKNOWN', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 16:48:51,145: 	 Task name:			150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 16:48:51,146: 	 Task status:			UNKNOWN
+ERROR 2015-01-13 16:48:51,146: 	 Error during task information retrieval:	150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host.
+INFO 2015-01-13 16:48:51,146: 	 
+INFO 2015-01-13 16:48:51,146: 	 No publication information available yet
+INFO 2015-01-13 16:48:51,146: 	 
+No jobs created yet!
+DEBUG 2015-01-13 16:50:25,771: 	 Executing command: 'status'
+DEBUG 2015-01-13 16:50:25,777: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 16:50:25,800: 	 Checking credentials
+DEBUG 2015-01-13 16:50:25,801: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 16:50:25,801: 	 Getting proxy life time left
+DEBUG 2015-01-13 16:50:26,626: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 40913
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 16:50:27,454: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 40911
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 16:50:27,454: 	 Proxy valid for 11:21:53 hours
+DEBUG 2015-01-13 16:50:27,595: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 16:50:27,596: 	 Checking credentials
+DEBUG 2015-01-13 16:50:27,596: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 16:50:27,596: 	 Getting proxy life time left
+DEBUG 2015-01-13 16:50:28,545: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 40911
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 16:50:29,265: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 40909
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 16:50:29,265: 	 Proxy valid for 11:21:51 hours
+DEBUG 2015-01-13 16:50:30,389: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 16:50:30,555: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 16:50:30,778: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 16:50:30,779: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 16:50:30,779: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 16:50:31,299: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 693:50:38  (28.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 16:50:31,301: 	 Myproxy is valid: 2497838
+DEBUG 2015-01-13 16:50:31,301: 	 Command use: status
+DEBUG 2015-01-13 16:50:31,301: 	 Options use: ['crab_20150113_135133']
+DEBUG 2015-01-13 16:50:31,402: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 16:50:31,402: 	 Instance is prod
+DEBUG 2015-01-13 16:50:31,402: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 16:50:31,402: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 16:50:31,402: 	 Looking up detailed status of task 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+DEBUG 2015-01-13 16:50:42,444: 	 {'status': 'SUBMITTED', 'totalJobdefs': 0, 'jobSetID': '150113_125143_crab3test-4:dcurry_crab_20150113_135133', 'jobsPerStatus': {'failed': 12, 'running': 6, 'transferring': 2, 'finished': 158, 'transferred': 1}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'jobList': [['finished', 165], ['finished', 133], ['finished', 132], ['finished', 131], ['finished', 130], ['transferring', 137], ['finished', 136], ['transferred', 135], ['finished', 134], ['finished', 139], ['finished', 138], ['finished', 166], ['finished', 24], ['finished', 25], ['finished', 26], ['finished', 27], ['finished', 20], ['finished', 21], ['finished', 22], ['finished', 23], ['finished', 160], ['finished', 28], ['finished', 29], ['failed', 161], ['finished', 4], ['finished', 8], ['failed', 163], ['finished', 119], ['finished', 120], ['finished', 121], ['failed', 122], ['finished', 123], ['finished', 124], ['finished', 125], ['finished', 126], ['finished', 127], ['finished', 128], ['finished', 129], ['finished', 167], ['finished', 118], ['running', 59], ['finished', 58], ['running', 55], ['finished', 54], ['finished', 57], ['finished', 56], ['finished', 51], ['finished', 50], ['finished', 53], ['finished', 52], ['finished', 164], ['finished', 179], ['finished', 178], ['finished', 115], ['failed', 114], ['finished', 88], ['finished', 89], ['finished', 111], ['running', 110], ['finished', 113], ['finished', 112], ['finished', 82], ['failed', 83], ['failed', 80], ['running', 81], ['finished', 86], ['finished', 87], ['finished', 84], ['finished', 85], ['finished', 3], ['finished', 177], ['finished', 7], ['finished', 108], ['finished', 109], ['failed', 102], ['finished', 103], ['finished', 100], ['finished', 101], ['finished', 106], ['finished', 107], ['failed', 104], ['finished', 105], ['finished', 39], ['finished', 38], ['finished', 33], ['finished', 32], ['finished', 31], ['finished', 30], ['finished', 37], ['finished', 36], ['finished', 35], ['finished', 34], ['finished', 176], ['finished', 60], ['finished', 61], ['finished', 62], ['finished', 63], ['running', 64], ['finished', 65], ['finished', 66], ['finished', 67], ['finished', 68], ['failed', 69], ['finished', 175], ['finished', 174], ['finished', 173], ['finished', 172], ['finished', 171], ['finished', 170], ['finished', 2], ['finished', 162], ['finished', 6], ['finished', 99], ['finished', 98], ['finished', 168], ['transferring', 169], ['finished', 91], ['finished', 90], ['finished', 93], ['finished', 92], ['finished', 95], ['running', 94], ['finished', 97], ['finished', 96], ['finished', 11], ['finished', 10], ['failed', 13], ['finished', 12], ['finished', 15], ['finished', 14], ['finished', 17], ['finished', 16], ['finished', 19], ['finished', 18], ['finished', 117], ['finished', 116], ['finished', 151], ['finished', 150], ['finished', 153], ['finished', 152], ['finished', 155], ['finished', 154], ['finished', 157], ['finished', 156], ['finished', 159], ['finished', 158], ['finished', 48], ['finished', 49], ['failed', 46], ['finished', 47], ['finished', 44], ['finished', 45], ['finished', 42], ['finished', 43], ['finished', 40], ['finished', 41], ['finished', 1], ['finished', 5], ['finished', 9], ['finished', 146], ['finished', 147], ['finished', 144], ['finished', 145], ['finished', 142], ['finished', 143], ['finished', 140], ['finished', 141], ['finished', 148], ['finished', 149], ['finished', 77], ['finished', 76], ['failed', 75], ['finished', 74], ['finished', 73], ['finished', 72], ['finished', 71], ['finished', 70], ['finished', 79], ['finished', 78]], 'jobs': {'133': {'State': 'finished'}, '132': {'State': 'finished'}, '131': {'State': 'finished'}, '130': {'State': 'finished'}, '137': {'State': 'transferring'}, '136': {'State': 'finished'}, '135': {'State': 'transferred'}, '134': {'State': 'finished'}, '139': {'State': 'finished'}, '138': {'State': 'finished'}, '93': {'State': 'finished'}, '24': {'State': 'finished'}, '25': {'State': 'finished'}, '26': {'State': 'finished'}, '27': {'State': 'finished'}, '20': {'State': 'finished'}, '21': {'State': 'finished'}, '22': {'State': 'finished'}, '23': {'State': 'finished'}, '95': {'State': 'finished'}, '28': {'State': 'finished'}, '29': {'State': 'finished'}, '94': {'State': 'running'}, '4': {'State': 'finished'}, '8': {'State': 'finished'}, '96': {'State': 'finished'}, '68': {'State': 'finished'}, '120': {'State': 'finished'}, '121': {'State': 'finished'}, '122': {'State': 'failed', 'Error': [8028, "CmsRunFailure\nCMSSW error message follows.\nFatal Exception\nAn exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/538/00000/828433BE-FE33-E211-B951-00259073E4BE.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/538/00000/828433BE-FE33-E211-B951-00259073E4BE.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/538/00000/828433BE-FE33-E211-B951-00259073E4BE.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/538/00000/828433BE-FE33-E211-B951-00259073E4BE.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/538/00000/828433BE-FE33-E211-B951-00259073E4BE.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov\n", {'type': 'Fatal Exception', 'details': "An exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/538/00000/828433BE-FE33-E211-B951-00259073E4BE.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/538/00000/828433BE-FE33-E211-B951-00259073E4BE.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/538/00000/828433BE-FE33-E211-B951-00259073E4BE.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/538/00000/828433BE-FE33-E211-B951-00259073E4BE.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/538/00000/828433BE-FE33-E211-B951-00259073E4BE.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov", 'exitCode': '8028'}]}, '123': {'State': 'finished'}, '124': {'State': 'finished'}, '125': {'State': 'finished'}, '126': {'State': 'finished'}, '127': {'State': 'finished'}, '128': {'State': 'finished'}, '129': {'State': 'finished'}, '69': {'State': 'failed', 'Error': [8028, "CmsRunFailure\nCMSSW error message follows.\nFatal Exception\nAn exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/217/00000/82247F0C-8B22-E211-87AD-00261834B52A.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/217/00000/82247F0C-8B22-E211-87AD-00261834B52A.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/217/00000/82247F0C-8B22-E211-87AD-00261834B52A.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/217/00000/82247F0C-8B22-E211-87AD-00261834B52A.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/217/00000/82247F0C-8B22-E211-87AD-00261834B52A.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov\n", {'type': 'Fatal Exception', 'details': "An exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/217/00000/82247F0C-8B22-E211-87AD-00261834B52A.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/217/00000/82247F0C-8B22-E211-87AD-00261834B52A.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/217/00000/82247F0C-8B22-E211-87AD-00261834B52A.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/217/00000/82247F0C-8B22-E211-87AD-00261834B52A.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/217/00000/82247F0C-8B22-E211-87AD-00261834B52A.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov", 'exitCode': '8028'}]}, '91': {'State': 'finished'}, '59': {'State': 'running'}, '58': {'State': 'finished'}, '55': {'State': 'running'}, '54': {'State': 'finished'}, '57': {'State': 'finished'}, '56': {'State': 'finished'}, '51': {'State': 'finished'}, '50': {'State': 'finished'}, '53': {'State': 'finished'}, '52': {'State': 'finished'}, '90': {'State': 'finished'}, '66': {'State': 'finished'}, '67': {'State': 'finished'}, '115': {'State': 'finished'}, '114': {'State': 'failed', 'Error': [8028, "CmsRunFailure\nCMSSW error message follows.\nFatal Exception\nAn exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/448/00000/74BB7026-0F32-E211-8B14-002590747DE2.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/448/00000/74BB7026-0F32-E211-8B14-002590747DE2.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/448/00000/74BB7026-0F32-E211-8B14-002590747DE2.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/448/00000/74BB7026-0F32-E211-8B14-002590747DE2.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/448/00000/74BB7026-0F32-E211-8B14-002590747DE2.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov\n", {'type': 'Fatal Exception', 'details': "An exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/448/00000/74BB7026-0F32-E211-8B14-002590747DE2.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/448/00000/74BB7026-0F32-E211-8B14-002590747DE2.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/448/00000/74BB7026-0F32-E211-8B14-002590747DE2.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/448/00000/74BB7026-0F32-E211-8B14-002590747DE2.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/448/00000/74BB7026-0F32-E211-8B14-002590747DE2.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov", 'exitCode': '8028'}]}, '88': {'State': 'finished'}, '89': {'State': 'finished'}, '111': {'State': 'finished'}, '110': {'State': 'running'}, '113': {'State': 'finished'}, '112': {'State': 'finished'}, '82': {'State': 'finished'}, '83': {'State': 'failed', 'Error': [8028, "CmsRunFailure\nCMSSW error message follows.\nFatal Exception\nAn exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/526/00000/EEF18E03-4B27-E211-A088-00259073E500.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/526/00000/EEF18E03-4B27-E211-A088-00259073E500.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/526/00000/EEF18E03-4B27-E211-A088-00259073E500.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/526/00000/EEF18E03-4B27-E211-A088-00259073E500.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/526/00000/EEF18E03-4B27-E211-A088-00259073E500.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov\n", {'type': 'Fatal Exception', 'details': "An exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/526/00000/EEF18E03-4B27-E211-A088-00259073E500.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/526/00000/EEF18E03-4B27-E211-A088-00259073E500.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/526/00000/EEF18E03-4B27-E211-A088-00259073E500.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/526/00000/EEF18E03-4B27-E211-A088-00259073E500.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/526/00000/EEF18E03-4B27-E211-A088-00259073E500.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov", 'exitCode': '8028'}]}, '80': {'State': 'failed', 'Error': [8028, "CmsRunFailure\nCMSSW error message follows.\nFatal Exception\nAn exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/478/00000/1C92AFA4-9D26-E211-8A0F-00259073E304.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/478/00000/1C92AFA4-9D26-E211-8A0F-00259073E304.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/478/00000/1C92AFA4-9D26-E211-8A0F-00259073E304.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/478/00000/1C92AFA4-9D26-E211-8A0F-00259073E304.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/478/00000/1C92AFA4-9D26-E211-8A0F-00259073E304.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov\n", {'type': 'Fatal Exception', 'details': "An exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/478/00000/1C92AFA4-9D26-E211-8A0F-00259073E304.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/478/00000/1C92AFA4-9D26-E211-8A0F-00259073E304.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/478/00000/1C92AFA4-9D26-E211-8A0F-00259073E304.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/478/00000/1C92AFA4-9D26-E211-8A0F-00259073E304.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/478/00000/1C92AFA4-9D26-E211-8A0F-00259073E304.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov", 'exitCode': '8028'}]}, '81': {'State': 'running'}, '119': {'State': 'finished'}, '118': {'State': 'finished'}, '84': {'State': 'finished'}, '85': {'State': 'finished'}, '3': {'State': 'finished'}, '7': {'State': 'finished'}, '92': {'State': 'finished'}, '108': {'State': 'finished'}, '109': {'State': 'finished'}, '102': {'State': 'failed', 'Error': [8028, "CmsRunFailure\nCMSSW error message follows.\nFatal Exception\nAn exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/099/00000/C8208701-722E-E211-AF71-00259074AE54.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/099/00000/C8208701-722E-E211-AF71-00259074AE54.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/099/00000/C8208701-722E-E211-AF71-00259074AE54.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/099/00000/C8208701-722E-E211-AF71-00259074AE54.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/099/00000/C8208701-722E-E211-AF71-00259074AE54.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov\n", {'type': 'Fatal Exception', 'details': "An exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/099/00000/C8208701-722E-E211-AF71-00259074AE54.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/099/00000/C8208701-722E-E211-AF71-00259074AE54.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/099/00000/C8208701-722E-E211-AF71-00259074AE54.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/099/00000/C8208701-722E-E211-AF71-00259074AE54.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/099/00000/C8208701-722E-E211-AF71-00259074AE54.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov", 'exitCode': '8028'}]}, '103': {'State': 'finished'}, '100': {'State': 'finished'}, '101': {'State': 'finished'}, '106': {'State': 'finished'}, '107': {'State': 'finished'}, '104': {'State': 'failed', 'Error': [8028, "CmsRunFailure\nCMSSW error message follows.\nFatal Exception\nAn exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/191/00000/DE7F6B75-1C2F-E211-A51C-00259073E406.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/191/00000/DE7F6B75-1C2F-E211-A51C-00259073E406.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/191/00000/DE7F6B75-1C2F-E211-A51C-00259073E406.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/191/00000/DE7F6B75-1C2F-E211-A51C-00259073E406.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/191/00000/DE7F6B75-1C2F-E211-A51C-00259073E406.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov\n", {'type': 'Fatal Exception', 'details': "An exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/191/00000/DE7F6B75-1C2F-E211-A51C-00259073E406.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/191/00000/DE7F6B75-1C2F-E211-A51C-00259073E406.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/191/00000/DE7F6B75-1C2F-E211-A51C-00259073E406.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/191/00000/DE7F6B75-1C2F-E211-A51C-00259073E406.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/207/191/00000/DE7F6B75-1C2F-E211-A51C-00259073E406.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov", 'exitCode': '8028'}]}, '105': {'State': 'finished'}, '39': {'State': 'finished'}, '38': {'State': 'finished'}, '33': {'State': 'finished'}, '32': {'State': 'finished'}, '31': {'State': 'finished'}, '30': {'State': 'finished'}, '37': {'State': 'finished'}, '36': {'State': 'finished'}, '35': {'State': 'finished'}, '34': {'State': 'finished'}, '60': {'State': 'finished'}, '61': {'State': 'finished'}, '62': {'State': 'finished'}, '63': {'State': 'finished'}, '64': {'State': 'running'}, '65': {'State': 'finished'}, '179': {'State': 'finished'}, '178': {'State': 'finished'}, '177': {'State': 'finished'}, '176': {'State': 'finished'}, '175': {'State': 'finished'}, '174': {'State': 'finished'}, '173': {'State': 'finished'}, '172': {'State': 'finished'}, '171': {'State': 'finished'}, '170': {'State': 'finished'}, '2': {'State': 'finished'}, '6': {'State': 'finished'}, '97': {'State': 'finished'}, '99': {'State': 'finished'}, '98': {'State': 'finished'}, '168': {'State': 'finished'}, '169': {'State': 'transferring'}, '164': {'State': 'finished'}, '165': {'State': 'finished'}, '166': {'State': 'finished'}, '167': {'State': 'finished'}, '160': {'State': 'finished'}, '161': {'State': 'failed', 'Error': [8028, "CmsRunFailure\nCMSSW error message follows.\nFatal Exception\nAn exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/825/00000/900A57F0-EA44-E211-8366-485B39800BB9.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/825/00000/900A57F0-EA44-E211-8366-485B39800BB9.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/825/00000/900A57F0-EA44-E211-8366-485B39800BB9.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/825/00000/900A57F0-EA44-E211-8366-485B39800BB9.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/825/00000/900A57F0-EA44-E211-8366-485B39800BB9.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov\n", {'type': 'Fatal Exception', 'details': "An exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/825/00000/900A57F0-EA44-E211-8366-485B39800BB9.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/825/00000/900A57F0-EA44-E211-8366-485B39800BB9.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/825/00000/900A57F0-EA44-E211-8366-485B39800BB9.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/825/00000/900A57F0-EA44-E211-8366-485B39800BB9.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/825/00000/900A57F0-EA44-E211-8366-485B39800BB9.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov", 'exitCode': '8028'}]}, '162': {'State': 'finished'}, '163': {'State': 'failed', 'Error': [8028, "CmsRunFailure\nCMSSW error message follows.\nFatal Exception\nAn exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/853/00000/7021A459-4C45-E211-BE1D-20CF305B0599.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/853/00000/7021A459-4C45-E211-BE1D-20CF305B0599.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/853/00000/7021A459-4C45-E211-BE1D-20CF305B0599.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/853/00000/7021A459-4C45-E211-BE1D-20CF305B0599.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/853/00000/7021A459-4C45-E211-BE1D-20CF305B0599.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov\n", {'type': 'Fatal Exception', 'details': "An exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/853/00000/7021A459-4C45-E211-BE1D-20CF305B0599.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/853/00000/7021A459-4C45-E211-BE1D-20CF305B0599.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/853/00000/7021A459-4C45-E211-BE1D-20CF305B0599.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/853/00000/7021A459-4C45-E211-BE1D-20CF305B0599.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/208/853/00000/7021A459-4C45-E211-BE1D-20CF305B0599.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov", 'exitCode': '8028'}]}, '11': {'State': 'finished'}, '10': {'State': 'finished'}, '13': {'State': 'failed', 'Error': [8028, "CmsRunFailure\nCMSSW error message follows.\nFatal Exception\nAn exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/204/113/00000/F42E38B8-3A0F-E211-A4A8-20CF3027A5D5.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/204/113/00000/F42E38B8-3A0F-E211-A4A8-20CF3027A5D5.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/204/113/00000/F42E38B8-3A0F-E211-A4A8-20CF3027A5D5.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/204/113/00000/F42E38B8-3A0F-E211-A4A8-20CF3027A5D5.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/204/113/00000/F42E38B8-3A0F-E211-A4A8-20CF3027A5D5.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov\n", {'type': 'Fatal Exception', 'details': "An exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/204/113/00000/F42E38B8-3A0F-E211-A4A8-20CF3027A5D5.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/204/113/00000/F42E38B8-3A0F-E211-A4A8-20CF3027A5D5.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/204/113/00000/F42E38B8-3A0F-E211-A4A8-20CF3027A5D5.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/204/113/00000/F42E38B8-3A0F-E211-A4A8-20CF3027A5D5.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/204/113/00000/F42E38B8-3A0F-E211-A4A8-20CF3027A5D5.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov", 'exitCode': '8028'}]}, '12': {'State': 'finished'}, '15': {'State': 'finished'}, '14': {'State': 'finished'}, '17': {'State': 'finished'}, '16': {'State': 'finished'}, '19': {'State': 'finished'}, '18': {'State': 'finished'}, '117': {'State': 'finished'}, '116': {'State': 'finished'}, '151': {'State': 'finished'}, '150': {'State': 'finished'}, '153': {'State': 'finished'}, '152': {'State': 'finished'}, '155': {'State': 'finished'}, '154': {'State': 'finished'}, '157': {'State': 'finished'}, '156': {'State': 'finished'}, '159': {'State': 'finished'}, '158': {'State': 'finished'}, '48': {'State': 'finished'}, '49': {'State': 'finished'}, '46': {'State': 'failed', 'Error': [8028, "CmsRunFailure\nCMSSW error message follows.\nFatal Exception\nAn exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/205/311/00000/CC0D5AA4-1A1A-E211-8BC6-00259073E3A0.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/205/311/00000/CC0D5AA4-1A1A-E211-8BC6-00259073E3A0.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/205/311/00000/CC0D5AA4-1A1A-E211-8BC6-00259073E3A0.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/205/311/00000/CC0D5AA4-1A1A-E211-8BC6-00259073E3A0.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/205/311/00000/CC0D5AA4-1A1A-E211-8BC6-00259073E3A0.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov\n", {'type': 'Fatal Exception', 'details': "An exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/205/311/00000/CC0D5AA4-1A1A-E211-8BC6-00259073E3A0.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/205/311/00000/CC0D5AA4-1A1A-E211-8BC6-00259073E3A0.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/205/311/00000/CC0D5AA4-1A1A-E211-8BC6-00259073E3A0.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/205/311/00000/CC0D5AA4-1A1A-E211-8BC6-00259073E3A0.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/205/311/00000/CC0D5AA4-1A1A-E211-8BC6-00259073E3A0.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov", 'exitCode': '8028'}]}, '86': {'State': 'finished'}, '44': {'State': 'finished'}, '45': {'State': 'finished'}, '42': {'State': 'finished'}, '43': {'State': 'finished'}, '40': {'State': 'finished'}, '87': {'State': 'finished'}, '1': {'State': 'finished'}, '5': {'State': 'finished'}, '9': {'State': 'finished'}, '146': {'State': 'finished'}, '147': {'State': 'finished'}, '144': {'State': 'finished'}, '145': {'State': 'finished'}, '142': {'State': 'finished'}, '143': {'State': 'finished'}, '140': {'State': 'finished'}, '141': {'State': 'finished'}, '148': {'State': 'finished'}, '149': {'State': 'finished'}, '77': {'State': 'finished'}, '76': {'State': 'finished'}, '75': {'State': 'failed', 'Error': [8028, "CmsRunFailure\nCMSSW error message follows.\nFatal Exception\nAn exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/401/00000/04B46705-3125-E211-ADF9-00259073E504.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/401/00000/04B46705-3125-E211-ADF9-00259073E504.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/401/00000/04B46705-3125-E211-ADF9-00259073E504.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/401/00000/04B46705-3125-E211-ADF9-00259073E504.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/401/00000/04B46705-3125-E211-ADF9-00259073E504.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov\n", {'type': 'Fatal Exception', 'details': "An exception of category 'FallbackFileOpenError' occurred while\n   [0] Calling InputSource::readFile_\n   [1] Calling RootInputFileSequence::initFile()\n   [2] Calling StorageFactory::open()\n   [3] Calling XrdFile::open()\nException Message:\nFailed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/401/00000/04B46705-3125-E211-ADF9-00259073E504.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'\n   Additional Info:\n      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/401/00000/04B46705-3125-E211-ADF9-00259073E504.root could not be opened.\nFallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/401/00000/04B46705-3125-E211-ADF9-00259073E504.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.\n      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/401/00000/04B46705-3125-E211-ADF9-00259073E504.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)\n      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/401/00000/04B46705-3125-E211-ADF9-00259073E504.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov", 'exitCode': '8028'}]}, '74': {'State': 'finished'}, '73': {'State': 'finished'}, '72': {'State': 'finished'}, '71': {'State': 'finished'}, '70': {'State': 'finished'}, '79': {'State': 'finished'}, '78': {'State': 'finished'}, '41': {'State': 'finished'}, '47': {'State': 'finished'}}, 'jobdefErrors': [], 'outdatasets': None, 'pool': {}, 'publication': {}}
+INFO 2015-01-13 16:50:42,445: 	 Task name:			150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 16:50:42,445: 	 Task status:			SUBMITTED
+INFO 2015-01-13 16:50:42,445: 	 Glidemon monitoring URL:	http://glidemon.web.cern.ch/glidemon/jobs.php?taskname=150113_125143_crab3test-4%3Adcurry_crab_20150113_135133
+INFO 2015-01-13 16:50:42,445: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=dcurry&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=150113_125143_crab3test-4%3Adcurry_crab_20150113_135133
+INFO 2015-01-13 16:50:42,447: 	 Details:			failed          6.7% ( 12/179)
+INFO 2015-01-13 16:50:42,447: 	 				finished       88.3% (158/179)
+INFO 2015-01-13 16:50:42,447: 	 				running         3.4% (  6/179)
+INFO 2015-01-13 16:50:42,447: 	 				transferred     0.6% (  1/179)
+INFO 2015-01-13 16:50:42,447: 	 				transferring    1.1% (  2/179)
+INFO 2015-01-13 16:50:42,447: 	 
+INFO 2015-01-13 16:50:42,448: 	 No publication information available yet
+INFO 2015-01-13 16:50:42,448: 	 
+Error summary:
+12 jobs failed with exit code 8028:
+	CmsRunFailure
+	CMSSW error message follows.
+	Fatal Exception
+	An exception of category 'FallbackFileOpenError' occurred while
+	   [0] Calling InputSource::readFile_
+	   [1] Calling RootInputFileSequence::initFile()
+	   [2] Calling StorageFactory::open()
+	   [3] Calling XrdFile::open()
+	Exception Message:
+	Failed to open the file 'root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/401/00000/04B46705-3125-E211-ADF9-00259073E504.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov'
+	   Additional Info:
+	      [a] Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/401/00000/04B46705-3125-E211-ADF9-00259073E504.root could not be opened.
+	Fallback Input file root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/401/00000/04B46705-3125-E211-ADF9-00259073E504.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov also could not be opened.
+	      [b] XrdClient::Open(name='root://cmsxrootd-site.fnal.gov//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/401/00000/04B46705-3125-E211-ADF9-00259073E504.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov', flags=0x10, permissions=0666) => error '' (errno=10000)
+	      [c] Current server connection: root://cmsxrootd.fnal.gov:1094//store/data/Run2012D/MinimumBias/RAW-RECO/HLTPhysics-Tier1PromptSkim-v1/000/206/401/00000/04B46705-3125-E211-ADF9-00259073E504.root?tried=+1213cmssrv203.fnal.gov,+1213cmssrv224.fnal.gov
+	
+Have a look at https://twiki.cern.ch/twiki/bin/viewauth/CMSPublic/JobExitCodes for a description of the exit codes
+DEBUG 2015-01-13 18:31:38,839: 	 Executing command: 'status'
+DEBUG 2015-01-13 18:31:38,840: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 18:31:38,867: 	 Checking credentials
+DEBUG 2015-01-13 18:31:38,869: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 18:31:38,869: 	 Getting proxy life time left
+DEBUG 2015-01-13 18:31:39,977: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 34840
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 18:31:40,682: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 34838
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 18:31:40,682: 	 Proxy valid for 09:40:40 hours
+DEBUG 2015-01-13 18:31:40,926: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 18:31:40,926: 	 Checking credentials
+DEBUG 2015-01-13 18:31:40,926: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 18:31:40,926: 	 Getting proxy life time left
+DEBUG 2015-01-13 18:31:41,545: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 34838
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 18:31:42,054: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 34836
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 18:31:42,055: 	 Proxy valid for 09:40:38 hours
+DEBUG 2015-01-13 18:31:42,667: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 18:31:42,955: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 18:31:43,070: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 18:31:43,070: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 18:31:43,070: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 18:31:43,779: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 692:09:26  (28.8 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 18:31:43,780: 	 Myproxy is valid: 2491766
+DEBUG 2015-01-13 18:31:43,780: 	 Command use: status
+DEBUG 2015-01-13 18:31:43,780: 	 Options use: ['crab_20150113_135133']
+DEBUG 2015-01-13 18:31:43,893: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 18:31:43,893: 	 Instance is prod
+DEBUG 2015-01-13 18:31:43,893: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 18:31:43,893: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 18:31:43,893: 	 Looking up detailed status of task 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+DEBUG 2015-01-13 18:32:13,893: 	 {'status': 'UNKNOWN', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 18:32:13,893: 	 Task name:			150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 18:32:13,894: 	 Task status:			UNKNOWN
+ERROR 2015-01-13 18:32:13,894: 	 Error during task information retrieval:	150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host.
+INFO 2015-01-13 18:32:13,894: 	 
+INFO 2015-01-13 18:32:13,894: 	 No publication information available yet
+INFO 2015-01-13 18:32:13,894: 	 
+No jobs created yet!
+DEBUG 2015-01-13 18:32:45,457: 	 Executing command: 'status'
+DEBUG 2015-01-13 18:32:45,458: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 18:32:45,470: 	 Checking credentials
+DEBUG 2015-01-13 18:32:45,471: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 18:32:45,471: 	 Getting proxy life time left
+DEBUG 2015-01-13 18:32:46,079: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 34773
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 18:32:46,688: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 34772
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 18:32:46,688: 	 Proxy valid for 09:39:33 hours
+DEBUG 2015-01-13 18:32:46,806: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 18:32:46,807: 	 Checking credentials
+DEBUG 2015-01-13 18:32:46,807: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 18:32:46,807: 	 Getting proxy life time left
+DEBUG 2015-01-13 18:32:47,415: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 34772
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 18:32:48,226: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 34770
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 18:32:48,226: 	 Proxy valid for 09:39:32 hours
+DEBUG 2015-01-13 18:32:48,933: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 18:32:49,098: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 18:32:49,215: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 18:32:49,215: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 18:32:49,215: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 18:32:49,620: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 692:08:20  (28.8 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 18:32:49,621: 	 Myproxy is valid: 2491700
+DEBUG 2015-01-13 18:32:49,622: 	 Command use: status
+DEBUG 2015-01-13 18:32:49,622: 	 Options use: ['crab_20150113_135133']
+DEBUG 2015-01-13 18:32:49,715: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 18:32:49,715: 	 Instance is prod
+DEBUG 2015-01-13 18:32:49,715: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 18:32:49,715: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 18:32:49,715: 	 Looking up detailed status of task 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+DEBUG 2015-01-13 18:33:13,022: 	 {'status': 'UNKNOWN', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 18:33:13,022: 	 Task name:			150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 18:33:13,023: 	 Task status:			UNKNOWN
+ERROR 2015-01-13 18:33:13,023: 	 Error during task information retrieval:	150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host.
+INFO 2015-01-13 18:33:13,023: 	 
+INFO 2015-01-13 18:33:13,023: 	 No publication information available yet
+INFO 2015-01-13 18:33:13,023: 	 
+No jobs created yet!
+DEBUG 2015-01-13 18:33:32,593: 	 Executing command: 'status'
+DEBUG 2015-01-13 18:33:32,593: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 18:33:32,602: 	 Checking credentials
+DEBUG 2015-01-13 18:33:32,604: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 18:33:32,604: 	 Getting proxy life time left
+DEBUG 2015-01-13 18:33:33,217: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 34726
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 18:33:33,823: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 34725
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 18:33:33,824: 	 Proxy valid for 09:38:46 hours
+DEBUG 2015-01-13 18:33:33,942: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 18:33:33,943: 	 Checking credentials
+DEBUG 2015-01-13 18:33:33,943: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 18:33:33,943: 	 Getting proxy life time left
+DEBUG 2015-01-13 18:33:34,552: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 34725
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 18:33:35,160: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 34723
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 18:33:35,161: 	 Proxy valid for 09:38:45 hours
+DEBUG 2015-01-13 18:33:35,766: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 18:33:35,885: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 18:33:35,999: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 18:33:35,999: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 18:33:35,999: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 18:33:36,407: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 692:07:33  (28.8 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 18:33:36,408: 	 Myproxy is valid: 2491653
+DEBUG 2015-01-13 18:33:36,409: 	 Command use: status
+DEBUG 2015-01-13 18:33:36,409: 	 Options use: ['crab_20150113_135133']
+DEBUG 2015-01-13 18:33:36,523: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 18:33:36,523: 	 Instance is prod
+DEBUG 2015-01-13 18:33:36,523: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 18:33:36,524: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 18:33:36,524: 	 Looking up detailed status of task 150113_125143_crab3test-4:dcurry_crab_20150113_135133
+DEBUG 2015-01-13 18:34:00,147: 	 {'status': 'UNKNOWN', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 18:34:00,147: 	 Task name:			150113_125143_crab3test-4:dcurry_crab_20150113_135133
+INFO 2015-01-13 18:34:00,147: 	 Task status:			UNKNOWN
+ERROR 2015-01-13 18:34:00,147: 	 Error during task information retrieval:	150113_125143_crab3test-4:dcurry_crab_20150113_135133: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host.
+INFO 2015-01-13 18:34:00,147: 	 
+INFO 2015-01-13 18:34:00,147: 	 No publication information available yet
+INFO 2015-01-13 18:34:00,148: 	 
+No jobs created yet!

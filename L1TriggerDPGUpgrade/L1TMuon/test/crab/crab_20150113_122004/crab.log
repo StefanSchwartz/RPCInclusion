@@ -1,0 +1,1193 @@
+DEBUG 2015-01-13 12:20:03,232: 	 Executing command: 'submit'
+DEBUG 2015-01-13 12:20:03,233: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 12:20:03,252: 	 Checking credentials
+DEBUG 2015-01-13 12:20:03,252: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 12:20:03,252: 	 Getting proxy life time left
+DEBUG 2015-01-13 12:20:03,861: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 86177
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:20:04,469: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 86176
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:20:04,469: 	 Proxy valid for 23:56:17 hours
+INFO 2015-01-13 12:20:04,469: 	 Will use configuration file crabConfig.py
+DEBUG 2015-01-13 12:20:04,470: 	 Loading configuration
+DEBUG 2015-01-13 12:20:04,614: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 12:20:04,615: 	 Checking credentials
+DEBUG 2015-01-13 12:20:04,615: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 12:20:04,615: 	 Getting proxy life time left
+DEBUG 2015-01-13 12:20:05,121: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 86175
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:20:05,626: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 86175
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:20:05,626: 	 Proxy valid for 23:56:15 hours
+DEBUG 2015-01-13 12:20:06,130: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:20:06,251: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 12:20:06,365: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 12:20:06,365: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 12:20:06,365: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 12:20:06,769: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 698:21:03  (29.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:20:06,770: 	 Myproxy is valid: 2514063
+DEBUG 2015-01-13 12:20:06,770: 	 Command use: submit
+DEBUG 2015-01-13 12:20:06,770: 	 Options use: []
+DEBUG 2015-01-13 12:20:06,912: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 12:20:06,912: 	 Instance is prod
+DEBUG 2015-01-13 12:20:06,912: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 12:20:06,912: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 12:20:06,912: 	 Started submission
+DEBUG 2015-01-13 12:20:06,913: 	 Working on ./crab_20150113_122004
+DEBUG 2015-01-13 12:20:07,183: 	 Found CMSSW_6_2_3 for slc5_amd64_gcc472 with base /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3
+DEBUG 2015-01-13 12:20:07,220: 	 UNIQUE NAME: tarUUID 543c379f-6ea3-4136-a0b9-762af4468ae4 
+DEBUG 2015-01-13 12:20:07,221: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferOutputs = True
+config.General.serverUrl = 'cmsweb.cern.ch'
+config.section_('JobType')
+config.JobType.outputFiles = ['rpc_tuple_2012D.root']
+config.JobType.filecacheurl = 'https://cmsweb.cern.ch/crabcache'
+config.JobType.pluginName = 'Analysis'
+config.JobType.capath = '/etc/grid-security/certificates/'
+config.JobType.psetName = 'L1TMuon_ntuple_data.py'
+config.JobType.proxyfilename = '/tmp/x509up_u37753'
+config.section_('Data')
+config.Data.inputDataset = '/MinimumBias/Run2012D-HLTPhysics-Tier1PromptSkim-v1/RAW-RECO'
+config.Data.unitsPerJob = 1000
+config.Data.outLFN = '/store/user/dcurry/rpc/'
+config.Data.splitting = 'LumiBased'
+config.section_('User')
+config.section_('Site')
+config.Site.storageSite = 'T2_CH_CERN'
+
+DEBUG 2015-01-13 12:20:07,221: 	 self.config.JobType.psetName: L1TMuon_ntuple_data.py
+DEBUG 2015-01-13 12:20:07,222: 	 Importing CMSSW config L1TMuon_ntuple_data.py
+DEBUG 2015-01-13 12:20:13,342: 	 The following EDM output files will be collected: []
+DEBUG 2015-01-13 12:20:13,342: 	 The following TFile output files will be collected: []
+DEBUG 2015-01-13 12:20:13,342: 	 The following user output files will be collected: ['rpc_tuple_2012D.root']
+DEBUG 2015-01-13 12:20:13,342: 	 Writing CMSSW config to ./crab_20150113_122004/inputs/CMSSW_cfg.py
+DEBUG 2015-01-13 12:20:13,736: 	 Found CMSSW_6_2_3 for slc5_amd64_gcc472 with base /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3
+DEBUG 2015-01-13 12:20:13,737: 	 Making tarball in ./crab_20150113_122004/inputs/543c379f-6ea3-4136-a0b9-762af4468ae4default.tgz
+DEBUG 2015-01-13 12:20:13,744: 	  checking directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/lib
+DEBUG 2015-01-13 12:20:13,744: 	  adding directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/lib to tarball
+DEBUG 2015-01-13 12:20:18,460: 	  checking directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/module
+DEBUG 2015-01-13 12:20:18,480: 	  adding data directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/src/L1Trigger/CSCTrackFinder/data to tarball
+DEBUG 2015-01-13 12:20:19,181: 	  adding data directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/src/L1TriggerDPGUpgrade/L1TMuon/macros/data to tarball
+DEBUG 2015-01-13 12:20:19,550: 	  adding data directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data to tarball
+DEBUG 2015-01-13 12:20:20,786: 	  adding data directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data to tarball
+DEBUG 2015-01-13 12:20:21,161: 	  adding data directory /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/tests/data to tarball
+DEBUG 2015-01-13 12:20:25,888: 	 tgz contents: [('lib', 0, 1399999195, 'dcurry'), ('lib/slc5_amd64_gcc472', 0, 1421068078, 'dcurry'), ('lib/slc5_amd64_gcc472/libL1TriggerDPGUpgradeDataFormats.so', 1419992, 1400000347, 'dcurry'), ('lib/slc5_amd64_gcc472/pluginL1TriggerDPGUpgradeDataFormatsCapabilities.so', 14152, 1400000354, 'dcurry'), ('lib/slc5_amd64_gcc472/L1TriggerDPGUpgradeDataFormatsCapabilities.edmplugin', 59, 1400000354, 'dcurry'), ('lib/slc5_amd64_gcc472/libL1TriggerCSCTrackFinder.so', 12372320, 1400001559, 'dcurry'), ('lib/slc5_amd64_gcc472/libL1TriggerDPGUpgradeL1TMuon.so', 775752, 1400001567, 'dcurry'), ('lib/slc5_amd64_gcc472/pluginL1TriggerDPGUpgradeL1TMuonPlugins.so', 894864, 1421068075, 'dcurry'), ('lib/slc5_amd64_gcc472/L1TriggerDPGUpgradeL1TMuonPlugins.edmplugin', 50, 1421068075, 'dcurry'), ('lib/slc5_amd64_gcc472/pluginL1TriggerCSCTrackFinderPlugins.so', 317232, 1400001686, 'dcurry'), ('lib/slc5_amd64_gcc472/L1TriggerCSCTrackFinderPlugins.edmplugin', 47, 1400001686, 'dcurry'), ('lib/slc5_amd64_gcc472/.edmplugincache', 9883, 1421068078, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data', 0, 1399999290, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30', 0, 1399999289, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30/comp_dphi_8.dat', 3055, 1399999288, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30/mode2-mode5.dat', 3744, 1399999288, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30/comp_dphi_7.dat', 3053, 1399999289, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30/comp_dphi_4b.dat', 3050, 1399999289, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30/comp_dphi_8a.dat', 3050, 1399999289, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_07_30/comp_dphi_5.dat', 3031, 1399999290, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_03_13', 0, 1399999291, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_03_13/comp_dphi_8.dat', 3055, 1399999290, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_03_13/comp_dphi_7.dat', 3053, 1399999291, 'dcurry'), ('src/L1Trigger/CSCTrackFinder/data/core_2012_03_13/comp_dphi_5.dat', 3031, 1399999291, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/data', 0, 1402485331, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/data/merge.txt', 731, 1401013309, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data', 0, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data/languages', 0, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data/languages/fetch_data.py', 3881, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data/movie_reviews', 0, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data/movie_reviews/fetch_data.py', 695, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data/twenty_newsgroups', 0, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/doc/tutorial/text_analytics/data/twenty_newsgroups/fetch_data.py', 784, 1405363465, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data', 0, 1405363500, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/boston_house_prices.csv', 34741, 1405363499, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/diabetes_data.csv.gz', 23803, 1405363499, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/diabetes_target.csv.gz', 1050, 1405363500, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/digits.csv.gz', 57523, 1405363500, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/iris.csv', 2734, 1405363500, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/linnerud_exercise.csv', 212, 1405363500, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/data/linnerud_physiological.csv', 219, 1405363500, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/tests/data', 0, 1405363503, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/tests/data/svmlight_classification.txt', 254, 1405363502, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/tests/data/svmlight_invalid.txt', 54, 1405363502, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/tests/data/svmlight_invalid_order.txt', 23, 1405363502, 'dcurry'), ('src/L1TriggerDPGUpgrade/L1TMuon/macros/python/sciKit/sklearn/datasets/tests/data/svmlight_multilabel.txt', 92, 1405363503, 'dcurry'), ('PSet.py', 101, 1421148013, 'dcurry'), ('PSet.pkl', 655932, 1421148013, 'dcurry'), ('debug/originalPSet.py', 5478, 1401885140, 'dcurry'), ('debug/crabConfig.py', 843, 1421148025, 'dcurry')]
+DEBUG 2015-01-13 12:20:25,888: 	 MD5 checksum: 4ef450b7a86ea67b4d0856f520b22c19
+DEBUG 2015-01-13 12:20:26,051: 	  uploading archive to cache /afs/cern.ch/work/d/dcurry/private/rpc/CMSSW_6_2_3/src/L1TriggerDPGUpgrade/L1TMuon/test/crab/crab_20150113_122004/inputs/543c379f-6ea3-4136-a0b9-762af4468ae4default.tgz 
+DEBUG 2015-01-13 12:20:26,721: 	 Result uploading input files: ('https://cmsweb.cern.ch/crabcache', '83f7c1f8f323a09c24d74c129b79093ac5fa1a12ebd74fdb5d68c094d36c71b9.tar.gz', '4ef450b7a86ea67b4d0856f520b22c19') 
+WARNING 2015-01-13 12:20:26,722: 	 WARNING: The following output files will not be published, as they are not EDM files: ['rpc_tuple_2012D.root']
+INFO 2015-01-13 12:20:26,722: 	 Sending the request to the server
+DEBUG 2015-01-13 12:20:26,722: 	 Submitting {'lfn': '/store/user/dcurry/rpc/', 'workflow': 'crab_20150113_122004', 'adduserfiles': [], 'savelogsflag': 0, 'publishname': '4ef450b7a86ea67b4d0856f520b22c19', 'ignorelocality': 0, 'useparent': 0, 'nonprodsw': 0, 'tfileoutfiles': [], 'asyncdest': 'T2_CH_CERN', 'oneEventMode': 0, 'algoargs': 1000, 'saveoutput': 1, 'totalunits': 0, 'cachefilename': '83f7c1f8f323a09c24d74c129b79093ac5fa1a12ebd74fdb5d68c094d36c71b9.tar.gz', 'jobarch': 'slc5_amd64_gcc472', 'addoutputfiles': ['rpc_tuple_2012D.root'], 'splitalgo': 'LumiBased', 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'jobsw': 'CMSSW_6_2_3', 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publication': 1, 'edmoutfiles': [], 'cacheurl': 'https://cmsweb.cern.ch/crabcache', 'inputdata': '/MinimumBias/Run2012D-HLTPhysics-Tier1PromptSkim-v1/RAW-RECO', 'jobtype': 'Analysis'} 
+DEBUG 2015-01-13 12:20:26,722: 	 Encoded submit request: lfn=%2Fstore%2Fuser%2Fdcurry%2Frpc%2F&workflow=crab_20150113_122004&savelogsflag=0&publishname=4ef450b7a86ea67b4d0856f520b22c19&ignorelocality=0&useparent=0&nonprodsw=0&asyncdest=T2_CH_CERN&oneEventMode=0&algoargs=1000&saveoutput=1&totalunits=0&cachefilename=83f7c1f8f323a09c24d74c129b79093ac5fa1a12ebd74fdb5d68c094d36c71b9.tar.gz&jobarch=slc5_amd64_gcc472&splitalgo=LumiBased&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&jobsw=CMSSW_6_2_3&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publication=1&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&inputdata=%2FMinimumBias%2FRun2012D-HLTPhysics-Tier1PromptSkim-v1%2FRAW-RECO&jobtype=Analysis&addoutputfiles=rpc_tuple_2012D.root
+DEBUG 2015-01-13 12:20:27,547: 	 Result: {'result': [{'RequestName': '150113_112027_crab3test-4:dcurry_crab_20150113_122004'}]}
+INFO 2015-01-13 12:20:27,554: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2015-01-13 12:20:27,554: 	 Task name: 150113_112027_crab3test-4:dcurry_crab_20150113_122004
+INFO 2015-01-13 12:20:27,555: 	 Please use 'crab status' to check how the submission process proceed
+DEBUG 2015-01-13 12:20:27,555: 	 About to return
+DEBUG 2015-01-13 12:24:43,120: 	 Executing command: 'status'
+DEBUG 2015-01-13 12:24:43,122: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 12:24:43,157: 	 Checking credentials
+DEBUG 2015-01-13 12:24:43,159: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 12:24:43,159: 	 Getting proxy life time left
+DEBUG 2015-01-13 12:24:43,971: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 85897
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:24:45,187: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 85895
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:24:45,187: 	 Proxy valid for 23:51:37 hours
+DEBUG 2015-01-13 12:24:45,438: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 12:24:45,438: 	 Checking credentials
+DEBUG 2015-01-13 12:24:45,438: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 12:24:45,438: 	 Getting proxy life time left
+DEBUG 2015-01-13 12:24:46,052: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 85894
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:24:46,862: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 85894
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:24:46,862: 	 Proxy valid for 23:51:34 hours
+DEBUG 2015-01-13 12:24:47,571: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:24:48,488: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 12:24:48,709: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 12:24:48,709: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 12:24:48,709: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 12:24:50,220: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 698:16:19  (29.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:24:50,222: 	 Myproxy is valid: 2513779
+DEBUG 2015-01-13 12:24:50,222: 	 Command use: status
+DEBUG 2015-01-13 12:24:50,222: 	 Options use: []
+DEBUG 2015-01-13 12:24:50,412: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 12:24:50,412: 	 Instance is prod
+DEBUG 2015-01-13 12:24:50,412: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 12:24:50,412: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 12:24:50,412: 	 Looking up detailed status of task 150113_112027_crab3test-4:dcurry_crab_20150113_122004
+DEBUG 2015-01-13 12:24:50,547: 	 {'status': 'QUEUED', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 12:24:50,547: 	 Task name:			150113_112027_crab3test-4:dcurry_crab_20150113_122004
+INFO 2015-01-13 12:24:50,547: 	 Task status:			QUEUED
+INFO 2015-01-13 12:24:50,547: 	 
+INFO 2015-01-13 12:24:50,547: 	 No publication information available yet
+INFO 2015-01-13 12:24:50,547: 	 
+No jobs created yet!
+DEBUG 2015-01-13 12:28:14,239: 	 Executing command: 'status'
+DEBUG 2015-01-13 12:28:14,240: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 12:28:14,310: 	 Checking credentials
+DEBUG 2015-01-13 12:28:14,314: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 12:28:14,314: 	 Getting proxy life time left
+DEBUG 2015-01-13 12:28:15,420: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 85685
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:28:15,834: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 85685
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:28:15,834: 	 Proxy valid for 23:48:05 hours
+DEBUG 2015-01-13 12:28:15,954: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 12:28:15,954: 	 Checking credentials
+DEBUG 2015-01-13 12:28:15,954: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 12:28:15,954: 	 Getting proxy life time left
+DEBUG 2015-01-13 12:28:16,559: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 85684
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:28:17,164: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 85683
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:28:17,164: 	 Proxy valid for 23:48:04 hours
+DEBUG 2015-01-13 12:28:18,369: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:28:18,515: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 12:28:18,825: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 12:28:18,825: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 12:28:18,825: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 12:28:19,831: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 698:12:50  (29.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:28:19,832: 	 Myproxy is valid: 2513570
+DEBUG 2015-01-13 12:28:19,832: 	 Command use: status
+DEBUG 2015-01-13 12:28:19,832: 	 Options use: []
+DEBUG 2015-01-13 12:28:20,034: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 12:28:20,034: 	 Instance is prod
+DEBUG 2015-01-13 12:28:20,034: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 12:28:20,034: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 12:28:20,035: 	 Looking up detailed status of task 150113_112027_crab3test-4:dcurry_crab_20150113_122004
+DEBUG 2015-01-13 12:28:26,033: 	 {'status': 'SUBMITTED', 'totalJobdefs': 0, 'jobSetID': '150113_112027_crab3test-4:dcurry_crab_20150113_122004', 'jobsPerStatus': {'idle': 24, 'running': 21, 'unsubmitted': 134}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'jobList': [['unsubmitted', 165], ['unsubmitted', 133], ['unsubmitted', 132], ['unsubmitted', 131], ['unsubmitted', 130], ['unsubmitted', 137], ['unsubmitted', 136], ['unsubmitted', 135], ['unsubmitted', 134], ['unsubmitted', 139], ['unsubmitted', 138], ['unsubmitted', 166], ['idle', 24], ['idle', 25], ['running', 26], ['idle', 27], ['running', 20], ['running', 21], ['idle', 22], ['running', 23], ['unsubmitted', 160], ['idle', 28], ['running', 29], ['unsubmitted', 161], ['idle', 4], ['running', 8], ['unsubmitted', 163], ['unsubmitted', 119], ['unsubmitted', 120], ['unsubmitted', 121], ['unsubmitted', 122], ['unsubmitted', 123], ['unsubmitted', 124], ['unsubmitted', 125], ['unsubmitted', 126], ['unsubmitted', 127], ['unsubmitted', 128], ['unsubmitted', 129], ['unsubmitted', 167], ['unsubmitted', 118], ['unsubmitted', 59], ['unsubmitted', 58], ['unsubmitted', 55], ['unsubmitted', 54], ['unsubmitted', 57], ['unsubmitted', 56], ['unsubmitted', 51], ['unsubmitted', 50], ['unsubmitted', 53], ['unsubmitted', 52], ['unsubmitted', 164], ['unsubmitted', 179], ['unsubmitted', 178], ['unsubmitted', 115], ['unsubmitted', 114], ['unsubmitted', 88], ['unsubmitted', 89], ['unsubmitted', 111], ['unsubmitted', 110], ['unsubmitted', 113], ['unsubmitted', 112], ['unsubmitted', 82], ['unsubmitted', 83], ['unsubmitted', 80], ['unsubmitted', 81], ['unsubmitted', 86], ['unsubmitted', 87], ['unsubmitted', 84], ['unsubmitted', 85], ['running', 3], ['unsubmitted', 177], ['running', 7], ['unsubmitted', 108], ['unsubmitted', 109], ['unsubmitted', 102], ['unsubmitted', 103], ['unsubmitted', 100], ['unsubmitted', 101], ['unsubmitted', 106], ['unsubmitted', 107], ['unsubmitted', 104], ['unsubmitted', 105], ['idle', 39], ['idle', 38], ['idle', 33], ['idle', 32], ['idle', 31], ['idle', 30], ['idle', 37], ['idle', 36], ['idle', 35], ['idle', 34], ['unsubmitted', 176], ['unsubmitted', 60], ['unsubmitted', 61], ['unsubmitted', 62], ['unsubmitted', 63], ['unsubmitted', 64], ['unsubmitted', 65], ['unsubmitted', 66], ['unsubmitted', 67], ['unsubmitted', 68], ['unsubmitted', 69], ['unsubmitted', 175], ['unsubmitted', 174], ['unsubmitted', 173], ['unsubmitted', 172], ['unsubmitted', 171], ['unsubmitted', 170], ['idle', 2], ['unsubmitted', 162], ['running', 6], ['unsubmitted', 99], ['unsubmitted', 98], ['unsubmitted', 168], ['unsubmitted', 169], ['unsubmitted', 91], ['unsubmitted', 90], ['unsubmitted', 93], ['unsubmitted', 92], ['unsubmitted', 95], ['unsubmitted', 94], ['unsubmitted', 97], ['unsubmitted', 96], ['running', 11], ['running', 10], ['running', 13], ['running', 12], ['running', 15], ['running', 14], ['idle', 17], ['running', 16], ['running', 19], ['running', 18], ['unsubmitted', 117], ['unsubmitted', 116], ['unsubmitted', 151], ['unsubmitted', 150], ['unsubmitted', 153], ['unsubmitted', 152], ['unsubmitted', 155], ['unsubmitted', 154], ['unsubmitted', 157], ['unsubmitted', 156], ['unsubmitted', 159], ['unsubmitted', 158], ['unsubmitted', 48], ['unsubmitted', 49], ['unsubmitted', 46], ['unsubmitted', 47], ['idle', 44], ['idle', 45], ['idle', 42], ['idle', 43], ['idle', 40], ['idle', 41], ['running', 1], ['running', 5], ['running', 9], ['unsubmitted', 146], ['unsubmitted', 147], ['unsubmitted', 144], ['unsubmitted', 145], ['unsubmitted', 142], ['unsubmitted', 143], ['unsubmitted', 140], ['unsubmitted', 141], ['unsubmitted', 148], ['unsubmitted', 149], ['unsubmitted', 77], ['unsubmitted', 76], ['unsubmitted', 75], ['unsubmitted', 74], ['unsubmitted', 73], ['unsubmitted', 72], ['unsubmitted', 71], ['unsubmitted', 70], ['unsubmitted', 79], ['unsubmitted', 78]], 'jobs': {'133': {'State': 'unsubmitted'}, '132': {'State': 'unsubmitted'}, '131': {'State': 'unsubmitted'}, '130': {'State': 'unsubmitted'}, '137': {'State': 'unsubmitted'}, '136': {'State': 'unsubmitted'}, '135': {'State': 'unsubmitted'}, '134': {'State': 'unsubmitted'}, '139': {'State': 'unsubmitted'}, '138': {'State': 'unsubmitted'}, '93': {'State': 'unsubmitted'}, '24': {'State': 'idle'}, '25': {'State': 'idle'}, '26': {'State': 'running'}, '27': {'State': 'idle'}, '20': {'State': 'running'}, '21': {'State': 'running'}, '22': {'State': 'idle'}, '23': {'State': 'running'}, '95': {'State': 'unsubmitted'}, '28': {'State': 'idle'}, '29': {'State': 'running'}, '94': {'State': 'unsubmitted'}, '4': {'State': 'idle'}, '8': {'State': 'running'}, '96': {'State': 'unsubmitted'}, '68': {'State': 'unsubmitted'}, '120': {'State': 'unsubmitted'}, '121': {'State': 'unsubmitted'}, '122': {'State': 'unsubmitted'}, '123': {'State': 'unsubmitted'}, '124': {'State': 'unsubmitted'}, '125': {'State': 'unsubmitted'}, '126': {'State': 'unsubmitted'}, '127': {'State': 'unsubmitted'}, '128': {'State': 'unsubmitted'}, '129': {'State': 'unsubmitted'}, '69': {'State': 'unsubmitted'}, '91': {'State': 'unsubmitted'}, '59': {'State': 'unsubmitted'}, '58': {'State': 'unsubmitted'}, '55': {'State': 'unsubmitted'}, '54': {'State': 'unsubmitted'}, '57': {'State': 'unsubmitted'}, '56': {'State': 'unsubmitted'}, '51': {'State': 'unsubmitted'}, '50': {'State': 'unsubmitted'}, '53': {'State': 'unsubmitted'}, '52': {'State': 'unsubmitted'}, '90': {'State': 'unsubmitted'}, '66': {'State': 'unsubmitted'}, '67': {'State': 'unsubmitted'}, '115': {'State': 'unsubmitted'}, '114': {'State': 'unsubmitted'}, '88': {'State': 'unsubmitted'}, '89': {'State': 'unsubmitted'}, '111': {'State': 'unsubmitted'}, '110': {'State': 'unsubmitted'}, '113': {'State': 'unsubmitted'}, '112': {'State': 'unsubmitted'}, '82': {'State': 'unsubmitted'}, '83': {'State': 'unsubmitted'}, '80': {'State': 'unsubmitted'}, '81': {'State': 'unsubmitted'}, '119': {'State': 'unsubmitted'}, '118': {'State': 'unsubmitted'}, '84': {'State': 'unsubmitted'}, '85': {'State': 'unsubmitted'}, '3': {'State': 'running'}, '7': {'State': 'running'}, '92': {'State': 'unsubmitted'}, '108': {'State': 'unsubmitted'}, '109': {'State': 'unsubmitted'}, '102': {'State': 'unsubmitted'}, '103': {'State': 'unsubmitted'}, '100': {'State': 'unsubmitted'}, '101': {'State': 'unsubmitted'}, '106': {'State': 'unsubmitted'}, '107': {'State': 'unsubmitted'}, '104': {'State': 'unsubmitted'}, '105': {'State': 'unsubmitted'}, '39': {'State': 'idle'}, '38': {'State': 'idle'}, '33': {'State': 'idle'}, '32': {'State': 'idle'}, '31': {'State': 'idle'}, '30': {'State': 'idle'}, '37': {'State': 'idle'}, '36': {'State': 'idle'}, '35': {'State': 'idle'}, '34': {'State': 'idle'}, '60': {'State': 'unsubmitted'}, '61': {'State': 'unsubmitted'}, '62': {'State': 'unsubmitted'}, '63': {'State': 'unsubmitted'}, '64': {'State': 'unsubmitted'}, '65': {'State': 'unsubmitted'}, '179': {'State': 'unsubmitted'}, '178': {'State': 'unsubmitted'}, '177': {'State': 'unsubmitted'}, '176': {'State': 'unsubmitted'}, '175': {'State': 'unsubmitted'}, '174': {'State': 'unsubmitted'}, '173': {'State': 'unsubmitted'}, '172': {'State': 'unsubmitted'}, '171': {'State': 'unsubmitted'}, '170': {'State': 'unsubmitted'}, '2': {'State': 'idle'}, '6': {'State': 'running'}, '97': {'State': 'unsubmitted'}, '99': {'State': 'unsubmitted'}, '98': {'State': 'unsubmitted'}, '168': {'State': 'unsubmitted'}, '169': {'State': 'unsubmitted'}, '164': {'State': 'unsubmitted'}, '165': {'State': 'unsubmitted'}, '166': {'State': 'unsubmitted'}, '167': {'State': 'unsubmitted'}, '160': {'State': 'unsubmitted'}, '161': {'State': 'unsubmitted'}, '162': {'State': 'unsubmitted'}, '163': {'State': 'unsubmitted'}, '11': {'State': 'running'}, '10': {'State': 'running'}, '13': {'State': 'running'}, '12': {'State': 'running'}, '15': {'State': 'running'}, '14': {'State': 'running'}, '17': {'State': 'idle'}, '16': {'State': 'running'}, '19': {'State': 'running'}, '18': {'State': 'running'}, '117': {'State': 'unsubmitted'}, '116': {'State': 'unsubmitted'}, '151': {'State': 'unsubmitted'}, '150': {'State': 'unsubmitted'}, '153': {'State': 'unsubmitted'}, '152': {'State': 'unsubmitted'}, '155': {'State': 'unsubmitted'}, '154': {'State': 'unsubmitted'}, '157': {'State': 'unsubmitted'}, '156': {'State': 'unsubmitted'}, '159': {'State': 'unsubmitted'}, '158': {'State': 'unsubmitted'}, '48': {'State': 'unsubmitted'}, '49': {'State': 'unsubmitted'}, '46': {'State': 'unsubmitted'}, '86': {'State': 'unsubmitted'}, '44': {'State': 'idle'}, '45': {'State': 'idle'}, '42': {'State': 'idle'}, '43': {'State': 'idle'}, '40': {'State': 'idle'}, '87': {'State': 'unsubmitted'}, '1': {'State': 'running'}, '5': {'State': 'running'}, '9': {'State': 'running'}, '146': {'State': 'unsubmitted'}, '147': {'State': 'unsubmitted'}, '144': {'State': 'unsubmitted'}, '145': {'State': 'unsubmitted'}, '142': {'State': 'unsubmitted'}, '143': {'State': 'unsubmitted'}, '140': {'State': 'unsubmitted'}, '141': {'State': 'unsubmitted'}, '148': {'State': 'unsubmitted'}, '149': {'State': 'unsubmitted'}, '77': {'State': 'unsubmitted'}, '76': {'State': 'unsubmitted'}, '75': {'State': 'unsubmitted'}, '74': {'State': 'unsubmitted'}, '73': {'State': 'unsubmitted'}, '72': {'State': 'unsubmitted'}, '71': {'State': 'unsubmitted'}, '70': {'State': 'unsubmitted'}, '79': {'State': 'unsubmitted'}, '78': {'State': 'unsubmitted'}, '41': {'State': 'idle'}, '47': {'State': 'unsubmitted'}}, 'jobdefErrors': [], 'outdatasets': None, 'pool': {}, 'publication': {}}
+INFO 2015-01-13 12:28:26,033: 	 Task name:			150113_112027_crab3test-4:dcurry_crab_20150113_122004
+INFO 2015-01-13 12:28:26,033: 	 Task status:			SUBMITTED
+INFO 2015-01-13 12:28:26,033: 	 Glidemon monitoring URL:	http://glidemon.web.cern.ch/glidemon/jobs.php?taskname=150113_112027_crab3test-4%3Adcurry_crab_20150113_122004
+INFO 2015-01-13 12:28:26,033: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=dcurry&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=150113_112027_crab3test-4%3Adcurry_crab_20150113_122004
+INFO 2015-01-13 12:28:26,037: 	 Details:			idle           13.4% ( 24/179)
+INFO 2015-01-13 12:28:26,038: 	 				running        11.7% ( 21/179)
+INFO 2015-01-13 12:28:26,038: 	 				unsubmitted    74.9% (134/179)
+INFO 2015-01-13 12:28:26,038: 	 
+INFO 2015-01-13 12:28:26,038: 	 No publication information available yet
+DEBUG 2015-01-13 12:37:26,808: 	 Executing command: 'status'
+DEBUG 2015-01-13 12:37:26,809: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 12:37:27,030: 	 Checking credentials
+DEBUG 2015-01-13 12:37:27,032: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 12:37:27,032: 	 Getting proxy life time left
+DEBUG 2015-01-13 12:37:29,441: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 85131
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:37:30,046: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 85131
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:37:30,047: 	 Proxy valid for 23:38:51 hours
+DEBUG 2015-01-13 12:37:35,975: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 12:37:35,975: 	 Checking credentials
+DEBUG 2015-01-13 12:37:35,975: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 12:37:35,975: 	 Getting proxy life time left
+DEBUG 2015-01-13 12:37:36,479: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 85124
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:37:36,985: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 85124
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:37:36,985: 	 Proxy valid for 23:38:44 hours
+DEBUG 2015-01-13 12:37:38,196: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:37:38,806: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 12:37:38,918: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 12:37:38,918: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 12:37:38,918: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 12:37:39,522: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 698:03:30  (29.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:37:39,524: 	 Myproxy is valid: 2513010
+DEBUG 2015-01-13 12:37:39,524: 	 Command use: status
+DEBUG 2015-01-13 12:37:39,524: 	 Options use: []
+DEBUG 2015-01-13 12:37:39,677: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 12:37:39,677: 	 Instance is prod
+DEBUG 2015-01-13 12:37:39,677: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 12:37:39,677: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 12:37:39,677: 	 Looking up detailed status of task 150113_112027_crab3test-4:dcurry_crab_20150113_122004
+DEBUG 2015-01-13 12:38:14,264: 	 {'status': 'UNKNOWN', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '150113_112027_crab3test-4:dcurry_crab_20150113_122004: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 12:38:14,264: 	 Task name:			150113_112027_crab3test-4:dcurry_crab_20150113_122004
+INFO 2015-01-13 12:38:14,264: 	 Task status:			UNKNOWN
+ERROR 2015-01-13 12:38:14,264: 	 Error during task information retrieval:	150113_112027_crab3test-4:dcurry_crab_20150113_122004: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host.
+INFO 2015-01-13 12:38:14,264: 	 
+INFO 2015-01-13 12:38:14,264: 	 No publication information available yet
+INFO 2015-01-13 12:38:14,264: 	 
+No jobs created yet!
+DEBUG 2015-01-13 12:41:03,138: 	 Executing command: 'status'
+DEBUG 2015-01-13 12:41:03,139: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 12:41:03,160: 	 Checking credentials
+DEBUG 2015-01-13 12:41:03,161: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 12:41:03,161: 	 Getting proxy life time left
+DEBUG 2015-01-13 12:41:03,867: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 84917
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:41:04,373: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 84916
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:41:04,373: 	 Proxy valid for 23:35:17 hours
+DEBUG 2015-01-13 12:41:04,486: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 12:41:04,486: 	 Checking credentials
+DEBUG 2015-01-13 12:41:04,487: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 12:41:04,487: 	 Getting proxy life time left
+DEBUG 2015-01-13 12:41:04,991: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 84916
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:41:05,497: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 84915
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:41:05,498: 	 Proxy valid for 23:35:16 hours
+DEBUG 2015-01-13 12:41:06,002: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:41:06,139: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 12:41:06,247: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 12:41:06,248: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 12:41:06,248: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 12:41:06,653: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 698:00:03  (29.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:41:06,654: 	 Myproxy is valid: 2512803
+DEBUG 2015-01-13 12:41:06,654: 	 Command use: status
+DEBUG 2015-01-13 12:41:06,654: 	 Options use: []
+DEBUG 2015-01-13 12:41:06,766: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 12:41:06,766: 	 Instance is prod
+DEBUG 2015-01-13 12:41:06,766: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 12:41:06,766: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 12:41:06,766: 	 Looking up detailed status of task 150113_112027_crab3test-4:dcurry_crab_20150113_122004
+DEBUG 2015-01-13 12:41:33,331: 	 {'status': 'UNKNOWN', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '150113_112027_crab3test-4:dcurry_crab_20150113_122004: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 12:41:33,331: 	 Task name:			150113_112027_crab3test-4:dcurry_crab_20150113_122004
+INFO 2015-01-13 12:41:33,331: 	 Task status:			UNKNOWN
+ERROR 2015-01-13 12:41:33,331: 	 Error during task information retrieval:	150113_112027_crab3test-4:dcurry_crab_20150113_122004: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host.
+INFO 2015-01-13 12:41:33,331: 	 
+INFO 2015-01-13 12:41:33,331: 	 No publication information available yet
+INFO 2015-01-13 12:41:33,331: 	 
+No jobs created yet!
+DEBUG 2015-01-13 12:58:48,216: 	 Executing command: 'status'
+DEBUG 2015-01-13 12:58:48,217: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 12:58:48,233: 	 Checking credentials
+DEBUG 2015-01-13 12:58:48,455: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 12:58:48,455: 	 Getting proxy life time left
+DEBUG 2015-01-13 12:58:49,863: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 83851
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:58:50,467: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 83850
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:58:50,468: 	 Proxy valid for 23:17:31 hours
+DEBUG 2015-01-13 12:58:50,781: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 12:58:50,781: 	 Checking credentials
+DEBUG 2015-01-13 12:58:50,781: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 12:58:50,781: 	 Getting proxy life time left
+DEBUG 2015-01-13 12:58:51,285: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 83849
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:58:51,689: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 83849
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:58:51,689: 	 Proxy valid for 23:17:29 hours
+DEBUG 2015-01-13 12:58:52,193: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:58:53,358: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 12:58:53,467: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 12:58:53,467: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 12:58:53,467: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 12:58:53,870: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 697:42:16  (29.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 12:58:53,871: 	 Myproxy is valid: 2511736
+DEBUG 2015-01-13 12:58:53,871: 	 Command use: status
+DEBUG 2015-01-13 12:58:53,871: 	 Options use: []
+DEBUG 2015-01-13 12:58:53,951: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 12:58:53,951: 	 Instance is prod
+DEBUG 2015-01-13 12:58:53,951: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 12:58:53,951: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 12:58:53,951: 	 Looking up detailed status of task 150113_112027_crab3test-4:dcurry_crab_20150113_122004
+DEBUG 2015-01-13 12:59:16,966: 	 {'status': 'UNKNOWN', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '150113_112027_crab3test-4:dcurry_crab_20150113_122004: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 12:59:16,966: 	 Task name:			150113_112027_crab3test-4:dcurry_crab_20150113_122004
+INFO 2015-01-13 12:59:16,967: 	 Task status:			UNKNOWN
+ERROR 2015-01-13 12:59:16,967: 	 Error during task information retrieval:	150113_112027_crab3test-4:dcurry_crab_20150113_122004: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host.
+INFO 2015-01-13 12:59:16,967: 	 
+INFO 2015-01-13 12:59:16,967: 	 No publication information available yet
+INFO 2015-01-13 12:59:16,967: 	 
+No jobs created yet!
+DEBUG 2015-01-13 13:05:05,086: 	 Executing command: 'status'
+DEBUG 2015-01-13 13:05:05,086: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 13:05:05,119: 	 Checking credentials
+DEBUG 2015-01-13 13:05:05,160: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 13:05:05,160: 	 Getting proxy life time left
+DEBUG 2015-01-13 13:05:06,668: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 83474
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:05:07,275: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 83473
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:05:07,275: 	 Proxy valid for 23:11:14 hours
+DEBUG 2015-01-13 13:05:21,673: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 13:05:21,673: 	 Checking credentials
+DEBUG 2015-01-13 13:05:21,674: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 13:05:21,674: 	 Getting proxy life time left
+DEBUG 2015-01-13 13:05:22,478: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 83458
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:05:23,483: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 83457
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:05:23,484: 	 Proxy valid for 23:10:58 hours
+DEBUG 2015-01-13 13:05:25,095: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:05:26,292: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 13:05:26,903: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 13:05:26,903: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 13:05:26,903: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 13:05:27,711: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 697:35:42  (29.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:05:27,712: 	 Myproxy is valid: 2511342
+DEBUG 2015-01-13 13:05:27,712: 	 Command use: status
+DEBUG 2015-01-13 13:05:27,712: 	 Options use: []
+DEBUG 2015-01-13 13:05:27,821: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 13:05:27,821: 	 Instance is prod
+DEBUG 2015-01-13 13:05:27,821: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 13:05:27,821: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 13:05:27,821: 	 Looking up detailed status of task 150113_112027_crab3test-4:dcurry_crab_20150113_122004
+DEBUG 2015-01-13 13:05:50,982: 	 {'status': 'UNKNOWN', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '150113_112027_crab3test-4:dcurry_crab_20150113_122004: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 13:05:50,982: 	 Task name:			150113_112027_crab3test-4:dcurry_crab_20150113_122004
+INFO 2015-01-13 13:05:50,982: 	 Task status:			UNKNOWN
+ERROR 2015-01-13 13:05:50,983: 	 Error during task information retrieval:	150113_112027_crab3test-4:dcurry_crab_20150113_122004: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host.
+INFO 2015-01-13 13:05:50,983: 	 
+INFO 2015-01-13 13:05:50,983: 	 No publication information available yet
+INFO 2015-01-13 13:05:50,983: 	 
+No jobs created yet!
+DEBUG 2015-01-13 13:08:28,872: 	 Executing command: 'status'
+DEBUG 2015-01-13 13:08:28,873: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 13:08:28,953: 	 Checking credentials
+DEBUG 2015-01-13 13:08:28,954: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 13:08:28,954: 	 Getting proxy life time left
+DEBUG 2015-01-13 13:08:30,873: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 83270
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:08:31,779: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 83269
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:08:31,780: 	 Proxy valid for 23:07:50 hours
+DEBUG 2015-01-13 13:08:32,297: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 13:08:32,297: 	 Checking credentials
+DEBUG 2015-01-13 13:08:32,297: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 13:08:32,297: 	 Getting proxy life time left
+DEBUG 2015-01-13 13:08:33,203: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 83267
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:08:34,210: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 83266
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:08:34,211: 	 Proxy valid for 23:07:47 hours
+DEBUG 2015-01-13 13:08:35,116: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:08:35,327: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 13:08:35,617: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 13:08:35,617: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 13:08:35,618: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 13:08:36,522: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 697:32:33  (29.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:08:36,523: 	 Myproxy is valid: 2511153
+DEBUG 2015-01-13 13:08:36,523: 	 Command use: status
+DEBUG 2015-01-13 13:08:36,523: 	 Options use: []
+DEBUG 2015-01-13 13:08:36,656: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 13:08:36,656: 	 Instance is prod
+DEBUG 2015-01-13 13:08:36,656: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 13:08:36,656: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 13:08:36,656: 	 Looking up detailed status of task 150113_112027_crab3test-4:dcurry_crab_20150113_122004
+DEBUG 2015-01-13 13:08:47,457: 	 {'status': 'SUBMITTED', 'totalJobdefs': 0, 'jobSetID': '150113_112027_crab3test-4:dcurry_crab_20150113_122004', 'jobsPerStatus': {'finished': 46, 'transferring': 6, 'running': 123, 'transferred': 4}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'jobList': [['finished', 165], ['running', 133], ['running', 132], ['finished', 131], ['finished', 130], ['running', 137], ['running', 136], ['running', 135], ['running', 134], ['finished', 139], ['running', 138], ['finished', 166], ['finished', 24], ['running', 25], ['transferred', 26], ['running', 27], ['running', 20], ['running', 21], ['running', 22], ['running', 23], ['finished', 160], ['finished', 28], ['finished', 29], ['running', 161], ['finished', 4], ['transferred', 8], ['finished', 163], ['running', 119], ['running', 120], ['running', 121], ['running', 122], ['finished', 123], ['running', 124], ['finished', 125], ['running', 126], ['transferring', 127], ['finished', 128], ['running', 129], ['finished', 167], ['running', 118], ['running', 59], ['running', 58], ['running', 55], ['running', 54], ['running', 57], ['transferring', 56], ['running', 51], ['finished', 50], ['transferring', 53], ['running', 52], ['finished', 164], ['finished', 179], ['running', 178], ['running', 115], ['running', 114], ['running', 88], ['finished', 89], ['running', 111], ['running', 110], ['finished', 113], ['running', 112], ['running', 82], ['transferred', 83], ['running', 80], ['running', 81], ['running', 86], ['transferring', 87], ['running', 84], ['running', 85], ['running', 3], ['running', 177], ['running', 7], ['running', 108], ['running', 109], ['transferring', 102], ['finished', 103], ['finished', 100], ['running', 101], ['running', 106], ['running', 107], ['running', 104], ['running', 105], ['running', 39], ['running', 38], ['finished', 33], ['finished', 32], ['finished', 31], ['finished', 30], ['finished', 37], ['finished', 36], ['finished', 35], ['finished', 34], ['running', 176], ['running', 60], ['running', 61], ['running', 62], ['running', 63], ['running', 64], ['running', 65], ['running', 66], ['running', 67], ['running', 68], ['running', 69], ['finished', 175], ['finished', 174], ['finished', 173], ['finished', 172], ['finished', 171], ['running', 170], ['running', 2], ['finished', 162], ['running', 6], ['running', 99], ['finished', 98], ['finished', 168], ['finished', 169], ['running', 91], ['running', 90], ['running', 93], ['running', 92], ['running', 95], ['running', 94], ['finished', 97], ['running', 96], ['running', 11], ['finished', 10], ['running', 13], ['running', 12], ['running', 15], ['running', 14], ['running', 17], ['finished', 16], ['running', 19], ['running', 18], ['running', 117], ['running', 116], ['running', 151], ['running', 150], ['running', 153], ['running', 152], ['running', 155], ['running', 154], ['running', 157], ['running', 156], ['running', 159], ['running', 158], ['running', 48], ['transferred', 49], ['running', 46], ['running', 47], ['running', 44], ['running', 45], ['running', 42], ['running', 43], ['running', 40], ['running', 41], ['running', 1], ['running', 5], ['finished', 9], ['running', 146], ['running', 147], ['running', 144], ['running', 145], ['finished', 142], ['running', 143], ['finished', 140], ['finished', 141], ['running', 148], ['running', 149], ['running', 77], ['running', 76], ['running', 75], ['running', 74], ['running', 73], ['transferring', 72], ['running', 71], ['running', 70], ['running', 79], ['running', 78]], 'jobs': {'133': {'State': 'running'}, '132': {'State': 'running'}, '131': {'State': 'finished'}, '130': {'State': 'finished'}, '137': {'State': 'running'}, '136': {'State': 'running'}, '135': {'State': 'running'}, '134': {'State': 'running'}, '139': {'State': 'finished'}, '138': {'State': 'running'}, '93': {'State': 'running'}, '24': {'State': 'finished'}, '25': {'State': 'running'}, '26': {'State': 'transferred'}, '27': {'State': 'running'}, '20': {'State': 'running'}, '21': {'State': 'running'}, '22': {'State': 'running'}, '23': {'State': 'running'}, '95': {'State': 'running'}, '28': {'State': 'finished'}, '29': {'State': 'finished'}, '94': {'State': 'running'}, '4': {'State': 'finished'}, '8': {'State': 'transferred'}, '96': {'State': 'running'}, '68': {'State': 'running'}, '120': {'State': 'running'}, '121': {'State': 'running'}, '122': {'State': 'running'}, '123': {'State': 'finished'}, '124': {'State': 'running'}, '125': {'State': 'finished'}, '126': {'State': 'running'}, '127': {'State': 'transferring'}, '128': {'State': 'finished'}, '129': {'State': 'running'}, '69': {'State': 'running'}, '91': {'State': 'running'}, '59': {'State': 'running'}, '58': {'State': 'running'}, '55': {'State': 'running'}, '54': {'State': 'running'}, '57': {'State': 'running'}, '56': {'State': 'transferring'}, '51': {'State': 'running'}, '50': {'State': 'finished'}, '53': {'State': 'transferring'}, '52': {'State': 'running'}, '90': {'State': 'running'}, '66': {'State': 'running'}, '67': {'State': 'running'}, '115': {'State': 'running'}, '114': {'State': 'running'}, '88': {'State': 'running'}, '89': {'State': 'finished'}, '111': {'State': 'running'}, '110': {'State': 'running'}, '113': {'State': 'finished'}, '112': {'State': 'running'}, '82': {'State': 'running'}, '83': {'State': 'transferred'}, '80': {'State': 'running'}, '81': {'State': 'running'}, '119': {'State': 'running'}, '118': {'State': 'running'}, '84': {'State': 'running'}, '85': {'State': 'running'}, '3': {'State': 'running'}, '7': {'State': 'running'}, '92': {'State': 'running'}, '108': {'State': 'running'}, '109': {'State': 'running'}, '102': {'State': 'transferring'}, '103': {'State': 'finished'}, '100': {'State': 'finished'}, '101': {'State': 'running'}, '106': {'State': 'running'}, '107': {'State': 'running'}, '104': {'State': 'running'}, '105': {'State': 'running'}, '39': {'State': 'running'}, '38': {'State': 'running'}, '33': {'State': 'finished'}, '32': {'State': 'finished'}, '31': {'State': 'finished'}, '30': {'State': 'finished'}, '37': {'State': 'finished'}, '36': {'State': 'finished'}, '35': {'State': 'finished'}, '34': {'State': 'finished'}, '60': {'State': 'running'}, '61': {'State': 'running'}, '62': {'State': 'running'}, '63': {'State': 'running'}, '64': {'State': 'running'}, '65': {'State': 'running'}, '179': {'State': 'finished'}, '178': {'State': 'running'}, '177': {'State': 'running'}, '176': {'State': 'running'}, '175': {'State': 'finished'}, '174': {'State': 'finished'}, '173': {'State': 'finished'}, '172': {'State': 'finished'}, '171': {'State': 'finished'}, '170': {'State': 'running'}, '2': {'State': 'running'}, '6': {'State': 'running'}, '97': {'State': 'finished'}, '99': {'State': 'running'}, '98': {'State': 'finished'}, '168': {'State': 'finished'}, '169': {'State': 'finished'}, '164': {'State': 'finished'}, '165': {'State': 'finished'}, '166': {'State': 'finished'}, '167': {'State': 'finished'}, '160': {'State': 'finished'}, '161': {'State': 'running'}, '162': {'State': 'finished'}, '163': {'State': 'finished'}, '11': {'State': 'running'}, '10': {'State': 'finished'}, '13': {'State': 'running'}, '12': {'State': 'running'}, '15': {'State': 'running'}, '14': {'State': 'running'}, '17': {'State': 'running'}, '16': {'State': 'finished'}, '19': {'State': 'running'}, '18': {'State': 'running'}, '117': {'State': 'running'}, '116': {'State': 'running'}, '151': {'State': 'running'}, '150': {'State': 'running'}, '153': {'State': 'running'}, '152': {'State': 'running'}, '155': {'State': 'running'}, '154': {'State': 'running'}, '157': {'State': 'running'}, '156': {'State': 'running'}, '159': {'State': 'running'}, '158': {'State': 'running'}, '48': {'State': 'running'}, '49': {'State': 'transferred'}, '46': {'State': 'running'}, '86': {'State': 'running'}, '44': {'State': 'running'}, '45': {'State': 'running'}, '42': {'State': 'running'}, '43': {'State': 'running'}, '40': {'State': 'running'}, '87': {'State': 'transferring'}, '1': {'State': 'running'}, '5': {'State': 'running'}, '9': {'State': 'finished'}, '146': {'State': 'running'}, '147': {'State': 'running'}, '144': {'State': 'running'}, '145': {'State': 'running'}, '142': {'State': 'finished'}, '143': {'State': 'running'}, '140': {'State': 'finished'}, '141': {'State': 'finished'}, '148': {'State': 'running'}, '149': {'State': 'running'}, '77': {'State': 'running'}, '76': {'State': 'running'}, '75': {'State': 'running'}, '74': {'State': 'running'}, '73': {'State': 'running'}, '72': {'State': 'transferring'}, '71': {'State': 'running'}, '70': {'State': 'running'}, '79': {'State': 'running'}, '78': {'State': 'running'}, '41': {'State': 'running'}, '47': {'State': 'running'}}, 'jobdefErrors': [], 'outdatasets': None, 'pool': {}, 'publication': {}}
+INFO 2015-01-13 13:08:47,457: 	 Task name:			150113_112027_crab3test-4:dcurry_crab_20150113_122004
+INFO 2015-01-13 13:08:47,457: 	 Task status:			SUBMITTED
+INFO 2015-01-13 13:08:47,457: 	 Glidemon monitoring URL:	http://glidemon.web.cern.ch/glidemon/jobs.php?taskname=150113_112027_crab3test-4%3Adcurry_crab_20150113_122004
+INFO 2015-01-13 13:08:47,457: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=dcurry&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=150113_112027_crab3test-4%3Adcurry_crab_20150113_122004
+INFO 2015-01-13 13:08:47,457: 	 Details:			finished       25.7% ( 46/179)
+INFO 2015-01-13 13:08:47,457: 	 				running        68.7% (123/179)
+INFO 2015-01-13 13:08:47,457: 	 				transferred     2.2% (  4/179)
+INFO 2015-01-13 13:08:47,457: 	 				transferring    3.4% (  6/179)
+INFO 2015-01-13 13:08:47,457: 	 
+INFO 2015-01-13 13:08:47,457: 	 No publication information available yet
+DEBUG 2015-01-13 13:16:56,682: 	 Executing command: 'status'
+DEBUG 2015-01-13 13:16:56,683: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 13:16:56,709: 	 Checking credentials
+DEBUG 2015-01-13 13:16:56,710: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 13:16:56,710: 	 Getting proxy life time left
+DEBUG 2015-01-13 13:16:57,628: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 82763
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:16:58,132: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 82762
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:16:58,132: 	 Proxy valid for 22:59:23 hours
+DEBUG 2015-01-13 13:16:58,244: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 13:16:58,245: 	 Checking credentials
+DEBUG 2015-01-13 13:16:58,245: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 13:16:58,245: 	 Getting proxy life time left
+DEBUG 2015-01-13 13:16:58,750: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 82762
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:16:59,154: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 82761
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:16:59,155: 	 Proxy valid for 22:59:22 hours
+DEBUG 2015-01-13 13:16:59,560: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:16:59,739: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 13:16:59,848: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 13:16:59,849: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 13:16:59,849: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 13:17:00,355: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 697:24:09  (29.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:17:00,356: 	 Myproxy is valid: 2510649
+DEBUG 2015-01-13 13:17:00,356: 	 Command use: status
+DEBUG 2015-01-13 13:17:00,356: 	 Options use: []
+DEBUG 2015-01-13 13:17:00,460: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 13:17:00,460: 	 Instance is prod
+DEBUG 2015-01-13 13:17:00,460: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 13:17:00,460: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 13:17:00,460: 	 Looking up detailed status of task 150113_112027_crab3test-4:dcurry_crab_20150113_122004
+DEBUG 2015-01-13 13:17:34,058: 	 {'status': 'SUBMITTED', 'totalJobdefs': 0, 'jobSetID': '150113_112027_crab3test-4:dcurry_crab_20150113_122004', 'jobsPerStatus': {'finished': 60, 'transferring': 6, 'running': 109, 'transferred': 4}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'jobList': [['finished', 165], ['running', 133], ['running', 132], ['finished', 131], ['finished', 130], ['running', 137], ['running', 136], ['running', 135], ['running', 134], ['finished', 139], ['finished', 138], ['finished', 166], ['finished', 24], ['running', 25], ['finished', 26], ['running', 27], ['running', 20], ['running', 21], ['running', 22], ['transferring', 23], ['finished', 160], ['finished', 28], ['finished', 29], ['running', 161], ['finished', 4], ['finished', 8], ['finished', 163], ['running', 119], ['running', 120], ['running', 121], ['running', 122], ['finished', 123], ['running', 124], ['finished', 125], ['running', 126], ['finished', 127], ['finished', 128], ['running', 129], ['finished', 167], ['running', 118], ['running', 59], ['running', 58], ['running', 55], ['running', 54], ['running', 57], ['finished', 56], ['running', 51], ['finished', 50], ['finished', 53], ['running', 52], ['finished', 164], ['finished', 179], ['running', 178], ['running', 115], ['running', 114], ['running', 88], ['finished', 89], ['transferred', 111], ['running', 110], ['finished', 113], ['running', 112], ['running', 82], ['finished', 83], ['running', 80], ['running', 81], ['running', 86], ['finished', 87], ['running', 84], ['running', 85], ['running', 3], ['running', 177], ['running', 7], ['running', 108], ['running', 109], ['finished', 102], ['finished', 103], ['finished', 100], ['running', 101], ['running', 106], ['running', 107], ['finished', 104], ['running', 105], ['running', 39], ['running', 38], ['finished', 33], ['finished', 32], ['finished', 31], ['finished', 30], ['finished', 37], ['finished', 36], ['finished', 35], ['finished', 34], ['running', 176], ['running', 60], ['running', 61], ['finished', 62], ['transferred', 63], ['running', 64], ['transferring', 65], ['running', 66], ['running', 67], ['running', 68], ['running', 69], ['finished', 175], ['finished', 174], ['finished', 173], ['finished', 172], ['finished', 171], ['transferring', 170], ['running', 2], ['finished', 162], ['running', 6], ['transferring', 99], ['finished', 98], ['finished', 168], ['finished', 169], ['running', 91], ['running', 90], ['running', 93], ['transferring', 92], ['running', 95], ['transferred', 94], ['finished', 97], ['running', 96], ['running', 11], ['finished', 10], ['running', 13], ['transferring', 12], ['running', 15], ['running', 14], ['running', 17], ['finished', 16], ['running', 19], ['running', 18], ['running', 117], ['running', 116], ['running', 151], ['transferred', 150], ['running', 153], ['running', 152], ['running', 155], ['running', 154], ['running', 157], ['running', 156], ['running', 159], ['running', 158], ['running', 48], ['finished', 49], ['running', 46], ['running', 47], ['finished', 44], ['running', 45], ['running', 42], ['running', 43], ['running', 40], ['running', 41], ['running', 1], ['running', 5], ['finished', 9], ['running', 146], ['running', 147], ['running', 144], ['running', 145], ['finished', 142], ['running', 143], ['finished', 140], ['finished', 141], ['running', 148], ['running', 149], ['running', 77], ['running', 76], ['running', 75], ['running', 74], ['running', 73], ['finished', 72], ['running', 71], ['running', 70], ['running', 79], ['running', 78]], 'jobs': {'133': {'State': 'running'}, '132': {'State': 'running'}, '131': {'State': 'finished'}, '130': {'State': 'finished'}, '137': {'State': 'running'}, '136': {'State': 'running'}, '135': {'State': 'running'}, '134': {'State': 'running'}, '139': {'State': 'finished'}, '138': {'State': 'finished'}, '93': {'State': 'running'}, '24': {'State': 'finished'}, '25': {'State': 'running'}, '26': {'State': 'finished'}, '27': {'State': 'running'}, '20': {'State': 'running'}, '21': {'State': 'running'}, '22': {'State': 'running'}, '23': {'State': 'transferring'}, '95': {'State': 'running'}, '28': {'State': 'finished'}, '29': {'State': 'finished'}, '94': {'State': 'transferred'}, '4': {'State': 'finished'}, '8': {'State': 'finished'}, '96': {'State': 'running'}, '68': {'State': 'running'}, '120': {'State': 'running'}, '121': {'State': 'running'}, '122': {'State': 'running'}, '123': {'State': 'finished'}, '124': {'State': 'running'}, '125': {'State': 'finished'}, '126': {'State': 'running'}, '127': {'State': 'finished'}, '128': {'State': 'finished'}, '129': {'State': 'running'}, '69': {'State': 'running'}, '91': {'State': 'running'}, '59': {'State': 'running'}, '58': {'State': 'running'}, '55': {'State': 'running'}, '54': {'State': 'running'}, '57': {'State': 'running'}, '56': {'State': 'finished'}, '51': {'State': 'running'}, '50': {'State': 'finished'}, '53': {'State': 'finished'}, '52': {'State': 'running'}, '90': {'State': 'running'}, '66': {'State': 'running'}, '67': {'State': 'running'}, '115': {'State': 'running'}, '114': {'State': 'running'}, '88': {'State': 'running'}, '89': {'State': 'finished'}, '111': {'State': 'transferred'}, '110': {'State': 'running'}, '113': {'State': 'finished'}, '112': {'State': 'running'}, '82': {'State': 'running'}, '83': {'State': 'finished'}, '80': {'State': 'running'}, '81': {'State': 'running'}, '119': {'State': 'running'}, '118': {'State': 'running'}, '84': {'State': 'running'}, '85': {'State': 'running'}, '3': {'State': 'running'}, '7': {'State': 'running'}, '92': {'State': 'transferring'}, '108': {'State': 'running'}, '109': {'State': 'running'}, '102': {'State': 'finished'}, '103': {'State': 'finished'}, '100': {'State': 'finished'}, '101': {'State': 'running'}, '106': {'State': 'running'}, '107': {'State': 'running'}, '104': {'State': 'finished'}, '105': {'State': 'running'}, '39': {'State': 'running'}, '38': {'State': 'running'}, '33': {'State': 'finished'}, '32': {'State': 'finished'}, '31': {'State': 'finished'}, '30': {'State': 'finished'}, '37': {'State': 'finished'}, '36': {'State': 'finished'}, '35': {'State': 'finished'}, '34': {'State': 'finished'}, '60': {'State': 'running'}, '61': {'State': 'running'}, '62': {'State': 'finished'}, '63': {'State': 'transferred'}, '64': {'State': 'running'}, '65': {'State': 'transferring'}, '179': {'State': 'finished'}, '178': {'State': 'running'}, '177': {'State': 'running'}, '176': {'State': 'running'}, '175': {'State': 'finished'}, '174': {'State': 'finished'}, '173': {'State': 'finished'}, '172': {'State': 'finished'}, '171': {'State': 'finished'}, '170': {'State': 'transferring'}, '2': {'State': 'running'}, '6': {'State': 'running'}, '97': {'State': 'finished'}, '99': {'State': 'transferring'}, '98': {'State': 'finished'}, '168': {'State': 'finished'}, '169': {'State': 'finished'}, '164': {'State': 'finished'}, '165': {'State': 'finished'}, '166': {'State': 'finished'}, '167': {'State': 'finished'}, '160': {'State': 'finished'}, '161': {'State': 'running'}, '162': {'State': 'finished'}, '163': {'State': 'finished'}, '11': {'State': 'running'}, '10': {'State': 'finished'}, '13': {'State': 'running'}, '12': {'State': 'transferring'}, '15': {'State': 'running'}, '14': {'State': 'running'}, '17': {'State': 'running'}, '16': {'State': 'finished'}, '19': {'State': 'running'}, '18': {'State': 'running'}, '117': {'State': 'running'}, '116': {'State': 'running'}, '151': {'State': 'running'}, '150': {'State': 'transferred'}, '153': {'State': 'running'}, '152': {'State': 'running'}, '155': {'State': 'running'}, '154': {'State': 'running'}, '157': {'State': 'running'}, '156': {'State': 'running'}, '159': {'State': 'running'}, '158': {'State': 'running'}, '48': {'State': 'running'}, '49': {'State': 'finished'}, '46': {'State': 'running'}, '86': {'State': 'running'}, '44': {'State': 'finished'}, '45': {'State': 'running'}, '42': {'State': 'running'}, '43': {'State': 'running'}, '40': {'State': 'running'}, '87': {'State': 'finished'}, '1': {'State': 'running'}, '5': {'State': 'running'}, '9': {'State': 'finished'}, '146': {'State': 'running'}, '147': {'State': 'running'}, '144': {'State': 'running'}, '145': {'State': 'running'}, '142': {'State': 'finished'}, '143': {'State': 'running'}, '140': {'State': 'finished'}, '141': {'State': 'finished'}, '148': {'State': 'running'}, '149': {'State': 'running'}, '77': {'State': 'running'}, '76': {'State': 'running'}, '75': {'State': 'running'}, '74': {'State': 'running'}, '73': {'State': 'running'}, '72': {'State': 'finished'}, '71': {'State': 'running'}, '70': {'State': 'running'}, '79': {'State': 'running'}, '78': {'State': 'running'}, '41': {'State': 'running'}, '47': {'State': 'running'}}, 'jobdefErrors': [], 'outdatasets': None, 'pool': {}, 'publication': {}}
+INFO 2015-01-13 13:17:34,058: 	 Task name:			150113_112027_crab3test-4:dcurry_crab_20150113_122004
+INFO 2015-01-13 13:17:34,058: 	 Task status:			SUBMITTED
+INFO 2015-01-13 13:17:34,058: 	 Glidemon monitoring URL:	http://glidemon.web.cern.ch/glidemon/jobs.php?taskname=150113_112027_crab3test-4%3Adcurry_crab_20150113_122004
+INFO 2015-01-13 13:17:34,058: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=dcurry&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=150113_112027_crab3test-4%3Adcurry_crab_20150113_122004
+INFO 2015-01-13 13:17:34,075: 	 Details:			finished       33.5% ( 60/179)
+INFO 2015-01-13 13:17:34,075: 	 				running        60.9% (109/179)
+INFO 2015-01-13 13:17:34,075: 	 				transferred     2.2% (  4/179)
+INFO 2015-01-13 13:17:34,075: 	 				transferring    3.4% (  6/179)
+INFO 2015-01-13 13:17:34,076: 	 
+INFO 2015-01-13 13:17:34,076: 	 No publication information available yet
+DEBUG 2015-01-13 13:21:32,531: 	 Executing command: 'status'
+DEBUG 2015-01-13 13:21:32,532: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 13:21:32,547: 	 Checking credentials
+DEBUG 2015-01-13 13:21:32,548: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 13:21:32,549: 	 Getting proxy life time left
+DEBUG 2015-01-13 13:21:33,857: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 82487
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:21:34,463: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 82486
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:21:34,464: 	 Proxy valid for 22:54:47 hours
+DEBUG 2015-01-13 13:21:34,576: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 13:21:34,576: 	 Checking credentials
+DEBUG 2015-01-13 13:21:34,577: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 13:21:34,577: 	 Getting proxy life time left
+DEBUG 2015-01-13 13:21:35,081: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 82485
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:21:35,586: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 82485
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:21:35,586: 	 Proxy valid for 22:54:45 hours
+DEBUG 2015-01-13 13:21:35,992: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:21:36,253: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 13:21:36,362: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 13:21:36,363: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 13:21:36,363: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 13:21:36,767: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 697:19:33  (29.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:21:36,768: 	 Myproxy is valid: 2510373
+DEBUG 2015-01-13 13:21:36,768: 	 Command use: status
+DEBUG 2015-01-13 13:21:36,768: 	 Options use: []
+DEBUG 2015-01-13 13:21:36,935: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 13:21:36,935: 	 Instance is prod
+DEBUG 2015-01-13 13:21:36,935: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 13:21:36,935: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 13:21:36,935: 	 Looking up detailed status of task 150113_112027_crab3test-4:dcurry_crab_20150113_122004
+DEBUG 2015-01-13 13:21:42,276: 	 {'status': 'SUBMITTED', 'totalJobdefs': 0, 'jobSetID': '150113_112027_crab3test-4:dcurry_crab_20150113_122004', 'jobsPerStatus': {'finished': 68, 'transferring': 5, 'running': 100, 'transferred': 6}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'jobList': [['finished', 165], ['running', 133], ['transferred', 132], ['finished', 131], ['finished', 130], ['running', 137], ['running', 136], ['running', 135], ['transferring', 134], ['finished', 139], ['finished', 138], ['finished', 166], ['finished', 24], ['running', 25], ['finished', 26], ['transferred', 27], ['running', 20], ['running', 21], ['running', 22], ['finished', 23], ['finished', 160], ['finished', 28], ['finished', 29], ['running', 161], ['finished', 4], ['finished', 8], ['finished', 163], ['running', 119], ['running', 120], ['running', 121], ['transferring', 122], ['finished', 123], ['running', 124], ['finished', 125], ['running', 126], ['finished', 127], ['finished', 128], ['running', 129], ['finished', 167], ['running', 118], ['running', 59], ['running', 58], ['running', 55], ['running', 54], ['running', 57], ['finished', 56], ['running', 51], ['finished', 50], ['finished', 53], ['running', 52], ['finished', 164], ['finished', 179], ['transferred', 178], ['running', 115], ['running', 114], ['running', 88], ['finished', 89], ['finished', 111], ['running', 110], ['finished', 113], ['running', 112], ['running', 82], ['finished', 83], ['running', 80], ['running', 81], ['running', 86], ['finished', 87], ['running', 84], ['running', 85], ['running', 3], ['transferred', 177], ['running', 7], ['running', 108], ['running', 109], ['finished', 102], ['finished', 103], ['finished', 100], ['running', 101], ['running', 106], ['running', 107], ['finished', 104], ['running', 105], ['running', 39], ['running', 38], ['finished', 33], ['finished', 32], ['finished', 31], ['finished', 30], ['finished', 37], ['finished', 36], ['finished', 35], ['finished', 34], ['running', 176], ['running', 60], ['running', 61], ['finished', 62], ['finished', 63], ['transferring', 64], ['transferring', 65], ['running', 66], ['running', 67], ['running', 68], ['running', 69], ['finished', 175], ['finished', 174], ['finished', 173], ['finished', 172], ['finished', 171], ['finished', 170], ['running', 2], ['finished', 162], ['running', 6], ['finished', 99], ['finished', 98], ['finished', 168], ['finished', 169], ['running', 91], ['running', 90], ['running', 93], ['transferred', 92], ['running', 95], ['finished', 94], ['finished', 97], ['running', 96], ['running', 11], ['finished', 10], ['running', 13], ['finished', 12], ['running', 15], ['running', 14], ['running', 17], ['finished', 16], ['transferred', 19], ['running', 18], ['running', 117], ['transferring', 116], ['running', 151], ['finished', 150], ['running', 153], ['running', 152], ['running', 155], ['running', 154], ['running', 157], ['running', 156], ['running', 159], ['running', 158], ['running', 48], ['finished', 49], ['running', 46], ['running', 47], ['finished', 44], ['running', 45], ['running', 42], ['running', 43], ['running', 40], ['running', 41], ['running', 1], ['running', 5], ['finished', 9], ['running', 146], ['running', 147], ['running', 144], ['running', 145], ['finished', 142], ['running', 143], ['finished', 140], ['finished', 141], ['running', 148], ['running', 149], ['running', 77], ['running', 76], ['running', 75], ['running', 74], ['running', 73], ['finished', 72], ['running', 71], ['running', 70], ['running', 79], ['running', 78]], 'jobs': {'133': {'State': 'running'}, '132': {'State': 'transferred'}, '131': {'State': 'finished'}, '130': {'State': 'finished'}, '137': {'State': 'running'}, '136': {'State': 'running'}, '135': {'State': 'running'}, '134': {'State': 'transferring'}, '139': {'State': 'finished'}, '138': {'State': 'finished'}, '93': {'State': 'running'}, '24': {'State': 'finished'}, '25': {'State': 'running'}, '26': {'State': 'finished'}, '27': {'State': 'transferred'}, '20': {'State': 'running'}, '21': {'State': 'running'}, '22': {'State': 'running'}, '23': {'State': 'finished'}, '95': {'State': 'running'}, '28': {'State': 'finished'}, '29': {'State': 'finished'}, '94': {'State': 'finished'}, '4': {'State': 'finished'}, '8': {'State': 'finished'}, '96': {'State': 'running'}, '68': {'State': 'running'}, '120': {'State': 'running'}, '121': {'State': 'running'}, '122': {'State': 'transferring'}, '123': {'State': 'finished'}, '124': {'State': 'running'}, '125': {'State': 'finished'}, '126': {'State': 'running'}, '127': {'State': 'finished'}, '128': {'State': 'finished'}, '129': {'State': 'running'}, '69': {'State': 'running'}, '91': {'State': 'running'}, '59': {'State': 'running'}, '58': {'State': 'running'}, '55': {'State': 'running'}, '54': {'State': 'running'}, '57': {'State': 'running'}, '56': {'State': 'finished'}, '51': {'State': 'running'}, '50': {'State': 'finished'}, '53': {'State': 'finished'}, '52': {'State': 'running'}, '90': {'State': 'running'}, '66': {'State': 'running'}, '67': {'State': 'running'}, '115': {'State': 'running'}, '114': {'State': 'running'}, '88': {'State': 'running'}, '89': {'State': 'finished'}, '111': {'State': 'finished'}, '110': {'State': 'running'}, '113': {'State': 'finished'}, '112': {'State': 'running'}, '82': {'State': 'running'}, '83': {'State': 'finished'}, '80': {'State': 'running'}, '81': {'State': 'running'}, '119': {'State': 'running'}, '118': {'State': 'running'}, '84': {'State': 'running'}, '85': {'State': 'running'}, '3': {'State': 'running'}, '7': {'State': 'running'}, '92': {'State': 'transferred'}, '108': {'State': 'running'}, '109': {'State': 'running'}, '102': {'State': 'finished'}, '103': {'State': 'finished'}, '100': {'State': 'finished'}, '101': {'State': 'running'}, '106': {'State': 'running'}, '107': {'State': 'running'}, '104': {'State': 'finished'}, '105': {'State': 'running'}, '39': {'State': 'running'}, '38': {'State': 'running'}, '33': {'State': 'finished'}, '32': {'State': 'finished'}, '31': {'State': 'finished'}, '30': {'State': 'finished'}, '37': {'State': 'finished'}, '36': {'State': 'finished'}, '35': {'State': 'finished'}, '34': {'State': 'finished'}, '60': {'State': 'running'}, '61': {'State': 'running'}, '62': {'State': 'finished'}, '63': {'State': 'finished'}, '64': {'State': 'transferring'}, '65': {'State': 'transferring'}, '179': {'State': 'finished'}, '178': {'State': 'transferred'}, '177': {'State': 'transferred'}, '176': {'State': 'running'}, '175': {'State': 'finished'}, '174': {'State': 'finished'}, '173': {'State': 'finished'}, '172': {'State': 'finished'}, '171': {'State': 'finished'}, '170': {'State': 'finished'}, '2': {'State': 'running'}, '6': {'State': 'running'}, '97': {'State': 'finished'}, '99': {'State': 'finished'}, '98': {'State': 'finished'}, '168': {'State': 'finished'}, '169': {'State': 'finished'}, '164': {'State': 'finished'}, '165': {'State': 'finished'}, '166': {'State': 'finished'}, '167': {'State': 'finished'}, '160': {'State': 'finished'}, '161': {'State': 'running'}, '162': {'State': 'finished'}, '163': {'State': 'finished'}, '11': {'State': 'running'}, '10': {'State': 'finished'}, '13': {'State': 'running'}, '12': {'State': 'finished'}, '15': {'State': 'running'}, '14': {'State': 'running'}, '17': {'State': 'running'}, '16': {'State': 'finished'}, '19': {'State': 'transferred'}, '18': {'State': 'running'}, '117': {'State': 'running'}, '116': {'State': 'transferring'}, '151': {'State': 'running'}, '150': {'State': 'finished'}, '153': {'State': 'running'}, '152': {'State': 'running'}, '155': {'State': 'running'}, '154': {'State': 'running'}, '157': {'State': 'running'}, '156': {'State': 'running'}, '159': {'State': 'running'}, '158': {'State': 'running'}, '48': {'State': 'running'}, '49': {'State': 'finished'}, '46': {'State': 'running'}, '86': {'State': 'running'}, '44': {'State': 'finished'}, '45': {'State': 'running'}, '42': {'State': 'running'}, '43': {'State': 'running'}, '40': {'State': 'running'}, '87': {'State': 'finished'}, '1': {'State': 'running'}, '5': {'State': 'running'}, '9': {'State': 'finished'}, '146': {'State': 'running'}, '147': {'State': 'running'}, '144': {'State': 'running'}, '145': {'State': 'running'}, '142': {'State': 'finished'}, '143': {'State': 'running'}, '140': {'State': 'finished'}, '141': {'State': 'finished'}, '148': {'State': 'running'}, '149': {'State': 'running'}, '77': {'State': 'running'}, '76': {'State': 'running'}, '75': {'State': 'running'}, '74': {'State': 'running'}, '73': {'State': 'running'}, '72': {'State': 'finished'}, '71': {'State': 'running'}, '70': {'State': 'running'}, '79': {'State': 'running'}, '78': {'State': 'running'}, '41': {'State': 'running'}, '47': {'State': 'running'}}, 'jobdefErrors': [], 'outdatasets': None, 'pool': {}, 'publication': {}}
+INFO 2015-01-13 13:21:42,276: 	 Task name:			150113_112027_crab3test-4:dcurry_crab_20150113_122004
+INFO 2015-01-13 13:21:42,276: 	 Task status:			SUBMITTED
+INFO 2015-01-13 13:21:42,276: 	 Glidemon monitoring URL:	http://glidemon.web.cern.ch/glidemon/jobs.php?taskname=150113_112027_crab3test-4%3Adcurry_crab_20150113_122004
+INFO 2015-01-13 13:21:42,276: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=dcurry&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=150113_112027_crab3test-4%3Adcurry_crab_20150113_122004
+INFO 2015-01-13 13:21:42,276: 	 Details:			finished       38.0% ( 68/179)
+INFO 2015-01-13 13:21:42,277: 	 				running        55.9% (100/179)
+INFO 2015-01-13 13:21:42,277: 	 				transferred     3.4% (  6/179)
+INFO 2015-01-13 13:21:42,277: 	 				transferring    2.8% (  5/179)
+INFO 2015-01-13 13:21:42,277: 	 
+INFO 2015-01-13 13:21:42,277: 	 No publication information available yet
+DEBUG 2015-01-13 13:38:19,189: 	 Executing command: 'status'
+DEBUG 2015-01-13 13:38:19,190: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 13:38:19,223: 	 Checking credentials
+DEBUG 2015-01-13 13:38:19,224: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 13:38:19,224: 	 Getting proxy life time left
+DEBUG 2015-01-13 13:38:20,231: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 81480
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:38:20,735: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 81480
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:38:20,735: 	 Proxy valid for 22:38:00 hours
+DEBUG 2015-01-13 13:38:20,852: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 13:38:20,853: 	 Checking credentials
+DEBUG 2015-01-13 13:38:20,853: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 13:38:20,853: 	 Getting proxy life time left
+DEBUG 2015-01-13 13:38:21,256: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 81479
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:38:21,660: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 81479
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:38:21,660: 	 Proxy valid for 22:37:59 hours
+DEBUG 2015-01-13 13:38:22,167: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:38:22,334: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 13:38:22,446: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 13:38:22,446: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 13:38:22,446: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 13:38:22,852: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 697:02:47  (29.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:38:22,853: 	 Myproxy is valid: 2509367
+DEBUG 2015-01-13 13:38:22,853: 	 Command use: status
+DEBUG 2015-01-13 13:38:22,853: 	 Options use: []
+DEBUG 2015-01-13 13:38:22,932: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 13:38:22,932: 	 Instance is prod
+DEBUG 2015-01-13 13:38:22,932: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 13:38:22,932: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 13:38:22,932: 	 Looking up detailed status of task 150113_112027_crab3test-4:dcurry_crab_20150113_122004
+DEBUG 2015-01-13 13:38:44,117: 	 {'status': 'UNKNOWN', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '150113_112027_crab3test-4:dcurry_crab_20150113_122004: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-01-13 13:38:44,117: 	 Task name:			150113_112027_crab3test-4:dcurry_crab_20150113_122004
+INFO 2015-01-13 13:38:44,117: 	 Task status:			UNKNOWN
+ERROR 2015-01-13 13:38:44,117: 	 Error during task information retrieval:	150113_112027_crab3test-4:dcurry_crab_20150113_122004: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed). If your task is a recent onem, this could mean there is a temporary glicth. Please, retry later: Timeout when waiting for remote host.
+INFO 2015-01-13 13:38:44,117: 	 
+INFO 2015-01-13 13:38:44,117: 	 No publication information available yet
+INFO 2015-01-13 13:38:44,118: 	 
+No jobs created yet!
+DEBUG 2015-01-13 13:47:08,943: 	 Executing command: 'status'
+DEBUG 2015-01-13 13:47:08,944: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 13:47:08,959: 	 Checking credentials
+DEBUG 2015-01-13 13:47:08,960: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 13:47:08,960: 	 Getting proxy life time left
+DEBUG 2015-01-13 13:47:09,466: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 80951
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:47:10,171: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 80950
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:47:10,171: 	 Proxy valid for 22:29:11 hours
+DEBUG 2015-01-13 13:47:10,281: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 13:47:10,282: 	 Checking credentials
+DEBUG 2015-01-13 13:47:10,282: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 13:47:10,282: 	 Getting proxy life time left
+DEBUG 2015-01-13 13:47:10,685: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 80950
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:47:11,090: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 80949
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:47:11,090: 	 Proxy valid for 22:29:10 hours
+DEBUG 2015-01-13 13:47:11,493: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:47:11,886: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 13:47:11,994: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 13:47:11,994: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 13:47:11,994: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 13:47:12,398: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 696:53:57  (29.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:47:12,399: 	 Myproxy is valid: 2508837
+DEBUG 2015-01-13 13:47:12,399: 	 Command use: status
+DEBUG 2015-01-13 13:47:12,399: 	 Options use: []
+DEBUG 2015-01-13 13:47:12,539: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 13:47:12,540: 	 Instance is prod
+DEBUG 2015-01-13 13:47:12,540: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 13:47:12,540: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 13:47:12,540: 	 Looking up detailed status of task 150113_112027_crab3test-4:dcurry_crab_20150113_122004
+DEBUG 2015-01-13 13:47:53,610: 	 {'status': 'SUBMITTED', 'totalJobdefs': 0, 'jobSetID': '150113_112027_crab3test-4:dcurry_crab_20150113_122004', 'jobsPerStatus': {'finished': 125, 'transferring': 4, 'running': 41, 'transferred': 9}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'jobList': [['finished', 165], ['finished', 133], ['finished', 132], ['finished', 131], ['finished', 130], ['running', 137], ['finished', 136], ['running', 135], ['finished', 134], ['finished', 139], ['finished', 138], ['finished', 166], ['finished', 24], ['finished', 25], ['finished', 26], ['finished', 27], ['finished', 20], ['finished', 21], ['running', 22], ['finished', 23], ['finished', 160], ['finished', 28], ['finished', 29], ['finished', 161], ['finished', 4], ['finished', 8], ['finished', 163], ['running', 119], ['finished', 120], ['running', 121], ['finished', 122], ['finished', 123], ['finished', 124], ['finished', 125], ['transferring', 126], ['finished', 127], ['finished', 128], ['running', 129], ['finished', 167], ['transferred', 118], ['finished', 59], ['finished', 58], ['finished', 55], ['running', 54], ['transferred', 57], ['finished', 56], ['finished', 51], ['finished', 50], ['finished', 53], ['finished', 52], ['finished', 164], ['finished', 179], ['finished', 178], ['running', 115], ['running', 114], ['running', 88], ['finished', 89], ['finished', 111], ['transferred', 110], ['finished', 113], ['finished', 112], ['running', 82], ['finished', 83], ['running', 80], ['finished', 81], ['finished', 86], ['finished', 87], ['running', 84], ['transferring', 85], ['finished', 3], ['finished', 177], ['running', 7], ['running', 108], ['finished', 109], ['finished', 102], ['finished', 103], ['finished', 100], ['running', 101], ['running', 106], ['finished', 107], ['finished', 104], ['transferred', 105], ['transferred', 39], ['finished', 38], ['finished', 33], ['finished', 32], ['finished', 31], ['finished', 30], ['finished', 37], ['finished', 36], ['finished', 35], ['finished', 34], ['finished', 176], ['finished', 60], ['finished', 61], ['finished', 62], ['finished', 63], ['finished', 64], ['transferring', 65], ['running', 66], ['running', 67], ['running', 68], ['running', 69], ['finished', 175], ['finished', 174], ['finished', 173], ['finished', 172], ['finished', 171], ['finished', 170], ['running', 2], ['finished', 162], ['running', 6], ['finished', 99], ['finished', 98], ['finished', 168], ['finished', 169], ['running', 91], ['finished', 90], ['finished', 93], ['finished', 92], ['finished', 95], ['finished', 94], ['finished', 97], ['finished', 96], ['finished', 11], ['finished', 10], ['transferring', 13], ['finished', 12], ['running', 15], ['finished', 14], ['finished', 17], ['finished', 16], ['finished', 19], ['finished', 18], ['running', 117], ['finished', 116], ['running', 151], ['finished', 150], ['running', 153], ['finished', 152], ['finished', 155], ['finished', 154], ['finished', 157], ['running', 156], ['running', 159], ['running', 158], ['finished', 48], ['finished', 49], ['running', 46], ['finished', 47], ['finished', 44], ['finished', 45], ['running', 42], ['running', 43], ['running', 40], ['finished', 41], ['transferred', 1], ['transferred', 5], ['finished', 9], ['finished', 146], ['finished', 147], ['finished', 144], ['finished', 145], ['finished', 142], ['finished', 143], ['finished', 140], ['finished', 141], ['finished', 148], ['running', 149], ['transferred', 77], ['running', 76], ['transferred', 75], ['running', 74], ['running', 73], ['finished', 72], ['finished', 71], ['running', 70], ['running', 79], ['finished', 78]], 'jobs': {'133': {'State': 'finished'}, '132': {'State': 'finished'}, '131': {'State': 'finished'}, '130': {'State': 'finished'}, '137': {'State': 'running'}, '136': {'State': 'finished'}, '135': {'State': 'running'}, '134': {'State': 'finished'}, '139': {'State': 'finished'}, '138': {'State': 'finished'}, '93': {'State': 'finished'}, '24': {'State': 'finished'}, '25': {'State': 'finished'}, '26': {'State': 'finished'}, '27': {'State': 'finished'}, '20': {'State': 'finished'}, '21': {'State': 'finished'}, '22': {'State': 'running'}, '23': {'State': 'finished'}, '95': {'State': 'finished'}, '28': {'State': 'finished'}, '29': {'State': 'finished'}, '94': {'State': 'finished'}, '4': {'State': 'finished'}, '8': {'State': 'finished'}, '96': {'State': 'finished'}, '68': {'State': 'running'}, '120': {'State': 'finished'}, '121': {'State': 'running'}, '122': {'State': 'finished'}, '123': {'State': 'finished'}, '124': {'State': 'finished'}, '125': {'State': 'finished'}, '126': {'State': 'transferring'}, '127': {'State': 'finished'}, '128': {'State': 'finished'}, '129': {'State': 'running'}, '69': {'State': 'running'}, '91': {'State': 'running'}, '59': {'State': 'finished'}, '58': {'State': 'finished'}, '55': {'State': 'finished'}, '54': {'State': 'running'}, '57': {'State': 'transferred'}, '56': {'State': 'finished'}, '51': {'State': 'finished'}, '50': {'State': 'finished'}, '53': {'State': 'finished'}, '52': {'State': 'finished'}, '90': {'State': 'finished'}, '66': {'State': 'running'}, '67': {'State': 'running'}, '115': {'State': 'running'}, '114': {'State': 'running'}, '88': {'State': 'running'}, '89': {'State': 'finished'}, '111': {'State': 'finished'}, '110': {'State': 'transferred'}, '113': {'State': 'finished'}, '112': {'State': 'finished'}, '82': {'State': 'running'}, '83': {'State': 'finished'}, '80': {'State': 'running'}, '81': {'State': 'finished'}, '119': {'State': 'running'}, '118': {'State': 'transferred'}, '84': {'State': 'running'}, '85': {'State': 'transferring'}, '3': {'State': 'finished'}, '7': {'State': 'running'}, '92': {'State': 'finished'}, '108': {'State': 'running'}, '109': {'State': 'finished'}, '102': {'State': 'finished'}, '103': {'State': 'finished'}, '100': {'State': 'finished'}, '101': {'State': 'running'}, '106': {'State': 'running'}, '107': {'State': 'finished'}, '104': {'State': 'finished'}, '105': {'State': 'transferred'}, '39': {'State': 'transferred'}, '38': {'State': 'finished'}, '33': {'State': 'finished'}, '32': {'State': 'finished'}, '31': {'State': 'finished'}, '30': {'State': 'finished'}, '37': {'State': 'finished'}, '36': {'State': 'finished'}, '35': {'State': 'finished'}, '34': {'State': 'finished'}, '60': {'State': 'finished'}, '61': {'State': 'finished'}, '62': {'State': 'finished'}, '63': {'State': 'finished'}, '64': {'State': 'finished'}, '65': {'State': 'transferring'}, '179': {'State': 'finished'}, '178': {'State': 'finished'}, '177': {'State': 'finished'}, '176': {'State': 'finished'}, '175': {'State': 'finished'}, '174': {'State': 'finished'}, '173': {'State': 'finished'}, '172': {'State': 'finished'}, '171': {'State': 'finished'}, '170': {'State': 'finished'}, '2': {'State': 'running'}, '6': {'State': 'running'}, '97': {'State': 'finished'}, '99': {'State': 'finished'}, '98': {'State': 'finished'}, '168': {'State': 'finished'}, '169': {'State': 'finished'}, '164': {'State': 'finished'}, '165': {'State': 'finished'}, '166': {'State': 'finished'}, '167': {'State': 'finished'}, '160': {'State': 'finished'}, '161': {'State': 'finished'}, '162': {'State': 'finished'}, '163': {'State': 'finished'}, '11': {'State': 'finished'}, '10': {'State': 'finished'}, '13': {'State': 'transferring'}, '12': {'State': 'finished'}, '15': {'State': 'running'}, '14': {'State': 'finished'}, '17': {'State': 'finished'}, '16': {'State': 'finished'}, '19': {'State': 'finished'}, '18': {'State': 'finished'}, '117': {'State': 'running'}, '116': {'State': 'finished'}, '151': {'State': 'running'}, '150': {'State': 'finished'}, '153': {'State': 'running'}, '152': {'State': 'finished'}, '155': {'State': 'finished'}, '154': {'State': 'finished'}, '157': {'State': 'finished'}, '156': {'State': 'running'}, '159': {'State': 'running'}, '158': {'State': 'running'}, '48': {'State': 'finished'}, '49': {'State': 'finished'}, '46': {'State': 'running'}, '86': {'State': 'finished'}, '44': {'State': 'finished'}, '45': {'State': 'finished'}, '42': {'State': 'running'}, '43': {'State': 'running'}, '40': {'State': 'running'}, '87': {'State': 'finished'}, '1': {'State': 'transferred'}, '5': {'State': 'transferred'}, '9': {'State': 'finished'}, '146': {'State': 'finished'}, '147': {'State': 'finished'}, '144': {'State': 'finished'}, '145': {'State': 'finished'}, '142': {'State': 'finished'}, '143': {'State': 'finished'}, '140': {'State': 'finished'}, '141': {'State': 'finished'}, '148': {'State': 'finished'}, '149': {'State': 'running'}, '77': {'State': 'transferred'}, '76': {'State': 'running'}, '75': {'State': 'transferred'}, '74': {'State': 'running'}, '73': {'State': 'running'}, '72': {'State': 'finished'}, '71': {'State': 'finished'}, '70': {'State': 'running'}, '79': {'State': 'running'}, '78': {'State': 'finished'}, '41': {'State': 'finished'}, '47': {'State': 'finished'}}, 'jobdefErrors': [], 'outdatasets': None, 'pool': {}, 'publication': {}}
+INFO 2015-01-13 13:47:53,611: 	 Task name:			150113_112027_crab3test-4:dcurry_crab_20150113_122004
+INFO 2015-01-13 13:47:53,611: 	 Task status:			SUBMITTED
+INFO 2015-01-13 13:47:53,611: 	 Glidemon monitoring URL:	http://glidemon.web.cern.ch/glidemon/jobs.php?taskname=150113_112027_crab3test-4%3Adcurry_crab_20150113_122004
+INFO 2015-01-13 13:47:53,611: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=dcurry&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=150113_112027_crab3test-4%3Adcurry_crab_20150113_122004
+INFO 2015-01-13 13:47:53,622: 	 Details:			finished       69.8% (125/179)
+INFO 2015-01-13 13:47:53,622: 	 				running        22.9% ( 41/179)
+INFO 2015-01-13 13:47:53,622: 	 				transferred     5.0% (  9/179)
+INFO 2015-01-13 13:47:53,622: 	 				transferring    2.2% (  4/179)
+INFO 2015-01-13 13:47:53,622: 	 
+INFO 2015-01-13 13:47:53,622: 	 No publication information available yet
+DEBUG 2015-01-13 13:50:58,934: 	 Executing command: 'kill'
+DEBUG 2015-01-13 13:50:58,934: 	 Found /afs/cern.ch/user/d/dcurry/.crab3 file
+DEBUG 2015-01-13 13:50:58,943: 	 Checking credentials
+DEBUG 2015-01-13 13:50:58,943: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 13:50:58,943: 	 Getting proxy life time left
+DEBUG 2015-01-13 13:50:59,449: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 80721
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:50:59,960: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 80721
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:50:59,961: 	 Proxy valid for 22:25:21 hours
+DEBUG 2015-01-13 13:51:00,075: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 13:51:00,076: 	 Checking credentials
+DEBUG 2015-01-13 13:51:00,076: 	 Found proxy file /tmp/x509up_u37753
+DEBUG 2015-01-13 13:51:00,076: 	 Getting proxy life time left
+DEBUG 2015-01-13 13:51:00,479: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -timeleft
+ output : 80720
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:51:00,983: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u37753 -actimeleft
+ output : 80720
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:51:00,983: 	 Proxy valid for 22:25:20 hours
+DEBUG 2015-01-13 13:51:01,387: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u37753 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:51:01,549: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-01-13 13:51:01,658: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/1b0a06ff720813198f5edc6648696789/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1j/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-01-13 13:51:01,658: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-01-13 13:51:01,658: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry_cmsweb.cern.ch for credential name
+DEBUG 2015-01-13 13:51:01,862: 	 Executing : 
+ command : myproxy-info -l 6d4064cd922d20609daf0cd42cb031661e05a283 -s myproxy.cern.ch
+ output : username: 6d4064cd922d20609daf0cd42cb031661e05a283
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=dcurry/CN=738447/CN=David Alexander Curry
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 696:50:08  (29.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-01-13 13:51:01,863: 	 Myproxy is valid: 2508608
+DEBUG 2015-01-13 13:51:01,863: 	 Command use: kill
+DEBUG 2015-01-13 13:51:01,863: 	 Options use: ['crab_20150113_122004']
+DEBUG 2015-01-13 13:51:02,002: 	 CRABClient version: 3.3.12.patch1 Compatible
+DEBUG 2015-01-13 13:51:02,003: 	 Instance is prod
+DEBUG 2015-01-13 13:51:02,003: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-01-13 13:51:02,003: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-01-13 13:51:02,003: 	 Killing task 150113_112027_crab3test-4:dcurry_crab_20150113_122004
+INFO 2015-01-13 13:51:23,217: 	 Error contacting the server.
+INFO 2015-01-13 13:51:23,217: 	 Server answered with: Execution error
+INFO 2015-01-13 13:51:23,217: 	 Reason is: You cannot kill a task if it is in the UNKNOWN state
+DEBUG 2015-01-13 13:51:23,217: 	 ERROR:  (500):  '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+    <title>500 Internal Server Error</title>
+    <style type="text/css">
+    #powered_by {
+        margin-top: 20px;
+        border-top: 2px solid black;
+        font-style: italic;
+    }
+
+    #traceback {
+        color: red;
+    }
+    </style>
+</head>
+    <body>
+        <h2>500 Internal Server Error</h2>
+        <p>Execution error</p>
+        <pre id="traceback"></pre>
+    <div id="powered_by">
+    <span>Powered by <a href="http://www.cherrypy.org">CherryPy 3.2.2</a></span>
+    </div>
+    </body>
+</html>
+'
+DEBUG 2015-01-13 13:51:23,217: 	 Command failed with URI: https://cmsweb.cern.ch/crabserver/prod/workflow
+DEBUG 2015-01-13 13:51:23,217: 	      Input data: workflow=150113_112027_crab3test-4%3Adcurry_crab_20150113_122004&
+DEBUG 2015-01-13 13:51:23,217: 	      Request headers: {'Content-Length': '726', 'X-Error-Http': '500', 'X-Rest-Time': '21142904.043 us', 'Server': 'CherryPy/3.2.2', 'Connection': 'close', 'X-Error-Detail': 'Execution error', 'CMS-Server-Time': 'D=21148769 t=1421153462068224', 'X-Rest-Status': '403', 'Date': 'Tue, 13 Jan 2015 12:51:02 GMT', 'Content-Type': 'text/html;charset=utf-8', 'X-Error-Info': 'You cannot kill a task if it is in the UNKNOWN state', 'X-Error-Id': '483cb0c6832933e185354c52a6311fee'}
+ERROR 2015-01-13 13:51:23,217: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/bin/crab", line 168, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/CRABClient/Commands/kill.py", line 21, in __call__
+    dictresult, status, reason = server.delete(self.uri, data = urlencode({ 'workflow' : self.cachedinfo['RequestName']}) + '&' + urlencode(self.jobids))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/RESTInteractions.py", line 79, in delete
+    return self.makeRequest(uri = uri, data = data, verb = 'DELETE')
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/RESTInteractions.py", line 111, in makeRequest
+    capath=caCertPath)#, verbose=True)# for debug
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.12.patch1/lib/python2.6/site-packages/WMCore/Services/pycurl_manager.py", line 164, in request
+    raise exc
+HTTPException
