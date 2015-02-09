@@ -204,11 +204,16 @@ class rpc_tuplizer: public edm::EDAnalyzer {
   int RpcMatchedID         [MAX_CSCTF_TRK]; // Which RPC hit is macthed to track
   int isGoodTrk        [MAX_CSCTF_TRK]; // Does track have good pT assignment
 
-  int Three_Hit_pt [MAX_CSCTF_TRK]; //New branch added by Stefan
+  //New branches added by Stefan
+  int Three_Hit_pt [MAX_CSCTF_TRK];
   int Three_Hit_Match [MAX_CSCTF_TRK];
+  int Three_Hit_Match_Front [MAX_CSCTF_TRK];
+  int Three_Hit_Match_Rear [MAX_CSCTF_TRK];
   int All_Hit_pt [MAX_CSCTF_TRK];
   int All_Hit_Match [MAX_CSCTF_TRK];
   int Two_Hit_Pt [MAX_CSCTF_TRK];
+  int NumHits [MAX_CSCTF_TRK];
+  int All_Calc_pt [MAX_CSCTF_TRK];
 
   // NEW decluster RPC phi pt assignment
   int PtTrk_cluster_front [MAX_CSCTF_TRK]; 
@@ -298,11 +303,16 @@ class rpc_tuplizer: public edm::EDAnalyzer {
     CSCtree -> Branch("PhiBitTrk" ,  PhiBitTrk , "PhiBitTrk[SizeTrk]/I");
     CSCtree -> Branch("ModeTrk"   ,  ModeTrk   , "ModeTrk[SizeTrk]/I");
 
-    CSCtree -> Branch("Three_Hit_pt", Three_Hit_pt, "Three_Hit_pt[SizeTrk]/I"); //new branch added by Stefan
+    //New branches added by Stefan
+    CSCtree -> Branch("Three_Hit_pt", Three_Hit_pt, "Three_Hit_pt[SizeTrk]/I");
     CSCtree -> Branch("Three_Hit_Match", Three_Hit_Match, "Three_Hit_Match[SizeTrk]/I");
+    CSCtree -> Branch("Three_Hit_Match_Front", Three_Hit_Match_Front, "Three_Hit_Match_Front[SizeTrk]/I");
+    CSCtree -> Branch("Three_Hit_Match_Rear", Three_Hit_Match_Rear, "Three_Hit_Match_Rear[SizeTrk]/I");
     CSCtree -> Branch("All_Hit_pt", All_Hit_pt, "All_Hit_pt[SizeTrk]/I");
     CSCtree -> Branch("All_Hit_Match", All_Hit_Match, "All_Hit_Match[SizeTrk]/I");
     CSCtree -> Branch("Two_Hit_Pt", Two_Hit_Pt, "Two_Hit_Pt[SizeTrk]/I");
+    CSCtree -> Branch("NumHits", NumHits, "NumHits[SizeTrk]/I");
+    CSCtree -> Branch("All_Calc_pt", All_Calc_pt, "All_Calc_pt[SizeTrk]/I");
 
     CSCtree -> Branch("PtTrk_reco_front"      , PtTrk_reco_front     , "PtTrk_reco_front[SizeTrk][36]/I");
     CSCtree -> Branch("PtTrk_reco_rear"       , PtTrk_reco_rear      , "PtTrk_reco_rear[SizeTrk][36]/I");

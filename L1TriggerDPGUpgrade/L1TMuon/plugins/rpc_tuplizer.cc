@@ -570,44 +570,71 @@ void rpc_tuplizer::fillCSCTF(const edm::Handle< vector<L1TMuon::InternalTrack> >
     // Now check if PtAddress.h computes correct track pt for 3 hit tracks only. 
     int isGoodTrack = rpc_tuplizer::check_track_pt(CSChits, trkPt);
 
+    NumHits[nTrk] = CSChits.size();
+
     //Filling new variable Three_Hit_pt, added by Stefan. Checks if three hits first.
     if (CSChits.size() == 3){
+
       ptadd address_front = getAddress1(CSChits);
       ptadd address_rear = getAddress0(CSChits);
       CSCTFPtLUT lut = CSCTFPtLUT(LUTparam, scale, ptScale);
 
 	switch(isGoodTrack){
 		case 0:
-			Three_Hit_pt[nTrk] = scaling(lut.PtReal(address_front));
+			Three_Hit_pt[nTrk] = trkPt;
 			Three_Hit_Match[nTrk] = -999;
-			All_Hit_pt[nTrk] = scaling(lut.PtReal(address_front));
+			Three_Hit_Match_Front[nTrk] = -999;
+			Three_Hit_Match_Rear[nTrk] = -999;
+			All_Hit_pt[nTrk] = trkPt;
 			All_Hit_Match[nTrk] = -999;
+			All_Calc_pt[nTrk] = scaling(lut.PtReal(address_front));
 			break;
 		case 1:
-			Three_Hit_pt[nTrk] = scaling(lut.PtReal(address_front));
+			Three_Hit_pt[nTrk] = trkPt;
 			Three_Hit_Match[nTrk] = scaling(lut.PtReal(address_front));
-			All_Hit_pt[nTrk] = scaling(lut.PtReal(address_front));
+			Three_Hit_Match_Front[nTrk] = scaling(lut.PtReal(address_front));
+			Three_Hit_Match_Rear[nTrk] = -999;
+			All_Hit_pt[nTrk] = trkPt;
 			All_Hit_Match[nTrk] = scaling(lut.PtReal(address_front));
+			All_Calc_pt[nTrk] = scaling(lut.PtReal(address_front));
 			break;
 		case 2:
-			Three_Hit_pt[nTrk] = scaling(lut.PtReal(address_rear));
+			Three_Hit_pt[nTrk] = trkPt;
 			Three_Hit_Match[nTrk] = scaling(lut.PtReal(address_rear));
-			All_Hit_pt[nTrk] = scaling(lut.PtReal(address_rear));
+			Three_Hit_Match_Front[nTrk] = -999;
+			Three_Hit_Match_Rear[nTrk] = scaling(lut.PtReal(address_rear));
+			All_Hit_pt[nTrk] = trkPt;
 			All_Hit_Match[nTrk] = scaling(lut.PtReal(address_rear));
+			All_Calc_pt[nTrk] = scaling(lut.PtReal(address_rear));
 			break;
+		case 3:
+			Three_Hit_pt[nTrk] = trkPt;
+                        Three_Hit_Match[nTrk] = scaling(lut.PtReal(address_rear));
+                        Three_Hit_Match_Front[nTrk] = scaling(lut.PtReal(address_front));
+                        Three_Hit_Match_Rear[nTrk] = scaling(lut.PtReal(address_rear));
+                        All_Hit_pt[nTrk] = trkPt;
+                        All_Hit_Match[nTrk] = scaling(lut.PtReal(address_rear));
+                        All_Calc_pt[nTrk] = scaling(lut.PtReal(address_rear));
+                        break;
 		default:
 			Three_Hit_pt[nTrk] = -999;
 			Three_Hit_Match[nTrk] = -999;
+			Three_Hit_Match_Front[nTrk] = -999;
+			Three_Hit_Match_Rear[nTrk] = -999;
 			All_Hit_pt[nTrk] = -999;
 			All_Hit_Match[nTrk] = -999;
+			All_Calc_pt[nTrk] = -999;
       		}
     }
 
     else {
 	Three_Hit_pt[nTrk] = -999;
 	Three_Hit_Match[nTrk] = -999;
+	Three_Hit_Match_Front[nTrk] = -999;
+	Three_Hit_Match_Rear[nTrk] = -999;
 	All_Hit_pt[nTrk] = -999;
 	All_Hit_Match[nTrk] = -999;
+	All_Calc_pt[nTrk] = -999;
     }
     
     if (isGoodTrack == 1 || isGoodTrack == 2) {
@@ -715,13 +742,18 @@ void rpc_tuplizer::fillCSCTF(const edm::Handle< vector<L1TMuon::InternalTrack> >
 	PtTrk_cluster_rear[nTrk]  = scaling(lut.PtReal(address0));
 
 	All_Hit_pt[nTrk] = scaling(lut.PtReal(address1));
+	All_Calc_pt[nTrk] = scaling(lut.PtReal(address1));
 	if (PtTrk_cluster_front[nTrk] == trkPt){
           All_Hit_Match[nTrk]  = scaling(lut.PtReal(address1));
         }
 	else if (PtTrk_cluster_rear[nTrk] == trkPt){
           All_Hit_Match[nTrk]  = scaling(lut.PtReal(address0));
 	  All_Hit_pt[nTrk] = scaling(lut.PtReal(address0));
+	  All_Calc_pt[nTrk] = scaling(lut.PtReal(address0));
         }
+	else {
+	  All_Hit_pt[nTrk] = trkPt;
+	}
 
       }
 
@@ -828,13 +860,18 @@ void rpc_tuplizer::fillCSCTF(const edm::Handle< vector<L1TMuon::InternalTrack> >
 	  }
 	  
 	  All_Hit_pt[nTrk] = scaling(lut.PtReal(address1));
+	  All_Calc_pt[nTrk] = scaling(lut.PtReal(address1));
           if (scaling(lut.PtReal(address1)) == trkPt){
             All_Hit_Match[nTrk]  = scaling(lut.PtReal(address1));
           }
           else if (scaling(lut.PtReal(address0)) == trkPt){
             All_Hit_Match[nTrk]  = scaling(lut.PtReal(address0));
             All_Hit_pt[nTrk] = scaling(lut.PtReal(address0));
+	    All_Calc_pt[nTrk] = scaling(lut.PtReal(address0));
           }
+	  else {
+	    All_Hit_pt[nTrk] = trkPt;
+	  }
 
 	  // store pt values in vector
 	  pt_temp.push_back(scaling(lut.PtReal(address1)));
