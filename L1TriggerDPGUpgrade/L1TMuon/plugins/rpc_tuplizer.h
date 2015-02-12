@@ -212,8 +212,23 @@ class rpc_tuplizer: public edm::EDAnalyzer {
   int All_Hit_pt [MAX_CSCTF_TRK];
   int All_Hit_Match [MAX_CSCTF_TRK];
   int Two_Hit_Pt [MAX_CSCTF_TRK];
+  int Two_Hit_Match [MAX_CSCTF_TRK];
+  int Two_Hit_Match_Front [MAX_CSCTF_TRK];
+  int Two_Hit_Match_Rear [MAX_CSCTF_TRK];
+  int Two_Calc_Pt [MAX_CSCTF_TRK];
+  int Two_Hit_Pt2 [MAX_CSCTF_TRK];
+  int Two_Hit_Match2 [MAX_CSCTF_TRK];
+  int Two_Hit_Match_Front2 [MAX_CSCTF_TRK];
+  int Two_Hit_Match_Rear2 [MAX_CSCTF_TRK];
+  int Two_Calc_Pt2 [MAX_CSCTF_TRK];
+  int Two_Hit_Pt3 [MAX_CSCTF_TRK];
+  int Two_Hit_Match3 [MAX_CSCTF_TRK];
+  int Two_Hit_Match_Front3 [MAX_CSCTF_TRK];
+  int Two_Hit_Match_Rear3 [MAX_CSCTF_TRK];
+  int Two_Calc_Pt3 [MAX_CSCTF_TRK];
   int NumHits [MAX_CSCTF_TRK];
   int All_Calc_pt [MAX_CSCTF_TRK];
+  int Three_Calc_pt [MAX_CSCTF_TRK];
 
   // NEW decluster RPC phi pt assignment
   int PtTrk_cluster_front [MAX_CSCTF_TRK]; 
@@ -310,9 +325,24 @@ class rpc_tuplizer: public edm::EDAnalyzer {
     CSCtree -> Branch("Three_Hit_Match_Rear", Three_Hit_Match_Rear, "Three_Hit_Match_Rear[SizeTrk]/I");
     CSCtree -> Branch("All_Hit_pt", All_Hit_pt, "All_Hit_pt[SizeTrk]/I");
     CSCtree -> Branch("All_Hit_Match", All_Hit_Match, "All_Hit_Match[SizeTrk]/I");
-    CSCtree -> Branch("Two_Hit_Pt", Two_Hit_Pt, "Two_Hit_Pt[SizeTrk]/I");
+    CSCtree -> Branch("Two_Hit_Pt", Two_Hit_Pt, "Two_Hit_Pt[SizeTrk]/I");    
+    CSCtree -> Branch("Two_Hit_Match", Two_Hit_Match, "Two_Hit_Match[SizeTrk]/I");
+    CSCtree -> Branch("Two_Hit_Match_Front", Two_Hit_Match_Front, "Two_Hit_Match_Front[SizeTrk]/I");
+    CSCtree -> Branch("Two_Hit_Match_Rear", Two_Hit_Match_Rear, "Two_Hit_Match_Rear[SizeTrk]/I");
+    CSCtree -> Branch("Two_Calc_Pt", Two_Calc_Pt, "Two_Calc_Pt[SizeTrk]/I");
+    CSCtree -> Branch("Two_Hit_Pt2", Two_Hit_Pt2, "Two_Hit_Pt2[SizeTrk]/I");
+    CSCtree -> Branch("Two_Hit_Match2", Two_Hit_Match2, "Two_Hit_Match2[SizeTrk]/I");
+    CSCtree -> Branch("Two_Hit_Match_Front2", Two_Hit_Match_Front2, "Two_Hit_Match_Front2[SizeTrk]/I");
+    CSCtree -> Branch("Two_Hit_Match_Rear2", Two_Hit_Match_Rear2, "Two_Hit_Match_Rear2[SizeTrk]/I");
+    CSCtree -> Branch("Two_Calc_Pt2", Two_Calc_Pt2, "Two_Calc_Pt2[SizeTrk]/I");
+    CSCtree -> Branch("Two_Hit_Pt3", Two_Hit_Pt3, "Two_Hit_Pt3[SizeTrk]/I");
+    CSCtree -> Branch("Two_Hit_Match3", Two_Hit_Match3, "Two_Hit_Match3[SizeTrk]/I");
+    CSCtree -> Branch("Two_Hit_Match_Front3", Two_Hit_Match_Front3, "Two_Hit_Match_Front3[SizeTrk]/I");
+    CSCtree -> Branch("Two_Hit_Match_Rear3", Two_Hit_Match_Rear3, "Two_Hit_Match_Rear3[SizeTrk]/I");   
+    CSCtree -> Branch("Two_Calc_Pt3", Two_Calc_Pt3, "Two_Calc_Pt3[SizeTrk]/I");
     CSCtree -> Branch("NumHits", NumHits, "NumHits[SizeTrk]/I");
     CSCtree -> Branch("All_Calc_pt", All_Calc_pt, "All_Calc_pt[SizeTrk]/I");
+    CSCtree -> Branch("Three_Calc_pt", Three_Calc_pt, "Three_Calc_pt[SizeTrk]/I");
 
     CSCtree -> Branch("PtTrk_reco_front"      , PtTrk_reco_front     , "PtTrk_reco_front[SizeTrk][36]/I");
     CSCtree -> Branch("PtTrk_reco_rear"       , PtTrk_reco_rear      , "PtTrk_reco_rear[SizeTrk][36]/I");

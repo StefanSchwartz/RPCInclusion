@@ -5,7 +5,7 @@ void scanTree(){
 	TFile *InFile = TFile::Open("csc_raw_test.root", "READ");
 	TTree* mytree = (TTree*)InFile->Get("CSCtree");
 
-	mytree->Scan("PtTrk:All_Hit_pt:Three_Hit_Match:All_Hit_Match:NumHits");
+	mytree->Scan("PtTrk:NumHits");
 
 	InFile->Close();
 }

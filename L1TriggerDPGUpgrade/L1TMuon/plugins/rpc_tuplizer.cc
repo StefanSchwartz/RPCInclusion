@@ -578,6 +578,8 @@ void rpc_tuplizer::fillCSCTF(const edm::Handle< vector<L1TMuon::InternalTrack> >
       ptadd address_front = getAddress1(CSChits);
       ptadd address_rear = getAddress0(CSChits);
       CSCTFPtLUT lut = CSCTFPtLUT(LUTparam, scale, ptScale);
+      int ptfront = scaling(lut.PtReal(address_front));
+      int ptrear = scaling(lut.PtReal(address_rear));
 
 	switch(isGoodTrack){
 		case 0:
@@ -587,34 +589,38 @@ void rpc_tuplizer::fillCSCTF(const edm::Handle< vector<L1TMuon::InternalTrack> >
 			Three_Hit_Match_Rear[nTrk] = -999;
 			All_Hit_pt[nTrk] = trkPt;
 			All_Hit_Match[nTrk] = -999;
-			All_Calc_pt[nTrk] = scaling(lut.PtReal(address_front));
+			All_Calc_pt[nTrk] = ptfront;
+			Three_Calc_pt[nTrk] = ptfront;
 			break;
 		case 1:
 			Three_Hit_pt[nTrk] = trkPt;
-			Three_Hit_Match[nTrk] = scaling(lut.PtReal(address_front));
-			Three_Hit_Match_Front[nTrk] = scaling(lut.PtReal(address_front));
+			Three_Hit_Match[nTrk] = ptfront;
+			Three_Hit_Match_Front[nTrk] = ptfront;
 			Three_Hit_Match_Rear[nTrk] = -999;
 			All_Hit_pt[nTrk] = trkPt;
-			All_Hit_Match[nTrk] = scaling(lut.PtReal(address_front));
-			All_Calc_pt[nTrk] = scaling(lut.PtReal(address_front));
+			All_Hit_Match[nTrk] = ptfront;
+			All_Calc_pt[nTrk] = ptfront;
+			Three_Calc_pt[nTrk] = ptfront;
 			break;
 		case 2:
 			Three_Hit_pt[nTrk] = trkPt;
-			Three_Hit_Match[nTrk] = scaling(lut.PtReal(address_rear));
+			Three_Hit_Match[nTrk] = ptrear;
 			Three_Hit_Match_Front[nTrk] = -999;
-			Three_Hit_Match_Rear[nTrk] = scaling(lut.PtReal(address_rear));
+			Three_Hit_Match_Rear[nTrk] = ptrear;
 			All_Hit_pt[nTrk] = trkPt;
-			All_Hit_Match[nTrk] = scaling(lut.PtReal(address_rear));
-			All_Calc_pt[nTrk] = scaling(lut.PtReal(address_rear));
+			All_Hit_Match[nTrk] = ptrear;
+			All_Calc_pt[nTrk] = ptrear;
+			Three_Calc_pt[nTrk] = ptrear;
 			break;
 		case 3:
 			Three_Hit_pt[nTrk] = trkPt;
-                        Three_Hit_Match[nTrk] = scaling(lut.PtReal(address_rear));
-                        Three_Hit_Match_Front[nTrk] = scaling(lut.PtReal(address_front));
-                        Three_Hit_Match_Rear[nTrk] = scaling(lut.PtReal(address_rear));
+                        Three_Hit_Match[nTrk] = ptrear;
+                        Three_Hit_Match_Front[nTrk] = ptrear;
+                        Three_Hit_Match_Rear[nTrk] = ptrear;
                         All_Hit_pt[nTrk] = trkPt;
-                        All_Hit_Match[nTrk] = scaling(lut.PtReal(address_rear));
-                        All_Calc_pt[nTrk] = scaling(lut.PtReal(address_rear));
+                        All_Hit_Match[nTrk] = ptrear;
+                        All_Calc_pt[nTrk] = ptrear;
+			Three_Calc_pt[nTrk] = ptrear;
                         break;
 		default:
 			Three_Hit_pt[nTrk] = -999;
@@ -624,6 +630,7 @@ void rpc_tuplizer::fillCSCTF(const edm::Handle< vector<L1TMuon::InternalTrack> >
 			All_Hit_pt[nTrk] = -999;
 			All_Hit_Match[nTrk] = -999;
 			All_Calc_pt[nTrk] = -999;
+			Three_Calc_pt[nTrk] = -999;
       		}
     }
 
@@ -635,6 +642,7 @@ void rpc_tuplizer::fillCSCTF(const edm::Handle< vector<L1TMuon::InternalTrack> >
 	All_Hit_pt[nTrk] = -999;
 	All_Hit_Match[nTrk] = -999;
 	All_Calc_pt[nTrk] = -999;
+	Three_Calc_pt[nTrk] = -999;
     }
     
     if (isGoodTrack == 1 || isGoodTrack == 2) {
@@ -652,33 +660,28 @@ void rpc_tuplizer::fillCSCTF(const edm::Handle< vector<L1TMuon::InternalTrack> >
       isGoodTrk[nTrk] = 0;
     }
        
-    
+      Two_Hit_Pt[nTrk] = -999;
+      Two_Hit_Match[nTrk] = -999;
+      Two_Hit_Match_Front[nTrk] = -999;
+      Two_Hit_Match_Rear[nTrk] = -999;
+      Two_Calc_Pt[nTrk] = -999;
+      Two_Hit_Pt3[nTrk] = -999;
+      Two_Hit_Match3[nTrk] = -999;
+      Two_Hit_Match_Front3[nTrk] = -999;
+      Two_Hit_Match_Rear3[nTrk] = -999;
+      Two_Calc_Pt3[nTrk] = -999;   
+      Two_Hit_Pt2[nTrk] = -999;
+      Two_Hit_Match2[nTrk] = -999;
+      Two_Hit_Match_Front2[nTrk] = -999;
+      Two_Hit_Match_Rear2[nTrk] = -999;
+      Two_Calc_Pt2[nTrk] = -999;
+
+ 
     // ------------ For each track use its LCT info to find track pt if there are 2 Lcts from different stations
     
     if ( LctTrkId_ == 2  &&
 	 trLctStation[nTrk][0] != trLctStation[nTrk][1] ) {
 
-      // ------------------------------------------------------------------------------------
-      // New section added by Stefan to calculate pT just from the two hits, so it can be
-      // compared to the same track with RPC information added
-
-/*      ptadd address_front = getAddress1(CSChits);
-      ptadd address_rear = getAddress0(CSChits);
-      CSCTFPtLUT lut = CSCTFPtLUT(LUTparam, scale, ptScale);
-
-      int Two_Hit_Pt1 = scaling(lut.PtReal(address_front));
-      int Two_Hit_Pt2 = scaling(lut.PtReal(address_rear));
-
-      if (Two_Hit_Pt1 == trkPt){
-	Two_Hit_Pt[nTrk] = Two_Hit_Pt1;
-      }
-      else if (Two_Hit_Pt2 == trkPt){
-	Two_Hit_Pt[nTrk] = Two_Hit_Pt2;
-      }
-      else {
-	Two_Hit_Pt[nTrk] = -999;
-      }
-*/
       // ====================================================================================
       // Now we try and use an rpc hit for pt calculation. Still only looking at 2 Lct tracks
       // For each CSC Lct loop over RPC Lcts and see if there is a match(dr < 0.2).
@@ -741,18 +744,43 @@ void rpc_tuplizer::fillCSCTF(const edm::Handle< vector<L1TMuon::InternalTrack> >
 	PtTrk_cluster_front[nTrk] = scaling(lut.PtReal(address1));
 	PtTrk_cluster_rear[nTrk]  = scaling(lut.PtReal(address0));
 
-	All_Hit_pt[nTrk] = scaling(lut.PtReal(address1));
-	All_Calc_pt[nTrk] = scaling(lut.PtReal(address1));
 	if (PtTrk_cluster_front[nTrk] == trkPt){
-          All_Hit_Match[nTrk]  = scaling(lut.PtReal(address1));
-        }
-	else if (PtTrk_cluster_rear[nTrk] == trkPt){
-          All_Hit_Match[nTrk]  = scaling(lut.PtReal(address0));
-	  All_Hit_pt[nTrk] = scaling(lut.PtReal(address0));
-	  All_Calc_pt[nTrk] = scaling(lut.PtReal(address0));
+          All_Hit_Match[nTrk]  = PtTrk_cluster_front[nTrk];
+	  All_Hit_pt[nTrk] = PtTrk_cluster_front[nTrk];
+	  All_Calc_pt[nTrk] = PtTrk_cluster_front[nTrk];
+	  Two_Hit_Pt[nTrk] = PtTrk_cluster_front[nTrk];
+	  Two_Hit_Match[nTrk] = PtTrk_cluster_front[nTrk];
+	  Two_Hit_Match_Front[nTrk] = PtTrk_cluster_front[nTrk];
+	  Two_Calc_Pt[nTrk] = PtTrk_cluster_front[nTrk];
+	  Two_Hit_Pt3[nTrk] = PtTrk_cluster_front[nTrk];
+          Two_Hit_Match3[nTrk] = PtTrk_cluster_front[nTrk];
+          Two_Hit_Match_Front3[nTrk] = PtTrk_cluster_front[nTrk];
+	  Two_Calc_Pt3[nTrk] = PtTrk_cluster_front[nTrk];
         }
 	else {
 	  All_Hit_pt[nTrk] = trkPt;
+          Two_Hit_Pt[nTrk] = trkPt;
+	  Two_Calc_Pt[nTrk] = PtTrk_cluster_front[nTrk];
+	  Two_Hit_Pt3[nTrk] = trkPt;
+	  Two_Calc_Pt3[nTrk] = PtTrk_cluster_front[nTrk];
+	}
+	if (PtTrk_cluster_rear[nTrk] == trkPt){
+          All_Hit_Match[nTrk]  = PtTrk_cluster_rear[nTrk];
+	  All_Hit_pt[nTrk] = PtTrk_cluster_rear[nTrk];
+	  All_Calc_pt[nTrk] = PtTrk_cluster_rear[nTrk];
+	  Two_Hit_Pt[nTrk] = PtTrk_cluster_rear[nTrk];
+	  Two_Hit_Match[nTrk] = PtTrk_cluster_rear[nTrk];
+	  Two_Hit_Match_Rear[nTrk] = PtTrk_cluster_rear[nTrk];
+	  Two_Calc_Pt[nTrk] = PtTrk_cluster_rear[nTrk];
+	  Two_Hit_Pt3[nTrk] = PtTrk_cluster_rear[nTrk];
+          Two_Hit_Match3[nTrk] = PtTrk_cluster_rear[nTrk];
+          Two_Hit_Match_Rear3[nTrk] = PtTrk_cluster_rear[nTrk];
+	  Two_Calc_Pt3[nTrk] = PtTrk_cluster_rear[nTrk];
+        }
+	else {
+	  All_Hit_pt[nTrk] = trkPt;
+	  Two_Hit_Pt[nTrk] = trkPt;
+	  Two_Hit_Pt3[nTrk] = trkPt;
 	}
 
       }
@@ -858,20 +886,6 @@ void rpc_tuplizer::fillCSCTF(const edm::Handle< vector<L1TMuon::InternalTrack> >
 	    cout << "        Front scaled   = " << scaling(lut.PtReal(address1)) << endl;
 	    cout << "        Rear  scaled   = " << scaling(lut.PtReal(address0)) << endl;
 	  }
-	  
-	  All_Hit_pt[nTrk] = scaling(lut.PtReal(address1));
-	  All_Calc_pt[nTrk] = scaling(lut.PtReal(address1));
-          if (scaling(lut.PtReal(address1)) == trkPt){
-            All_Hit_Match[nTrk]  = scaling(lut.PtReal(address1));
-          }
-          else if (scaling(lut.PtReal(address0)) == trkPt){
-            All_Hit_Match[nTrk]  = scaling(lut.PtReal(address0));
-            All_Hit_pt[nTrk] = scaling(lut.PtReal(address0));
-	    All_Calc_pt[nTrk] = scaling(lut.PtReal(address0));
-          }
-	  else {
-	    All_Hit_pt[nTrk] = trkPt;
-	  }
 
 	  // store pt values in vector
 	  pt_temp.push_back(scaling(lut.PtReal(address1)));
@@ -880,6 +894,42 @@ void rpc_tuplizer::fillCSCTF(const edm::Handle< vector<L1TMuon::InternalTrack> >
 	  // fill track branches with reco pT
 	  PtTrk_reco_front [nTrk][RpcTrkId_] = scaling(lut.PtReal(address1));
 	  PtTrk_reco_rear  [nTrk][RpcTrkId_] = scaling(lut.PtReal(address0));
+        
+          if (PtTrk_reco_front[nTrk][RpcTrkId_] == trkPt){
+            All_Hit_Match[nTrk]  = PtTrk_reco_front[nTrk][RpcTrkId_];
+            All_Hit_pt[nTrk] = PtTrk_reco_front[nTrk][RpcTrkId_];
+            All_Calc_pt[nTrk] = PtTrk_reco_front[nTrk][RpcTrkId_];
+            Two_Hit_Pt2[nTrk] = PtTrk_reco_front[nTrk][RpcTrkId_];
+            Two_Hit_Match2[nTrk] = PtTrk_reco_front[nTrk][RpcTrkId_];
+            Two_Hit_Match_Front2[nTrk] = PtTrk_reco_front[nTrk][RpcTrkId_];
+	    Two_Calc_Pt2[nTrk] = PtTrk_reco_front[nTrk][RpcTrkId_];
+	    Two_Hit_Pt3[nTrk] = PtTrk_reco_front[nTrk][RpcTrkId_];
+	    Two_Hit_Match3[nTrk] = PtTrk_reco_front[nTrk][RpcTrkId_];
+            Two_Hit_Match_Front3[nTrk] = PtTrk_reco_front[nTrk][RpcTrkId_];
+	    Two_Calc_Pt3[nTrk] = PtTrk_reco_front[nTrk][RpcTrkId_];
+          }
+          else {
+            All_Hit_pt[nTrk] = trkPt;
+            Two_Hit_Pt2[nTrk] = trkPt;
+	    Two_Calc_Pt2[nTrk] = PtTrk_reco_front[nTrk][RpcTrkId_];
+	    Two_Hit_Pt3[nTrk] = trkPt;
+	    if (Two_Calc_Pt3[nTrk] == -999){
+	       Two_Calc_Pt3[nTrk] = PtTrk_reco_front[nTrk][RpcTrkId_];
+	    }
+          }
+          if (PtTrk_reco_rear[nTrk][RpcTrkId_] == trkPt){
+            All_Hit_Match[nTrk]  = PtTrk_reco_rear[nTrk][RpcTrkId_];
+            All_Hit_pt[nTrk] = PtTrk_reco_rear[nTrk][RpcTrkId_];
+            All_Calc_pt[nTrk] = PtTrk_reco_rear[nTrk][RpcTrkId_];
+            Two_Hit_Pt2[nTrk] = PtTrk_reco_rear[nTrk][RpcTrkId_];
+            Two_Hit_Match2[nTrk] = PtTrk_reco_rear[nTrk][RpcTrkId_];
+            Two_Hit_Match_Rear2[nTrk] = PtTrk_reco_rear[nTrk][RpcTrkId_];
+	    Two_Calc_Pt2[nTrk] = PtTrk_reco_rear[nTrk][RpcTrkId_];
+	    Two_Hit_Pt3[nTrk] = PtTrk_reco_rear[nTrk][RpcTrkId_];
+            Two_Hit_Match3[nTrk] = PtTrk_reco_rear[nTrk][RpcTrkId_];
+            Two_Hit_Match_Rear3[nTrk] = PtTrk_reco_rear[nTrk][RpcTrkId_];
+	    Two_Calc_Pt3[nTrk] = PtTrk_reco_rear[nTrk][RpcTrkId_];
+          }
 	  
 	  sort(pt_temp.begin(), pt_temp.end());
 	  int best_pt  = closest(pt_temp, 500);
