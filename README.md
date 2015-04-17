@@ -11,7 +11,7 @@ To produce new Monte Carlo Data Samples:
 
 	Run particle_gun_gen_sim.py in CMSSW_6_2_3
 	
-Need file L1_tuple_MC.py to create NTuple
+Need file L1TMuon_tuple_MC.py to create NTuple, which calls rpc_tuplizer.cc, so the entire codebase is needed
 	
 To Analyze NTuples:
 
