@@ -1,7 +1,7 @@
 # Auto generated configuration file
-# using: 
-# Revision: 1.381.2.7 
-# Source: /local/reps/CMSSW/CMSSW/Configuration/PyReleaseValidation/python/ConfigBuilder.py,v 
+# using:
+# Revision: 1.381.2.7
+# Source: /local/reps/CMSSW/CMSSW/Configuration/PyReleaseValidation/python/ConfigBuilder.py,v
 # with command line options: SingleMuFlatLogPt_100MeVto2TeV_cfi.py -s GEN,SIM,DIGI,L1 --conditions START53_V7A::All --eventcontent FEVTDEBUG --no_exec
 import FWCore.ParameterSet.Config as cms
 
@@ -26,7 +26,7 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(70000)
+    input = cms.untracked.int32(10)
 )
 
 # Input source
@@ -49,7 +49,7 @@ process.FEVTDEBUGoutput = cms.OutputModule("PoolOutputModule",
     splitLevel = cms.untracked.int32(0),
     eventAutoFlushCompressedSize = cms.untracked.int32(5242880),
     outputCommands = process.FEVTDEBUGEventContent.outputCommands,
-    fileName = cms.untracked.string('/afs/cern.ch/user/s/sschwart/work/Shared/SingleMuLowPt_5GeVto200GeV_GEN_SIM_DIGI_L1_4_9_2015.root'),
+    fileName = cms.untracked.string('SingleMuLowPt_2To100GeV_GEN_SIM_DIGI_L1_4_9_2015.root'),
     dataset = cms.untracked.PSet(
         filterName = cms.untracked.string(''),
         dataTier = cms.untracked.string('')
@@ -68,16 +68,16 @@ process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:mc', '')
 
 process.generator = cms.EDProducer("FlatRandomOneOverPtGunProducer",
 	PGunParameters = cms.PSet(
-        MinOneOverPt = cms.double(0.5),
-	MaxOneOverPt = cms.double(0.01),
-        PartID = cms.vint32(13),        
+        MinOneOverPt = cms.double(0.5), # 2 GeV
+	MaxOneOverPt = cms.double(0.01), # 100 GeV
+        PartID = cms.vint32(13),
         MaxPhi = cms.double(3.14159265359),
 	MinPhi = cms.double(-3.14159265359),
-	MaxEta = cms.double(1.6),
-        MinEta = cms.double(0.9)        
+	MaxEta = cms.double(1.6), ## RPC region
+        MinEta = cms.double(0.9)  ## RPC region
 	),
     Verbosity = cms.untracked.int32(0),
-				   psethack = cms.string('single mu pt 5to100'),
+				   psethack = cms.string('single mu pt 2to100'),
 				   AddAntiParticle = cms.bool(False), #need *single* muons dammit
 				   firstRun = cms.untracked.uint32(1)
 )
@@ -102,5 +102,5 @@ process.schedule = cms.Schedule(process.generation_step,
 				process.FEVTDEBUGoutput_step)
 # filter all path with the production filter sequence
 for path in process.paths:
-	getattr(process,path)._seq = process.generator * getattr(process,path)._seq 
+	getattr(process,path)._seq = process.generator * getattr(process,path)._seq
 
