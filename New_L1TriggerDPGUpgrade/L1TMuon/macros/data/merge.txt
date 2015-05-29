@@ -1,0 +1,6 @@
+cmsLs /store/user/dcurry/rpc/2012D_reco_5_23/ | grep root | awk '{print "root://eoscms//eos/cms"$5""}'
+
+
+
+hadd -f root://eoscms//eos/cms/store/user/dcurry/rpc/2012D_reco_5_23/merged.root root://eoscms//eos/cms/store/user/dcurry/rpc/2012D_reco_5_23/rpc_tuple_2012D_11_1_Ahs.root root://eoscms//eos/cms/store/user/dcurry/rpc/2012D_reco_5_23/rpc_tuple_2012D_12_1_9zy.root root://eoscms//eos/cms/store/user/dcurry/rpc/2012D_reco_5_23/rpc_tuple_2012D_1_1_3Jc.root root://eoscms//eos/cms/store/user/dcurry/rpc/2012D_reco_5_23/rpc_tuple_2012D_1_1_KM6.root root://eoscms//eos/cms/store/user/dcurry/rpc/2012D_reco_5_23/rpc_tuple_2012D_3_1_47Q.root root://eoscms//eos/cms/store/user/dcurry/rpc/2012D_reco_5_23/rpc_tuple_2012D_9_1_muf.root 
+
